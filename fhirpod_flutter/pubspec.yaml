@@ -22,6 +22,8 @@ environment:
   flutter: ">=3.3.0"
 
 dependencies:
+  fhir:
+    path: ../fhir
   flutter:
     sdk: flutter
   serverpod_flutter: ^1.1.0

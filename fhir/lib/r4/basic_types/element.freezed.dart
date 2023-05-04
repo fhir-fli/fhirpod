@@ -116,6 +116,7 @@ class __$$_ElementCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 @JsonSerializable()
 class _$_Element extends _Element {
   _$_Element(
