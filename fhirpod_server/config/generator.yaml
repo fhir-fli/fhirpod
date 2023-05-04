@@ -3,6 +3,25 @@ type: server
 client_package_path: ../fhirpod_client
 
 extraClasses:
+  - package:fhir/r4.dart:Base64binary
+  - package:fhir/r4.dart:Boolean
+  - package:fhir/r4.dart:Canonical
+  - package:fhir/r4.dart:Code
+  - package:fhir/r4.dart:Date
+  - package:fhir/r4.dart:Decimal
+  - package:fhir/r4.dart:FhirDateTime
+  - package:fhir/r4.dart:FhirUri
+  - package:fhir/r4.dart:FhirUrl
+  - package:fhir/r4.dart:Id
+  - package:fhir/r4.dart:Instant
+  - package:fhir/r4.dart:Integer
+  - package:fhir/r4.dart:Integer64
+  - package:fhir/r4.dart:Markdown
+  - package:fhir/r4.dart:Oid
+  - package:fhir/r4.dart:PositiveInt
+  - package:fhir/r4.dart:Time
+  - package:fhir/r4.dart:UnsignedInt
+  - package:fhir/r4.dart:FhirUuid
   - package:fhir/r4.dart:Element
   - package:fhir/r4.dart:Extension
   - package:fhir/r4.dart:Narrative
