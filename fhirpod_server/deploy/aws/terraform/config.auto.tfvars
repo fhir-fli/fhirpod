@@ -81,8 +81,8 @@ staging_autoscaling_desired_capacity = 1
 
 # The deployment bucket name needs to be unique and can only contain lower case
 # letters and dashes (no underscored allowed).
-deployment_bucket_name              = "fhirpod-deployment-8810847"
-public_storage_bucket_name          = "fhirpod-public-storage-8810847"
-private_storage_bucket_name         = "fhirpod-private-storage-8810847"
-public_storage_bucket_name_staging  = "fhirpod-public-storage-staging-8810847"
-private_storage_bucket_name_staging = "fhirpod-private-storage-staging-8810847"
+deployment_bucket_name              = "fhirpod-deployment-3986581"
+public_storage_bucket_name          = "fhirpod-public-storage-3986581"
+private_storage_bucket_name         = "fhirpod-private-storage-3986581"
+public_storage_bucket_name_staging  = "fhirpod-public-storage-staging-3986581"
+private_storage_bucket_name_staging = "fhirpod-private-storage-staging-3986581"

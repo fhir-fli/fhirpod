@@ -5,6 +5,4 @@ environment:
   sdk: '>=2.17.0 <3.0.0'
 
 dependencies:
-  fhir_r4:
-    path: ../../fhir/fhir_r4
   serverpod_client: ^1.1.0
