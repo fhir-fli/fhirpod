@@ -1,5 +1,9 @@
 import 'package:serverpod/serverpod.dart';
 
+import 'package:fhir/r5.dart' as fhir;
+
+import '../generated/patient.dart';
+
 // This is an example endpoint of your server. It's best practice to use the
 // `Endpoint` ending of the class name, but it will be removed when accessing
 // the endpoint from the client. I.e., this endpoint can be accessed through
@@ -15,7 +19,16 @@ class FhirResource extends Endpoint {
   // should return a typed future; the same types as for the parameters are
   // supported. The `session` object provides access to the database, logging,
   // passwords, and information about the request being made to the server.
-  Future<String> post(Session session, String name) async {
-    return 'Hello $name';
+  Future<Patient?> get(
+    Session session, {
+    fhir.R5ResourceType? resourceType,
+    fhir.FhirId? id,
+  }) async {
+    final List<Patient> patients = await Patient.find(
+      session,
+      where: (p0) => p0.fhirId.equals(id.toString()),
+    );
+    patients.first.
+    return patients.isEmpty ? null : patients.first;
   }
 }
