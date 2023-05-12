@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class TestScriptFixture extends _i1.SerializableEntity {
   TestScriptFixture({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     this.autocreate,
@@ -26,7 +26,8 @@ class TestScriptFixture extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return TestScriptFixture(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -45,7 +46,7 @@ class TestScriptFixture extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -64,7 +65,7 @@ class TestScriptFixture extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'autocreate': autocreate,

@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class NutritionProductCharacteristic extends _i1.SerializableEntity {
   NutritionProductCharacteristic({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     required this.type,
@@ -31,7 +31,8 @@ class NutritionProductCharacteristic extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return NutritionProductCharacteristic(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -61,7 +62,7 @@ class NutritionProductCharacteristic extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -90,7 +91,7 @@ class NutritionProductCharacteristic extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'type': type,
@@ -109,7 +110,7 @@ class NutritionProductCharacteristic extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'type': type,

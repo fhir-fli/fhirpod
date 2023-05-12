@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class Population extends _i1.SerializableEntity {
   Population({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     this.ageRange,
@@ -26,7 +26,8 @@ class Population extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return Population(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -47,7 +48,7 @@ class Population extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -66,7 +67,7 @@ class Population extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'ageRange': ageRange,

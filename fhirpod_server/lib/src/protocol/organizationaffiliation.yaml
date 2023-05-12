@@ -1,7 +1,8 @@
 class: OrganizationAffiliation
+table: organizationaffiliation
 fields: 
   resourceType: String
-  id: String?
+  fhirId: String?
   meta: FhirMeta?
   implicitRules: String?
   implicitRulesElement: Element?

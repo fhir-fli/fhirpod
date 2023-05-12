@@ -1,6 +1,6 @@
 class: Reference
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   reference: String?
   referenceElement: Element?

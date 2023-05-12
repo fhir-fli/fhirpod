@@ -1,6 +1,6 @@
 class: RatioRange
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   lowNumerator: Quantity?
   highNumerator: Quantity?

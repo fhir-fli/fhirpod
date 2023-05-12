@@ -12,7 +12,7 @@ import 'protocol.dart' as _i2;
 class FhirEndpoint extends _i1.SerializableEntity {
   FhirEndpoint({
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -48,7 +48,8 @@ class FhirEndpoint extends _i1.SerializableEntity {
     return FhirEndpoint(
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -109,7 +110,7 @@ class FhirEndpoint extends _i1.SerializableEntity {
 
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -167,7 +168,7 @@ class FhirEndpoint extends _i1.SerializableEntity {
   Map<String, dynamic> toJson() {
     return {
       'resourceType': resourceType,
-      'id': id,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -201,7 +202,7 @@ class FhirEndpoint extends _i1.SerializableEntity {
   Map<String, dynamic> allToJson() {
     return {
       'resourceType': resourceType,
-      'id': id,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,

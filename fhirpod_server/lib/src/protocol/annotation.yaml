@@ -1,6 +1,6 @@
 class: Annotation
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   authorReference: Reference?
   authorString: String?

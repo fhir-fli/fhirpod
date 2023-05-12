@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class SubstanceDefinition extends _i1.SerializableEntity {
+class SubstanceDefinition extends _i1.TableRow {
   SubstanceDefinition({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -48,16 +49,18 @@ class SubstanceDefinition extends _i1.SerializableEntity {
     this.polymer,
     this.protein,
     this.sourceMaterial,
-  });
+  }) : super(id);
 
   factory SubstanceDefinition.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return SubstanceDefinition(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -141,9 +144,11 @@ class SubstanceDefinition extends _i1.SerializableEntity {
     );
   }
 
+  static final t = SubstanceDefinitionTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -216,10 +221,57 @@ class SubstanceDefinition extends _i1.SerializableEntity {
   _i2.SubstanceDefinitionSourceMaterial? sourceMaterial;
 
   @override
+  String get tableName => 'substancedefinition';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'identifier': identifier,
+      'version': version,
+      'versionElement': versionElement,
+      'status': status,
+      'classification': classification,
+      'domain': domain,
+      'grade': grade,
+      'description': description,
+      'descriptionElement': descriptionElement,
+      'informationSource': informationSource,
+      'note': note,
+      'manufacturer': manufacturer,
+      'supplier': supplier,
+      'moiety': moiety,
+      'characterization': characterization,
+      'property': property,
+      'referenceInformation': referenceInformation,
+      'molecularWeight': molecularWeight,
+      'structure': structure,
+      'code': code,
+      'name': name,
+      'relationship': relationship,
+      'nucleicAcid': nucleicAcid,
+      'polymer': polymer,
+      'protein': protein,
+      'sourceMaterial': sourceMaterial,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -261,8 +313,9 @@ class SubstanceDefinition extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -300,4 +353,368 @@ class SubstanceDefinition extends _i1.SerializableEntity {
       'sourceMaterial': sourceMaterial,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'version':
+        version = value;
+        return;
+      case 'versionElement':
+        versionElement = value;
+        return;
+      case 'status':
+        status = value;
+        return;
+      case 'classification':
+        classification = value;
+        return;
+      case 'domain':
+        domain = value;
+        return;
+      case 'grade':
+        grade = value;
+        return;
+      case 'description':
+        description = value;
+        return;
+      case 'descriptionElement':
+        descriptionElement = value;
+        return;
+      case 'informationSource':
+        informationSource = value;
+        return;
+      case 'note':
+        note = value;
+        return;
+      case 'manufacturer':
+        manufacturer = value;
+        return;
+      case 'supplier':
+        supplier = value;
+        return;
+      case 'moiety':
+        moiety = value;
+        return;
+      case 'characterization':
+        characterization = value;
+        return;
+      case 'property':
+        property = value;
+        return;
+      case 'referenceInformation':
+        referenceInformation = value;
+        return;
+      case 'molecularWeight':
+        molecularWeight = value;
+        return;
+      case 'structure':
+        structure = value;
+        return;
+      case 'code':
+        code = value;
+        return;
+      case 'name':
+        name = value;
+        return;
+      case 'relationship':
+        relationship = value;
+        return;
+      case 'nucleicAcid':
+        nucleicAcid = value;
+        return;
+      case 'polymer':
+        polymer = value;
+        return;
+      case 'protein':
+        protein = value;
+        return;
+      case 'sourceMaterial':
+        sourceMaterial = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<SubstanceDefinition>> find(
+    _i1.Session session, {
+    SubstanceDefinitionExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<SubstanceDefinition>(
+      where: where != null ? where(SubstanceDefinition.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<SubstanceDefinition?> findSingleRow(
+    _i1.Session session, {
+    SubstanceDefinitionExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<SubstanceDefinition>(
+      where: where != null ? where(SubstanceDefinition.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<SubstanceDefinition?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<SubstanceDefinition>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required SubstanceDefinitionExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<SubstanceDefinition>(
+      where: where(SubstanceDefinition.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    SubstanceDefinition row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    SubstanceDefinition row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    SubstanceDefinition row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    SubstanceDefinitionExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<SubstanceDefinition>(
+      where: where != null ? where(SubstanceDefinition.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef SubstanceDefinitionExpressionBuilder = _i1.Expression Function(
+    SubstanceDefinitionTable);
+
+class SubstanceDefinitionTable extends _i1.Table {
+  SubstanceDefinitionTable() : super(tableName: 'substancedefinition');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final version = _i1.ColumnString('version');
+
+  final versionElement = _i1.ColumnSerializable('versionElement');
+
+  final status = _i1.ColumnSerializable('status');
+
+  final classification = _i1.ColumnSerializable('classification');
+
+  final domain = _i1.ColumnSerializable('domain');
+
+  final grade = _i1.ColumnSerializable('grade');
+
+  final description = _i1.ColumnString('description');
+
+  final descriptionElement = _i1.ColumnSerializable('descriptionElement');
+
+  final informationSource = _i1.ColumnSerializable('informationSource');
+
+  final note = _i1.ColumnSerializable('note');
+
+  final manufacturer = _i1.ColumnSerializable('manufacturer');
+
+  final supplier = _i1.ColumnSerializable('supplier');
+
+  final moiety = _i1.ColumnSerializable('moiety');
+
+  final characterization = _i1.ColumnSerializable('characterization');
+
+  final property = _i1.ColumnSerializable('property');
+
+  final referenceInformation = _i1.ColumnSerializable('referenceInformation');
+
+  final molecularWeight = _i1.ColumnSerializable('molecularWeight');
+
+  final structure = _i1.ColumnSerializable('structure');
+
+  final code = _i1.ColumnSerializable('code');
+
+  final name = _i1.ColumnSerializable('name');
+
+  final relationship = _i1.ColumnSerializable('relationship');
+
+  final nucleicAcid = _i1.ColumnSerializable('nucleicAcid');
+
+  final polymer = _i1.ColumnSerializable('polymer');
+
+  final protein = _i1.ColumnSerializable('protein');
+
+  final sourceMaterial = _i1.ColumnSerializable('sourceMaterial');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        identifier,
+        version,
+        versionElement,
+        status,
+        classification,
+        domain,
+        grade,
+        description,
+        descriptionElement,
+        informationSource,
+        note,
+        manufacturer,
+        supplier,
+        moiety,
+        characterization,
+        property,
+        referenceInformation,
+        molecularWeight,
+        structure,
+        code,
+        name,
+        relationship,
+        nucleicAcid,
+        polymer,
+        protein,
+        sourceMaterial,
+      ];
+}
+
+@Deprecated('Use SubstanceDefinitionTable.t instead.')
+SubstanceDefinitionTable tSubstanceDefinition = SubstanceDefinitionTable();

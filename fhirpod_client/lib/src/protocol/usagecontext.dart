@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class UsageContext extends _i1.SerializableEntity {
   UsageContext({
-    this.id,
+    this.fhirId,
     this.extension_,
     required this.code,
     this.valueCodeableConcept,
@@ -25,7 +25,8 @@ class UsageContext extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return UsageContext(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       code: serializationManager
@@ -42,7 +43,7 @@ class UsageContext extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -59,7 +60,7 @@ class UsageContext extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'code': code,
       'valueCodeableConcept': valueCodeableConcept,

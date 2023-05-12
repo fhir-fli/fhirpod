@@ -12,7 +12,7 @@ import 'protocol.dart' as _i2;
 class FhirList extends _i1.SerializableEntity {
   FhirList({
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -48,7 +48,8 @@ class FhirList extends _i1.SerializableEntity {
     return FhirList(
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -107,7 +108,7 @@ class FhirList extends _i1.SerializableEntity {
 
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -165,7 +166,7 @@ class FhirList extends _i1.SerializableEntity {
   Map<String, dynamic> toJson() {
     return {
       'resourceType': resourceType,
-      'id': id,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,

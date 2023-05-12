@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class TestReport extends _i1.SerializableEntity {
+class TestReport extends _i1.TableRow {
   TestReport({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -40,16 +41,18 @@ class TestReport extends _i1.SerializableEntity {
     this.setup,
     this.test,
     this.teardown,
-  });
+  }) : super(id);
 
   factory TestReport.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return TestReport(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -109,9 +112,11 @@ class TestReport extends _i1.SerializableEntity {
     );
   }
 
+  static final t = TestReportTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -168,10 +173,49 @@ class TestReport extends _i1.SerializableEntity {
   _i2.TestReportTeardown? teardown;
 
   @override
+  String get tableName => 'testreport';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'identifier': identifier,
+      'name': name,
+      'nameElement': nameElement,
+      'status': status,
+      'statusElement': statusElement,
+      'testScript': testScript,
+      'result': result,
+      'resultElement': resultElement,
+      'score': score,
+      'scoreElement': scoreElement,
+      'tester': tester,
+      'testerElement': testerElement,
+      'issued': issued,
+      'issuedElement': issuedElement,
+      'participant': participant,
+      'setup': setup,
+      'test': test,
+      'teardown': teardown,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -205,8 +249,9 @@ class TestReport extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -236,4 +281,319 @@ class TestReport extends _i1.SerializableEntity {
       'teardown': teardown,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'name':
+        name = value;
+        return;
+      case 'nameElement':
+        nameElement = value;
+        return;
+      case 'status':
+        status = value;
+        return;
+      case 'statusElement':
+        statusElement = value;
+        return;
+      case 'testScript':
+        testScript = value;
+        return;
+      case 'result':
+        result = value;
+        return;
+      case 'resultElement':
+        resultElement = value;
+        return;
+      case 'score':
+        score = value;
+        return;
+      case 'scoreElement':
+        scoreElement = value;
+        return;
+      case 'tester':
+        tester = value;
+        return;
+      case 'testerElement':
+        testerElement = value;
+        return;
+      case 'issued':
+        issued = value;
+        return;
+      case 'issuedElement':
+        issuedElement = value;
+        return;
+      case 'participant':
+        participant = value;
+        return;
+      case 'setup':
+        setup = value;
+        return;
+      case 'test':
+        test = value;
+        return;
+      case 'teardown':
+        teardown = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<TestReport>> find(
+    _i1.Session session, {
+    TestReportExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<TestReport>(
+      where: where != null ? where(TestReport.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<TestReport?> findSingleRow(
+    _i1.Session session, {
+    TestReportExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<TestReport>(
+      where: where != null ? where(TestReport.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<TestReport?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<TestReport>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required TestReportExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<TestReport>(
+      where: where(TestReport.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    TestReport row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    TestReport row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    TestReport row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    TestReportExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<TestReport>(
+      where: where != null ? where(TestReport.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef TestReportExpressionBuilder = _i1.Expression Function(TestReportTable);
+
+class TestReportTable extends _i1.Table {
+  TestReportTable() : super(tableName: 'testreport');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final name = _i1.ColumnString('name');
+
+  final nameElement = _i1.ColumnSerializable('nameElement');
+
+  final status = _i1.ColumnString('status');
+
+  final statusElement = _i1.ColumnSerializable('statusElement');
+
+  final testScript = _i1.ColumnString('testScript');
+
+  final result = _i1.ColumnString('result');
+
+  final resultElement = _i1.ColumnSerializable('resultElement');
+
+  final score = _i1.ColumnDouble('score');
+
+  final scoreElement = _i1.ColumnSerializable('scoreElement');
+
+  final tester = _i1.ColumnString('tester');
+
+  final testerElement = _i1.ColumnSerializable('testerElement');
+
+  final issued = _i1.ColumnDateTime('issued');
+
+  final issuedElement = _i1.ColumnSerializable('issuedElement');
+
+  final participant = _i1.ColumnSerializable('participant');
+
+  final setup = _i1.ColumnSerializable('setup');
+
+  final test = _i1.ColumnSerializable('test');
+
+  final teardown = _i1.ColumnSerializable('teardown');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        identifier,
+        name,
+        nameElement,
+        status,
+        statusElement,
+        testScript,
+        result,
+        resultElement,
+        score,
+        scoreElement,
+        tester,
+        testerElement,
+        issued,
+        issuedElement,
+        participant,
+        setup,
+        test,
+        teardown,
+      ];
+}
+
+@Deprecated('Use TestReportTable.t instead.')
+TestReportTable tTestReport = TestReportTable();

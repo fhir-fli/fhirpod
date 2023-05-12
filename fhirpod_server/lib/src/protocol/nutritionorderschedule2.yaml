@@ -1,6 +1,6 @@
 class: NutritionOrderSchedule2
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   timing: List<Timing>?

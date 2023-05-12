@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class CapabilityStatementOperation extends _i1.SerializableEntity {
   CapabilityStatementOperation({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     this.name,
@@ -26,7 +26,8 @@ class CapabilityStatementOperation extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return CapabilityStatementOperation(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -45,7 +46,7 @@ class CapabilityStatementOperation extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -64,7 +65,7 @@ class CapabilityStatementOperation extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'name': name,

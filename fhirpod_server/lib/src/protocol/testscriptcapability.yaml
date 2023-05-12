@@ -1,6 +1,6 @@
 class: TestScriptCapability
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   required_: bool?

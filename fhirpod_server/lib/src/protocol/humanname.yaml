@@ -1,6 +1,6 @@
 class: HumanName
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   use: String?
   useElement: Element?

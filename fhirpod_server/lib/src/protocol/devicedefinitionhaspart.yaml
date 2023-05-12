@@ -1,6 +1,6 @@
 class: DeviceDefinitionHasPart
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   reference: Reference

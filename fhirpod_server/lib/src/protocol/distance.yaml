@@ -1,6 +1,6 @@
 class: Distance
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   value: double?
   valueElement: Element?

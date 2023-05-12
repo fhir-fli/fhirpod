@@ -1,6 +1,6 @@
 class: ConceptMapDependsOn
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   attribute: String?

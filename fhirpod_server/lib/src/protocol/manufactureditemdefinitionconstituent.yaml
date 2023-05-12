@@ -1,6 +1,6 @@
 class: ManufacturedItemDefinitionConstituent
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   amount: List<Quantity>?

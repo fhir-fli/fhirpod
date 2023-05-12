@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class ExplanationOfBenefitDiagnosis extends _i1.SerializableEntity {
   ExplanationOfBenefitDiagnosis({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     this.sequence,
@@ -27,7 +27,8 @@ class ExplanationOfBenefitDiagnosis extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return ExplanationOfBenefitDiagnosis(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -49,7 +50,7 @@ class ExplanationOfBenefitDiagnosis extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -70,7 +71,7 @@ class ExplanationOfBenefitDiagnosis extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'sequence': sequence,
@@ -85,7 +86,7 @@ class ExplanationOfBenefitDiagnosis extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'sequence': sequence,

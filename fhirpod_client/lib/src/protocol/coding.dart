@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class Coding extends _i1.SerializableEntity {
   Coding({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.system,
     this.systemElement,
@@ -30,7 +30,8 @@ class Coding extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return Coding(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       system: serializationManager
@@ -56,7 +57,7 @@ class Coding extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -83,7 +84,7 @@ class Coding extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'system': system,
       'systemElement': systemElement,

@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class Person extends _i1.SerializableEntity {
+class Person extends _i1.TableRow {
   Person({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -41,16 +42,18 @@ class Person extends _i1.SerializableEntity {
     this.communication,
     this.managingOrganization,
     this.link,
-  });
+  }) : super(id);
 
   factory Person.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return Person(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -112,9 +115,11 @@ class Person extends _i1.SerializableEntity {
     );
   }
 
+  static final t = PersonTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -173,10 +178,50 @@ class Person extends _i1.SerializableEntity {
   List<_i2.PersonLink>? link;
 
   @override
+  String get tableName => 'person';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'identifier': identifier,
+      'active': active,
+      'activeElement': activeElement,
+      'name': name,
+      'telecom': telecom,
+      'gender': gender,
+      'genderElement': genderElement,
+      'birthDate': birthDate,
+      'birthDateElement': birthDateElement,
+      'deceasedBoolean': deceasedBoolean,
+      'deceasedBooleanElement': deceasedBooleanElement,
+      'deceasedDateTime': deceasedDateTime,
+      'deceasedDateTimeElement': deceasedDateTimeElement,
+      'address': address,
+      'maritalStatus': maritalStatus,
+      'photo': photo,
+      'communication': communication,
+      'managingOrganization': managingOrganization,
+      'link': link,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -211,8 +256,9 @@ class Person extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -243,4 +289,327 @@ class Person extends _i1.SerializableEntity {
       'link': link,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'active':
+        active = value;
+        return;
+      case 'activeElement':
+        activeElement = value;
+        return;
+      case 'name':
+        name = value;
+        return;
+      case 'telecom':
+        telecom = value;
+        return;
+      case 'gender':
+        gender = value;
+        return;
+      case 'genderElement':
+        genderElement = value;
+        return;
+      case 'birthDate':
+        birthDate = value;
+        return;
+      case 'birthDateElement':
+        birthDateElement = value;
+        return;
+      case 'deceasedBoolean':
+        deceasedBoolean = value;
+        return;
+      case 'deceasedBooleanElement':
+        deceasedBooleanElement = value;
+        return;
+      case 'deceasedDateTime':
+        deceasedDateTime = value;
+        return;
+      case 'deceasedDateTimeElement':
+        deceasedDateTimeElement = value;
+        return;
+      case 'address':
+        address = value;
+        return;
+      case 'maritalStatus':
+        maritalStatus = value;
+        return;
+      case 'photo':
+        photo = value;
+        return;
+      case 'communication':
+        communication = value;
+        return;
+      case 'managingOrganization':
+        managingOrganization = value;
+        return;
+      case 'link':
+        link = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<Person>> find(
+    _i1.Session session, {
+    PersonExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<Person>(
+      where: where != null ? where(Person.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<Person?> findSingleRow(
+    _i1.Session session, {
+    PersonExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<Person>(
+      where: where != null ? where(Person.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<Person?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<Person>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required PersonExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<Person>(
+      where: where(Person.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Person row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    Person row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    Person row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    PersonExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<Person>(
+      where: where != null ? where(Person.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef PersonExpressionBuilder = _i1.Expression Function(PersonTable);
+
+class PersonTable extends _i1.Table {
+  PersonTable() : super(tableName: 'person');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final active = _i1.ColumnBool('active');
+
+  final activeElement = _i1.ColumnSerializable('activeElement');
+
+  final name = _i1.ColumnSerializable('name');
+
+  final telecom = _i1.ColumnSerializable('telecom');
+
+  final gender = _i1.ColumnString('gender');
+
+  final genderElement = _i1.ColumnSerializable('genderElement');
+
+  final birthDate = _i1.ColumnDateTime('birthDate');
+
+  final birthDateElement = _i1.ColumnSerializable('birthDateElement');
+
+  final deceasedBoolean = _i1.ColumnBool('deceasedBoolean');
+
+  final deceasedBooleanElement =
+      _i1.ColumnSerializable('deceasedBooleanElement');
+
+  final deceasedDateTime = _i1.ColumnDateTime('deceasedDateTime');
+
+  final deceasedDateTimeElement =
+      _i1.ColumnSerializable('deceasedDateTimeElement');
+
+  final address = _i1.ColumnSerializable('address');
+
+  final maritalStatus = _i1.ColumnSerializable('maritalStatus');
+
+  final photo = _i1.ColumnSerializable('photo');
+
+  final communication = _i1.ColumnSerializable('communication');
+
+  final managingOrganization = _i1.ColumnSerializable('managingOrganization');
+
+  final link = _i1.ColumnSerializable('link');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        identifier,
+        active,
+        activeElement,
+        name,
+        telecom,
+        gender,
+        genderElement,
+        birthDate,
+        birthDateElement,
+        deceasedBoolean,
+        deceasedBooleanElement,
+        deceasedDateTime,
+        deceasedDateTimeElement,
+        address,
+        maritalStatus,
+        photo,
+        communication,
+        managingOrganization,
+        link,
+      ];
+}
+
+@Deprecated('Use PersonTable.t instead.')
+PersonTable tPerson = PersonTable();

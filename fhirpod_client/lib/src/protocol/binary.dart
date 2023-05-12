@@ -11,8 +11,9 @@ import 'protocol.dart' as _i2;
 
 class Binary extends _i1.SerializableEntity {
   Binary({
-    required this.resourceType,
     this.id,
+    required this.resourceType,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -30,9 +31,11 @@ class Binary extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return Binary(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -56,9 +59,14 @@ class Binary extends _i1.SerializableEntity {
     );
   }
 
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  int? id;
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -83,8 +91,9 @@ class Binary extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,

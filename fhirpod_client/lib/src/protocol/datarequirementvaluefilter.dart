@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class DataRequirementValueFilter extends _i1.SerializableEntity {
   DataRequirementValueFilter({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     this.path,
@@ -31,7 +31,8 @@ class DataRequirementValueFilter extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return DataRequirementValueFilter(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -60,7 +61,7 @@ class DataRequirementValueFilter extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -89,7 +90,7 @@ class DataRequirementValueFilter extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'path': path,

@@ -1,6 +1,6 @@
 class: ContactPoint
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   system: String?
   systemElement: Element?

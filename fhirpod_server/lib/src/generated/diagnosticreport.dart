@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class DiagnosticReport extends _i1.SerializableEntity {
+class DiagnosticReport extends _i1.TableRow {
   DiagnosticReport({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -48,16 +49,18 @@ class DiagnosticReport extends _i1.SerializableEntity {
     this.conclusionElement,
     this.conclusionCode,
     this.presentedForm,
-  });
+  }) : super(id);
 
   factory DiagnosticReport.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return DiagnosticReport(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -135,9 +138,11 @@ class DiagnosticReport extends _i1.SerializableEntity {
     );
   }
 
+  static final t = DiagnosticReportTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -210,10 +215,57 @@ class DiagnosticReport extends _i1.SerializableEntity {
   List<_i2.Attachment>? presentedForm;
 
   @override
+  String get tableName => 'diagnosticreport';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'identifier': identifier,
+      'basedOn': basedOn,
+      'status': status,
+      'statusElement': statusElement,
+      'category': category,
+      'code': code,
+      'subject': subject,
+      'encounter': encounter,
+      'effectiveDateTime': effectiveDateTime,
+      'effectiveDateTimeElement': effectiveDateTimeElement,
+      'effectivePeriod': effectivePeriod,
+      'issued': issued,
+      'issuedElement': issuedElement,
+      'performer': performer,
+      'resultsInterpreter': resultsInterpreter,
+      'specimen': specimen,
+      'result': result,
+      'note': note,
+      'study': study,
+      'supportingInfo': supportingInfo,
+      'media': media,
+      'composition': composition,
+      'conclusion': conclusion,
+      'conclusionElement': conclusionElement,
+      'conclusionCode': conclusionCode,
+      'presentedForm': presentedForm,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -255,8 +307,9 @@ class DiagnosticReport extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -294,4 +347,369 @@ class DiagnosticReport extends _i1.SerializableEntity {
       'presentedForm': presentedForm,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'basedOn':
+        basedOn = value;
+        return;
+      case 'status':
+        status = value;
+        return;
+      case 'statusElement':
+        statusElement = value;
+        return;
+      case 'category':
+        category = value;
+        return;
+      case 'code':
+        code = value;
+        return;
+      case 'subject':
+        subject = value;
+        return;
+      case 'encounter':
+        encounter = value;
+        return;
+      case 'effectiveDateTime':
+        effectiveDateTime = value;
+        return;
+      case 'effectiveDateTimeElement':
+        effectiveDateTimeElement = value;
+        return;
+      case 'effectivePeriod':
+        effectivePeriod = value;
+        return;
+      case 'issued':
+        issued = value;
+        return;
+      case 'issuedElement':
+        issuedElement = value;
+        return;
+      case 'performer':
+        performer = value;
+        return;
+      case 'resultsInterpreter':
+        resultsInterpreter = value;
+        return;
+      case 'specimen':
+        specimen = value;
+        return;
+      case 'result':
+        result = value;
+        return;
+      case 'note':
+        note = value;
+        return;
+      case 'study':
+        study = value;
+        return;
+      case 'supportingInfo':
+        supportingInfo = value;
+        return;
+      case 'media':
+        media = value;
+        return;
+      case 'composition':
+        composition = value;
+        return;
+      case 'conclusion':
+        conclusion = value;
+        return;
+      case 'conclusionElement':
+        conclusionElement = value;
+        return;
+      case 'conclusionCode':
+        conclusionCode = value;
+        return;
+      case 'presentedForm':
+        presentedForm = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<DiagnosticReport>> find(
+    _i1.Session session, {
+    DiagnosticReportExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<DiagnosticReport>(
+      where: where != null ? where(DiagnosticReport.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<DiagnosticReport?> findSingleRow(
+    _i1.Session session, {
+    DiagnosticReportExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<DiagnosticReport>(
+      where: where != null ? where(DiagnosticReport.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<DiagnosticReport?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<DiagnosticReport>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required DiagnosticReportExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<DiagnosticReport>(
+      where: where(DiagnosticReport.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    DiagnosticReport row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    DiagnosticReport row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    DiagnosticReport row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    DiagnosticReportExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<DiagnosticReport>(
+      where: where != null ? where(DiagnosticReport.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef DiagnosticReportExpressionBuilder = _i1.Expression Function(
+    DiagnosticReportTable);
+
+class DiagnosticReportTable extends _i1.Table {
+  DiagnosticReportTable() : super(tableName: 'diagnosticreport');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final basedOn = _i1.ColumnSerializable('basedOn');
+
+  final status = _i1.ColumnString('status');
+
+  final statusElement = _i1.ColumnSerializable('statusElement');
+
+  final category = _i1.ColumnSerializable('category');
+
+  final code = _i1.ColumnSerializable('code');
+
+  final subject = _i1.ColumnSerializable('subject');
+
+  final encounter = _i1.ColumnSerializable('encounter');
+
+  final effectiveDateTime = _i1.ColumnDateTime('effectiveDateTime');
+
+  final effectiveDateTimeElement =
+      _i1.ColumnSerializable('effectiveDateTimeElement');
+
+  final effectivePeriod = _i1.ColumnSerializable('effectivePeriod');
+
+  final issued = _i1.ColumnDateTime('issued');
+
+  final issuedElement = _i1.ColumnSerializable('issuedElement');
+
+  final performer = _i1.ColumnSerializable('performer');
+
+  final resultsInterpreter = _i1.ColumnSerializable('resultsInterpreter');
+
+  final specimen = _i1.ColumnSerializable('specimen');
+
+  final result = _i1.ColumnSerializable('result');
+
+  final note = _i1.ColumnSerializable('note');
+
+  final study = _i1.ColumnSerializable('study');
+
+  final supportingInfo = _i1.ColumnSerializable('supportingInfo');
+
+  final media = _i1.ColumnSerializable('media');
+
+  final composition = _i1.ColumnSerializable('composition');
+
+  final conclusion = _i1.ColumnString('conclusion');
+
+  final conclusionElement = _i1.ColumnSerializable('conclusionElement');
+
+  final conclusionCode = _i1.ColumnSerializable('conclusionCode');
+
+  final presentedForm = _i1.ColumnSerializable('presentedForm');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        identifier,
+        basedOn,
+        status,
+        statusElement,
+        category,
+        code,
+        subject,
+        encounter,
+        effectiveDateTime,
+        effectiveDateTimeElement,
+        effectivePeriod,
+        issued,
+        issuedElement,
+        performer,
+        resultsInterpreter,
+        specimen,
+        result,
+        note,
+        study,
+        supportingInfo,
+        media,
+        composition,
+        conclusion,
+        conclusionElement,
+        conclusionCode,
+        presentedForm,
+      ];
+}
+
+@Deprecated('Use DiagnosticReportTable.t instead.')
+DiagnosticReportTable tDiagnosticReport = DiagnosticReportTable();

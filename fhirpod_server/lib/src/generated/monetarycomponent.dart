@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class MonetaryComponent extends _i1.SerializableEntity {
   MonetaryComponent({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.type,
     this.typeElement,
@@ -26,7 +26,8 @@ class MonetaryComponent extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return MonetaryComponent(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       type:
@@ -44,7 +45,7 @@ class MonetaryComponent extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -63,7 +64,7 @@ class MonetaryComponent extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'type': type,
       'typeElement': typeElement,
@@ -77,7 +78,7 @@ class MonetaryComponent extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'type': type,
       'typeElement': typeElement,

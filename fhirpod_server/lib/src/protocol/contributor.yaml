@@ -1,6 +1,6 @@
 class: Contributor
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   type: String?
   typeElement: Element?

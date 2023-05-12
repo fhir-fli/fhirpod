@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class MessageHeader extends _i1.SerializableEntity {
+class MessageHeader extends _i1.TableRow {
   MessageHeader({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -34,16 +35,18 @@ class MessageHeader extends _i1.SerializableEntity {
     this.response,
     this.focus,
     this.definition,
-  });
+  }) : super(id);
 
   factory MessageHeader.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return MessageHeader(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -91,9 +94,11 @@ class MessageHeader extends _i1.SerializableEntity {
     );
   }
 
+  static final t = MessageHeaderTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -138,10 +143,43 @@ class MessageHeader extends _i1.SerializableEntity {
   String? definition;
 
   @override
+  String get tableName => 'messageheader';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'eventCoding': eventCoding,
+      'eventCanonical': eventCanonical,
+      'eventCanonicalElement': eventCanonicalElement,
+      'destination': destination,
+      'sender': sender,
+      'author': author,
+      'source': source,
+      'responsible': responsible,
+      'reason': reason,
+      'response': response,
+      'focus': focus,
+      'definition': definition,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -169,8 +207,9 @@ class MessageHeader extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -194,4 +233,284 @@ class MessageHeader extends _i1.SerializableEntity {
       'definition': definition,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'eventCoding':
+        eventCoding = value;
+        return;
+      case 'eventCanonical':
+        eventCanonical = value;
+        return;
+      case 'eventCanonicalElement':
+        eventCanonicalElement = value;
+        return;
+      case 'destination':
+        destination = value;
+        return;
+      case 'sender':
+        sender = value;
+        return;
+      case 'author':
+        author = value;
+        return;
+      case 'source':
+        source = value;
+        return;
+      case 'responsible':
+        responsible = value;
+        return;
+      case 'reason':
+        reason = value;
+        return;
+      case 'response':
+        response = value;
+        return;
+      case 'focus':
+        focus = value;
+        return;
+      case 'definition':
+        definition = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<MessageHeader>> find(
+    _i1.Session session, {
+    MessageHeaderExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<MessageHeader>(
+      where: where != null ? where(MessageHeader.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<MessageHeader?> findSingleRow(
+    _i1.Session session, {
+    MessageHeaderExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<MessageHeader>(
+      where: where != null ? where(MessageHeader.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<MessageHeader?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<MessageHeader>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required MessageHeaderExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<MessageHeader>(
+      where: where(MessageHeader.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    MessageHeader row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    MessageHeader row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    MessageHeader row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    MessageHeaderExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<MessageHeader>(
+      where: where != null ? where(MessageHeader.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef MessageHeaderExpressionBuilder = _i1.Expression Function(
+    MessageHeaderTable);
+
+class MessageHeaderTable extends _i1.Table {
+  MessageHeaderTable() : super(tableName: 'messageheader');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final eventCoding = _i1.ColumnSerializable('eventCoding');
+
+  final eventCanonical = _i1.ColumnString('eventCanonical');
+
+  final eventCanonicalElement = _i1.ColumnSerializable('eventCanonicalElement');
+
+  final destination = _i1.ColumnSerializable('destination');
+
+  final sender = _i1.ColumnSerializable('sender');
+
+  final author = _i1.ColumnSerializable('author');
+
+  final source = _i1.ColumnSerializable('source');
+
+  final responsible = _i1.ColumnSerializable('responsible');
+
+  final reason = _i1.ColumnSerializable('reason');
+
+  final response = _i1.ColumnSerializable('response');
+
+  final focus = _i1.ColumnSerializable('focus');
+
+  final definition = _i1.ColumnString('definition');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        eventCoding,
+        eventCanonical,
+        eventCanonicalElement,
+        destination,
+        sender,
+        author,
+        source,
+        responsible,
+        reason,
+        response,
+        focus,
+        definition,
+      ];
+}
+
+@Deprecated('Use MessageHeaderTable.t instead.')
+MessageHeaderTable tMessageHeader = MessageHeaderTable();

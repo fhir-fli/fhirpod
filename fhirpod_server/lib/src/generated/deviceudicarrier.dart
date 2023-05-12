@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class DeviceUdiCarrier extends _i1.SerializableEntity {
   DeviceUdiCarrier({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     this.deviceIdentifier,
@@ -33,7 +33,8 @@ class DeviceUdiCarrier extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return DeviceUdiCarrier(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -66,7 +67,7 @@ class DeviceUdiCarrier extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -99,7 +100,7 @@ class DeviceUdiCarrier extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'deviceIdentifier': deviceIdentifier,
@@ -120,7 +121,7 @@ class DeviceUdiCarrier extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'deviceIdentifier': deviceIdentifier,

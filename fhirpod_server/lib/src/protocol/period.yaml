@@ -1,6 +1,6 @@
 class: Period
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   start: DateTime?
   startElement: Element?

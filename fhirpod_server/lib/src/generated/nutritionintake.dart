@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class NutritionIntake extends _i1.SerializableEntity {
+class NutritionIntake extends _i1.TableRow {
   NutritionIntake({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -49,16 +50,18 @@ class NutritionIntake extends _i1.SerializableEntity {
     this.derivedFrom,
     this.reason,
     this.note,
-  });
+  }) : super(id);
 
   factory NutritionIntake.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return NutritionIntake(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -140,9 +143,11 @@ class NutritionIntake extends _i1.SerializableEntity {
     );
   }
 
+  static final t = NutritionIntakeTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -217,10 +222,58 @@ class NutritionIntake extends _i1.SerializableEntity {
   List<_i2.Annotation>? note;
 
   @override
+  String get tableName => 'nutritionintake';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'identifier': identifier,
+      'instantiatesCanonical': instantiatesCanonical,
+      'instantiatesUri': instantiatesUri,
+      'instantiatesUriElement': instantiatesUriElement,
+      'basedOn': basedOn,
+      'partOf': partOf,
+      'status': status,
+      'statusElement': statusElement,
+      'statusReason': statusReason,
+      'code': code,
+      'subject': subject,
+      'encounter': encounter,
+      'occurrenceDateTime': occurrenceDateTime,
+      'occurrenceDateTimeElement': occurrenceDateTimeElement,
+      'occurrencePeriod': occurrencePeriod,
+      'recorded': recorded,
+      'recordedElement': recordedElement,
+      'reportedBoolean': reportedBoolean,
+      'reportedBooleanElement': reportedBooleanElement,
+      'reportedReference': reportedReference,
+      'consumedItem': consumedItem,
+      'ingredientLabel': ingredientLabel,
+      'performer': performer,
+      'location': location,
+      'derivedFrom': derivedFrom,
+      'reason': reason,
+      'note': note,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -263,8 +316,9 @@ class NutritionIntake extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -303,4 +357,377 @@ class NutritionIntake extends _i1.SerializableEntity {
       'note': note,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'instantiatesCanonical':
+        instantiatesCanonical = value;
+        return;
+      case 'instantiatesUri':
+        instantiatesUri = value;
+        return;
+      case 'instantiatesUriElement':
+        instantiatesUriElement = value;
+        return;
+      case 'basedOn':
+        basedOn = value;
+        return;
+      case 'partOf':
+        partOf = value;
+        return;
+      case 'status':
+        status = value;
+        return;
+      case 'statusElement':
+        statusElement = value;
+        return;
+      case 'statusReason':
+        statusReason = value;
+        return;
+      case 'code':
+        code = value;
+        return;
+      case 'subject':
+        subject = value;
+        return;
+      case 'encounter':
+        encounter = value;
+        return;
+      case 'occurrenceDateTime':
+        occurrenceDateTime = value;
+        return;
+      case 'occurrenceDateTimeElement':
+        occurrenceDateTimeElement = value;
+        return;
+      case 'occurrencePeriod':
+        occurrencePeriod = value;
+        return;
+      case 'recorded':
+        recorded = value;
+        return;
+      case 'recordedElement':
+        recordedElement = value;
+        return;
+      case 'reportedBoolean':
+        reportedBoolean = value;
+        return;
+      case 'reportedBooleanElement':
+        reportedBooleanElement = value;
+        return;
+      case 'reportedReference':
+        reportedReference = value;
+        return;
+      case 'consumedItem':
+        consumedItem = value;
+        return;
+      case 'ingredientLabel':
+        ingredientLabel = value;
+        return;
+      case 'performer':
+        performer = value;
+        return;
+      case 'location':
+        location = value;
+        return;
+      case 'derivedFrom':
+        derivedFrom = value;
+        return;
+      case 'reason':
+        reason = value;
+        return;
+      case 'note':
+        note = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<NutritionIntake>> find(
+    _i1.Session session, {
+    NutritionIntakeExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<NutritionIntake>(
+      where: where != null ? where(NutritionIntake.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<NutritionIntake?> findSingleRow(
+    _i1.Session session, {
+    NutritionIntakeExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<NutritionIntake>(
+      where: where != null ? where(NutritionIntake.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<NutritionIntake?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<NutritionIntake>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required NutritionIntakeExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<NutritionIntake>(
+      where: where(NutritionIntake.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    NutritionIntake row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    NutritionIntake row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    NutritionIntake row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    NutritionIntakeExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<NutritionIntake>(
+      where: where != null ? where(NutritionIntake.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef NutritionIntakeExpressionBuilder = _i1.Expression Function(
+    NutritionIntakeTable);
+
+class NutritionIntakeTable extends _i1.Table {
+  NutritionIntakeTable() : super(tableName: 'nutritionintake');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final instantiatesCanonical = _i1.ColumnSerializable('instantiatesCanonical');
+
+  final instantiatesUri = _i1.ColumnSerializable('instantiatesUri');
+
+  final instantiatesUriElement =
+      _i1.ColumnSerializable('instantiatesUriElement');
+
+  final basedOn = _i1.ColumnSerializable('basedOn');
+
+  final partOf = _i1.ColumnSerializable('partOf');
+
+  final status = _i1.ColumnString('status');
+
+  final statusElement = _i1.ColumnSerializable('statusElement');
+
+  final statusReason = _i1.ColumnSerializable('statusReason');
+
+  final code = _i1.ColumnSerializable('code');
+
+  final subject = _i1.ColumnSerializable('subject');
+
+  final encounter = _i1.ColumnSerializable('encounter');
+
+  final occurrenceDateTime = _i1.ColumnDateTime('occurrenceDateTime');
+
+  final occurrenceDateTimeElement =
+      _i1.ColumnSerializable('occurrenceDateTimeElement');
+
+  final occurrencePeriod = _i1.ColumnSerializable('occurrencePeriod');
+
+  final recorded = _i1.ColumnDateTime('recorded');
+
+  final recordedElement = _i1.ColumnSerializable('recordedElement');
+
+  final reportedBoolean = _i1.ColumnBool('reportedBoolean');
+
+  final reportedBooleanElement =
+      _i1.ColumnSerializable('reportedBooleanElement');
+
+  final reportedReference = _i1.ColumnSerializable('reportedReference');
+
+  final consumedItem = _i1.ColumnSerializable('consumedItem');
+
+  final ingredientLabel = _i1.ColumnSerializable('ingredientLabel');
+
+  final performer = _i1.ColumnSerializable('performer');
+
+  final location = _i1.ColumnSerializable('location');
+
+  final derivedFrom = _i1.ColumnSerializable('derivedFrom');
+
+  final reason = _i1.ColumnSerializable('reason');
+
+  final note = _i1.ColumnSerializable('note');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        identifier,
+        instantiatesCanonical,
+        instantiatesUri,
+        instantiatesUriElement,
+        basedOn,
+        partOf,
+        status,
+        statusElement,
+        statusReason,
+        code,
+        subject,
+        encounter,
+        occurrenceDateTime,
+        occurrenceDateTimeElement,
+        occurrencePeriod,
+        recorded,
+        recordedElement,
+        reportedBoolean,
+        reportedBooleanElement,
+        reportedReference,
+        consumedItem,
+        ingredientLabel,
+        performer,
+        location,
+        derivedFrom,
+        reason,
+        note,
+      ];
+}
+
+@Deprecated('Use NutritionIntakeTable.t instead.')
+NutritionIntakeTable tNutritionIntake = NutritionIntakeTable();

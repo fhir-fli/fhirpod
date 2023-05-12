@@ -1,6 +1,6 @@
 class: EvidenceReportCharacteristic
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   code: CodeableConcept

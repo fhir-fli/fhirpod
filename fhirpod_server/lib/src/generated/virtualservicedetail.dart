@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class VirtualServiceDetail extends _i1.SerializableEntity {
   VirtualServiceDetail({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.channelType,
     this.addressUrl,
@@ -33,7 +33,8 @@ class VirtualServiceDetail extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return VirtualServiceDetail(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       channelType: serializationManager
@@ -67,7 +68,7 @@ class VirtualServiceDetail extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -100,7 +101,7 @@ class VirtualServiceDetail extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'channelType': channelType,
       'addressUrl': addressUrl,
@@ -121,7 +122,7 @@ class VirtualServiceDetail extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'channelType': channelType,
       'addressUrl': addressUrl,

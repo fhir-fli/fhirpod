@@ -11,8 +11,9 @@ import 'protocol.dart' as _i2;
 
 class CodeSystem extends _i1.SerializableEntity {
   CodeSystem({
-    required this.resourceType,
     this.id,
+    required this.resourceType,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -76,7 +77,7 @@ class CodeSystem extends _i1.SerializableEntity {
     this.content,
     this.contentElement,
     this.supplements,
-    this.count,
+    this.count_,
     this.countElement,
     this.filter,
     this.property,
@@ -88,9 +89,11 @@ class CodeSystem extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return CodeSystem(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -220,7 +223,8 @@ class CodeSystem extends _i1.SerializableEntity {
           .deserialize<_i2.Element?>(jsonSerialization['contentElement']),
       supplements: serializationManager
           .deserialize<String?>(jsonSerialization['supplements']),
-      count: serializationManager.deserialize<int?>(jsonSerialization['count']),
+      count_:
+          serializationManager.deserialize<int?>(jsonSerialization['count_']),
       countElement: serializationManager
           .deserialize<_i2.Element?>(jsonSerialization['countElement']),
       filter: serializationManager.deserialize<List<_i2.CodeSystemFilter>?>(
@@ -232,9 +236,14 @@ class CodeSystem extends _i1.SerializableEntity {
     );
   }
 
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  int? id;
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -362,7 +371,7 @@ class CodeSystem extends _i1.SerializableEntity {
 
   String? supplements;
 
-  int? count;
+  int? count_;
 
   _i2.Element? countElement;
 
@@ -375,8 +384,9 @@ class CodeSystem extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -440,7 +450,7 @@ class CodeSystem extends _i1.SerializableEntity {
       'content': content,
       'contentElement': contentElement,
       'supplements': supplements,
-      'count': count,
+      'count_': count_,
       'countElement': countElement,
       'filter': filter,
       'property': property,

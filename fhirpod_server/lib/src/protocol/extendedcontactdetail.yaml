@@ -1,6 +1,6 @@
 class: ExtendedContactDetail
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   purpose: CodeableConcept?
   name: List<HumanName>?

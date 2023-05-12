@@ -1,7 +1,8 @@
 class: ResearchStudy
+table: researchstudy
 fields: 
   resourceType: String
-  id: String?
+  fhirId: String?
   meta: FhirMeta?
   implicitRules: String?
   implicitRulesElement: Element?

@@ -1,7 +1,8 @@
 class: Substance
+table: substance
 fields: 
   resourceType: String
-  id: String?
+  fhirId: String?
   meta: FhirMeta?
   implicitRules: String?
   implicitRulesElement: Element?

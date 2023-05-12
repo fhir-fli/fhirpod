@@ -1,6 +1,6 @@
 class: ParameterDefinition
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   name: String?
   nameElement: Element?

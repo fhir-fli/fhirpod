@@ -1,7 +1,8 @@
 class: GenomicStudy
+table: genomicstudy
 fields: 
   resourceType: String
-  id: String?
+  fhirId: String?
   meta: FhirMeta?
   implicitRules: String?
   implicitRulesElement: Element?

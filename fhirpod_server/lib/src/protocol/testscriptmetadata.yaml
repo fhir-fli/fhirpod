@@ -1,6 +1,6 @@
 class: TestScriptMetadata
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   link: List<TestScriptLink>?

@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class MedicationBatch extends _i1.SerializableEntity {
   MedicationBatch({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     this.lotNumber,
@@ -25,7 +25,8 @@ class MedicationBatch extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return MedicationBatch(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -42,7 +43,7 @@ class MedicationBatch extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -59,7 +60,7 @@ class MedicationBatch extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'lotNumber': lotNumber,
@@ -72,7 +73,7 @@ class MedicationBatch extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'lotNumber': lotNumber,

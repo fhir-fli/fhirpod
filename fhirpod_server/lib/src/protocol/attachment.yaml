@@ -1,6 +1,6 @@
 class: Attachment
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   contentType: String?
   contentTypeElement: Element?

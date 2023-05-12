@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class TestScriptScope extends _i1.SerializableEntity {
   TestScriptScope({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     required this.artifact,
@@ -24,7 +24,8 @@ class TestScriptScope extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return TestScriptScope(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -39,7 +40,7 @@ class TestScriptScope extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -54,7 +55,7 @@ class TestScriptScope extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'artifact': artifact,
@@ -66,7 +67,7 @@ class TestScriptScope extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'artifact': artifact,

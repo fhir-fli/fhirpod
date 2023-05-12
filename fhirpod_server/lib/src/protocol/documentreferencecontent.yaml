@@ -1,6 +1,6 @@
 class: DocumentReferenceContent
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   attachment: Attachment

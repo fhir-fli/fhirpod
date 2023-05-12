@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class SubstanceIngredient extends _i1.SerializableEntity {
   SubstanceIngredient({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     this.quantity,
@@ -24,7 +24,8 @@ class SubstanceIngredient extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return SubstanceIngredient(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -40,7 +41,7 @@ class SubstanceIngredient extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -55,7 +56,7 @@ class SubstanceIngredient extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'quantity': quantity,
@@ -67,7 +68,7 @@ class SubstanceIngredient extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'quantity': quantity,

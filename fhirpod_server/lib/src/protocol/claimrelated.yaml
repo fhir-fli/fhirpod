@@ -1,6 +1,6 @@
 class: ClaimRelated
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   claim: Reference?

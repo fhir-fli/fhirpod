@@ -1,6 +1,6 @@
 class: EvidenceReportTarget
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   url: String?

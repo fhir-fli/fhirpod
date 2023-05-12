@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class EvidenceReportSubject extends _i1.SerializableEntity {
   EvidenceReportSubject({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     this.characteristic,
@@ -23,7 +23,8 @@ class EvidenceReportSubject extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return EvidenceReportSubject(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -37,7 +38,7 @@ class EvidenceReportSubject extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -50,7 +51,7 @@ class EvidenceReportSubject extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'characteristic': characteristic,

@@ -1,7 +1,8 @@
 class: AdverseEvent
+table: adverseevent
 fields: 
   resourceType: String
-  id: String?
+  fhirId: String?
   meta: FhirMeta?
   implicitRules: String?
   implicitRulesElement: Element?

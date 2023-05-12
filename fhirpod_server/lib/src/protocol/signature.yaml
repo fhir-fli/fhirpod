@@ -1,6 +1,6 @@
 class: Signature
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   type: List<Coding>?
   when: DateTime?

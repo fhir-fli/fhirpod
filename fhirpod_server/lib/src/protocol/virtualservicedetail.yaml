@@ -1,6 +1,6 @@
 class: VirtualServiceDetail
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   channelType: Coding?
   addressUrl: String?

@@ -1,7 +1,8 @@
 class: ObservationDefinition
+table: observationdefinition
 fields: 
   resourceType: String
-  id: String?
+  fhirId: String?
   meta: FhirMeta?
   implicitRules: String?
   implicitRulesElement: Element?

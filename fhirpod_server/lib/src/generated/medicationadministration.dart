@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class MedicationAdministration extends _i1.SerializableEntity {
+class MedicationAdministration extends _i1.TableRow {
   MedicationAdministration({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -49,16 +50,18 @@ class MedicationAdministration extends _i1.SerializableEntity {
     this.note,
     this.dosage,
     this.eventHistory,
-  });
+  }) : super(id);
 
   factory MedicationAdministration.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return MedicationAdministration(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -140,9 +143,11 @@ class MedicationAdministration extends _i1.SerializableEntity {
     );
   }
 
+  static final t = MedicationAdministrationTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -217,10 +222,58 @@ class MedicationAdministration extends _i1.SerializableEntity {
   List<_i2.Reference>? eventHistory;
 
   @override
+  String get tableName => 'medicationadministration';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'identifier': identifier,
+      'basedOn': basedOn,
+      'partOf': partOf,
+      'status': status,
+      'statusElement': statusElement,
+      'statusReason': statusReason,
+      'category': category,
+      'medication': medication,
+      'subject': subject,
+      'encounter': encounter,
+      'supportingInformation': supportingInformation,
+      'occurenceDateTime': occurenceDateTime,
+      'occurenceDateTimeElement': occurenceDateTimeElement,
+      'occurencePeriod': occurencePeriod,
+      'occurenceTiming': occurenceTiming,
+      'recorded': recorded,
+      'recordedElement': recordedElement,
+      'isSubPotent': isSubPotent,
+      'isSubPotentElement': isSubPotentElement,
+      'subPotentReason': subPotentReason,
+      'performer': performer,
+      'reason': reason,
+      'request': request,
+      'device': device,
+      'note': note,
+      'dosage': dosage,
+      'eventHistory': eventHistory,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -263,8 +316,9 @@ class MedicationAdministration extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -303,4 +357,377 @@ class MedicationAdministration extends _i1.SerializableEntity {
       'eventHistory': eventHistory,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'basedOn':
+        basedOn = value;
+        return;
+      case 'partOf':
+        partOf = value;
+        return;
+      case 'status':
+        status = value;
+        return;
+      case 'statusElement':
+        statusElement = value;
+        return;
+      case 'statusReason':
+        statusReason = value;
+        return;
+      case 'category':
+        category = value;
+        return;
+      case 'medication':
+        medication = value;
+        return;
+      case 'subject':
+        subject = value;
+        return;
+      case 'encounter':
+        encounter = value;
+        return;
+      case 'supportingInformation':
+        supportingInformation = value;
+        return;
+      case 'occurenceDateTime':
+        occurenceDateTime = value;
+        return;
+      case 'occurenceDateTimeElement':
+        occurenceDateTimeElement = value;
+        return;
+      case 'occurencePeriod':
+        occurencePeriod = value;
+        return;
+      case 'occurenceTiming':
+        occurenceTiming = value;
+        return;
+      case 'recorded':
+        recorded = value;
+        return;
+      case 'recordedElement':
+        recordedElement = value;
+        return;
+      case 'isSubPotent':
+        isSubPotent = value;
+        return;
+      case 'isSubPotentElement':
+        isSubPotentElement = value;
+        return;
+      case 'subPotentReason':
+        subPotentReason = value;
+        return;
+      case 'performer':
+        performer = value;
+        return;
+      case 'reason':
+        reason = value;
+        return;
+      case 'request':
+        request = value;
+        return;
+      case 'device':
+        device = value;
+        return;
+      case 'note':
+        note = value;
+        return;
+      case 'dosage':
+        dosage = value;
+        return;
+      case 'eventHistory':
+        eventHistory = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<MedicationAdministration>> find(
+    _i1.Session session, {
+    MedicationAdministrationExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<MedicationAdministration>(
+      where: where != null ? where(MedicationAdministration.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<MedicationAdministration?> findSingleRow(
+    _i1.Session session, {
+    MedicationAdministrationExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<MedicationAdministration>(
+      where: where != null ? where(MedicationAdministration.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<MedicationAdministration?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<MedicationAdministration>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required MedicationAdministrationExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<MedicationAdministration>(
+      where: where(MedicationAdministration.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    MedicationAdministration row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    MedicationAdministration row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    MedicationAdministration row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    MedicationAdministrationExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<MedicationAdministration>(
+      where: where != null ? where(MedicationAdministration.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef MedicationAdministrationExpressionBuilder = _i1.Expression Function(
+    MedicationAdministrationTable);
+
+class MedicationAdministrationTable extends _i1.Table {
+  MedicationAdministrationTable()
+      : super(tableName: 'medicationadministration');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final basedOn = _i1.ColumnSerializable('basedOn');
+
+  final partOf = _i1.ColumnSerializable('partOf');
+
+  final status = _i1.ColumnString('status');
+
+  final statusElement = _i1.ColumnSerializable('statusElement');
+
+  final statusReason = _i1.ColumnSerializable('statusReason');
+
+  final category = _i1.ColumnSerializable('category');
+
+  final medication = _i1.ColumnSerializable('medication');
+
+  final subject = _i1.ColumnSerializable('subject');
+
+  final encounter = _i1.ColumnSerializable('encounter');
+
+  final supportingInformation = _i1.ColumnSerializable('supportingInformation');
+
+  final occurenceDateTime = _i1.ColumnDateTime('occurenceDateTime');
+
+  final occurenceDateTimeElement =
+      _i1.ColumnSerializable('occurenceDateTimeElement');
+
+  final occurencePeriod = _i1.ColumnSerializable('occurencePeriod');
+
+  final occurenceTiming = _i1.ColumnSerializable('occurenceTiming');
+
+  final recorded = _i1.ColumnDateTime('recorded');
+
+  final recordedElement = _i1.ColumnSerializable('recordedElement');
+
+  final isSubPotent = _i1.ColumnBool('isSubPotent');
+
+  final isSubPotentElement = _i1.ColumnSerializable('isSubPotentElement');
+
+  final subPotentReason = _i1.ColumnSerializable('subPotentReason');
+
+  final performer = _i1.ColumnSerializable('performer');
+
+  final reason = _i1.ColumnSerializable('reason');
+
+  final request = _i1.ColumnSerializable('request');
+
+  final device = _i1.ColumnSerializable('device');
+
+  final note = _i1.ColumnSerializable('note');
+
+  final dosage = _i1.ColumnSerializable('dosage');
+
+  final eventHistory = _i1.ColumnSerializable('eventHistory');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        identifier,
+        basedOn,
+        partOf,
+        status,
+        statusElement,
+        statusReason,
+        category,
+        medication,
+        subject,
+        encounter,
+        supportingInformation,
+        occurenceDateTime,
+        occurenceDateTimeElement,
+        occurencePeriod,
+        occurenceTiming,
+        recorded,
+        recordedElement,
+        isSubPotent,
+        isSubPotentElement,
+        subPotentReason,
+        performer,
+        reason,
+        request,
+        device,
+        note,
+        dosage,
+        eventHistory,
+      ];
+}
+
+@Deprecated('Use MedicationAdministrationTable.t instead.')
+MedicationAdministrationTable tMedicationAdministration =
+    MedicationAdministrationTable();

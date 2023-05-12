@@ -1,6 +1,6 @@
 class: EvidenceStatistic
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   description: String?

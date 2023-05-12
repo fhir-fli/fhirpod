@@ -1,6 +1,6 @@
 class: FhirMeta
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   versionId: String?
   versionIdElement: Element?

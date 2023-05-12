@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class Period extends _i1.SerializableEntity {
   Period({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.start,
     this.startElement,
@@ -24,7 +24,8 @@ class Period extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return Period(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       start: serializationManager
@@ -38,7 +39,7 @@ class Period extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -53,7 +54,7 @@ class Period extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'start': start,
       'startElement': startElement,
@@ -65,7 +66,7 @@ class Period extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'start': start,
       'startElement': startElement,

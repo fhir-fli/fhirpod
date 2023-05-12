@@ -1,7 +1,8 @@
 class: InventoryItem
+table: inventoryitem
 fields: 
   resourceType: String
-  id: String?
+  fhirId: String?
   meta: FhirMeta?
   implicitRules: String?
   implicitRulesElement: Element?

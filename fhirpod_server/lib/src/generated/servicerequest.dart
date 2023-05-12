@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class ServiceRequest extends _i1.SerializableEntity {
+class ServiceRequest extends _i1.TableRow {
   ServiceRequest({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -68,16 +69,18 @@ class ServiceRequest extends _i1.SerializableEntity {
     this.note,
     this.patientInstruction,
     this.relevantHistory,
-  });
+  }) : super(id);
 
   factory ServiceRequest.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return ServiceRequest(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -197,9 +200,11 @@ class ServiceRequest extends _i1.SerializableEntity {
     );
   }
 
+  static final t = ServiceRequestTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -312,10 +317,77 @@ class ServiceRequest extends _i1.SerializableEntity {
   List<_i2.Reference>? relevantHistory;
 
   @override
+  String get tableName => 'servicerequest';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'identifier': identifier,
+      'instantiatesCanonical': instantiatesCanonical,
+      'instantiatesUri': instantiatesUri,
+      'instantiatesUriElement': instantiatesUriElement,
+      'basedOn': basedOn,
+      'replaces': replaces,
+      'requisition': requisition,
+      'status': status,
+      'statusElement': statusElement,
+      'intent': intent,
+      'intentElement': intentElement,
+      'category': category,
+      'priority': priority,
+      'priorityElement': priorityElement,
+      'doNotPerform': doNotPerform,
+      'doNotPerformElement': doNotPerformElement,
+      'code': code,
+      'orderDetail': orderDetail,
+      'quantityQuantity': quantityQuantity,
+      'quantityRatio': quantityRatio,
+      'quantityRange': quantityRange,
+      'subject': subject,
+      'focus': focus,
+      'encounter': encounter,
+      'occurrenceDateTime': occurrenceDateTime,
+      'occurrenceDateTimeElement': occurrenceDateTimeElement,
+      'occurrencePeriod': occurrencePeriod,
+      'occurrenceTiming': occurrenceTiming,
+      'asNeededBoolean': asNeededBoolean,
+      'asNeededBooleanElement': asNeededBooleanElement,
+      'asNeededCodeableConcept': asNeededCodeableConcept,
+      'authoredOn': authoredOn,
+      'authoredOnElement': authoredOnElement,
+      'requester': requester,
+      'performerType': performerType,
+      'performer': performer,
+      'location': location,
+      'reason': reason,
+      'insurance': insurance,
+      'supportingInfo': supportingInfo,
+      'specimen': specimen,
+      'bodySite': bodySite,
+      'bodyStructure': bodyStructure,
+      'note': note,
+      'patientInstruction': patientInstruction,
+      'relevantHistory': relevantHistory,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -377,8 +449,9 @@ class ServiceRequest extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -436,4 +509,492 @@ class ServiceRequest extends _i1.SerializableEntity {
       'relevantHistory': relevantHistory,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'instantiatesCanonical':
+        instantiatesCanonical = value;
+        return;
+      case 'instantiatesUri':
+        instantiatesUri = value;
+        return;
+      case 'instantiatesUriElement':
+        instantiatesUriElement = value;
+        return;
+      case 'basedOn':
+        basedOn = value;
+        return;
+      case 'replaces':
+        replaces = value;
+        return;
+      case 'requisition':
+        requisition = value;
+        return;
+      case 'status':
+        status = value;
+        return;
+      case 'statusElement':
+        statusElement = value;
+        return;
+      case 'intent':
+        intent = value;
+        return;
+      case 'intentElement':
+        intentElement = value;
+        return;
+      case 'category':
+        category = value;
+        return;
+      case 'priority':
+        priority = value;
+        return;
+      case 'priorityElement':
+        priorityElement = value;
+        return;
+      case 'doNotPerform':
+        doNotPerform = value;
+        return;
+      case 'doNotPerformElement':
+        doNotPerformElement = value;
+        return;
+      case 'code':
+        code = value;
+        return;
+      case 'orderDetail':
+        orderDetail = value;
+        return;
+      case 'quantityQuantity':
+        quantityQuantity = value;
+        return;
+      case 'quantityRatio':
+        quantityRatio = value;
+        return;
+      case 'quantityRange':
+        quantityRange = value;
+        return;
+      case 'subject':
+        subject = value;
+        return;
+      case 'focus':
+        focus = value;
+        return;
+      case 'encounter':
+        encounter = value;
+        return;
+      case 'occurrenceDateTime':
+        occurrenceDateTime = value;
+        return;
+      case 'occurrenceDateTimeElement':
+        occurrenceDateTimeElement = value;
+        return;
+      case 'occurrencePeriod':
+        occurrencePeriod = value;
+        return;
+      case 'occurrenceTiming':
+        occurrenceTiming = value;
+        return;
+      case 'asNeededBoolean':
+        asNeededBoolean = value;
+        return;
+      case 'asNeededBooleanElement':
+        asNeededBooleanElement = value;
+        return;
+      case 'asNeededCodeableConcept':
+        asNeededCodeableConcept = value;
+        return;
+      case 'authoredOn':
+        authoredOn = value;
+        return;
+      case 'authoredOnElement':
+        authoredOnElement = value;
+        return;
+      case 'requester':
+        requester = value;
+        return;
+      case 'performerType':
+        performerType = value;
+        return;
+      case 'performer':
+        performer = value;
+        return;
+      case 'location':
+        location = value;
+        return;
+      case 'reason':
+        reason = value;
+        return;
+      case 'insurance':
+        insurance = value;
+        return;
+      case 'supportingInfo':
+        supportingInfo = value;
+        return;
+      case 'specimen':
+        specimen = value;
+        return;
+      case 'bodySite':
+        bodySite = value;
+        return;
+      case 'bodyStructure':
+        bodyStructure = value;
+        return;
+      case 'note':
+        note = value;
+        return;
+      case 'patientInstruction':
+        patientInstruction = value;
+        return;
+      case 'relevantHistory':
+        relevantHistory = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<ServiceRequest>> find(
+    _i1.Session session, {
+    ServiceRequestExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<ServiceRequest>(
+      where: where != null ? where(ServiceRequest.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<ServiceRequest?> findSingleRow(
+    _i1.Session session, {
+    ServiceRequestExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<ServiceRequest>(
+      where: where != null ? where(ServiceRequest.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<ServiceRequest?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<ServiceRequest>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required ServiceRequestExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<ServiceRequest>(
+      where: where(ServiceRequest.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    ServiceRequest row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    ServiceRequest row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    ServiceRequest row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    ServiceRequestExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<ServiceRequest>(
+      where: where != null ? where(ServiceRequest.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef ServiceRequestExpressionBuilder = _i1.Expression Function(
+    ServiceRequestTable);
+
+class ServiceRequestTable extends _i1.Table {
+  ServiceRequestTable() : super(tableName: 'servicerequest');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final instantiatesCanonical = _i1.ColumnSerializable('instantiatesCanonical');
+
+  final instantiatesUri = _i1.ColumnSerializable('instantiatesUri');
+
+  final instantiatesUriElement =
+      _i1.ColumnSerializable('instantiatesUriElement');
+
+  final basedOn = _i1.ColumnSerializable('basedOn');
+
+  final replaces = _i1.ColumnSerializable('replaces');
+
+  final requisition = _i1.ColumnSerializable('requisition');
+
+  final status = _i1.ColumnString('status');
+
+  final statusElement = _i1.ColumnSerializable('statusElement');
+
+  final intent = _i1.ColumnString('intent');
+
+  final intentElement = _i1.ColumnSerializable('intentElement');
+
+  final category = _i1.ColumnSerializable('category');
+
+  final priority = _i1.ColumnString('priority');
+
+  final priorityElement = _i1.ColumnSerializable('priorityElement');
+
+  final doNotPerform = _i1.ColumnBool('doNotPerform');
+
+  final doNotPerformElement = _i1.ColumnSerializable('doNotPerformElement');
+
+  final code = _i1.ColumnSerializable('code');
+
+  final orderDetail = _i1.ColumnSerializable('orderDetail');
+
+  final quantityQuantity = _i1.ColumnSerializable('quantityQuantity');
+
+  final quantityRatio = _i1.ColumnSerializable('quantityRatio');
+
+  final quantityRange = _i1.ColumnSerializable('quantityRange');
+
+  final subject = _i1.ColumnSerializable('subject');
+
+  final focus = _i1.ColumnSerializable('focus');
+
+  final encounter = _i1.ColumnSerializable('encounter');
+
+  final occurrenceDateTime = _i1.ColumnDateTime('occurrenceDateTime');
+
+  final occurrenceDateTimeElement =
+      _i1.ColumnSerializable('occurrenceDateTimeElement');
+
+  final occurrencePeriod = _i1.ColumnSerializable('occurrencePeriod');
+
+  final occurrenceTiming = _i1.ColumnSerializable('occurrenceTiming');
+
+  final asNeededBoolean = _i1.ColumnBool('asNeededBoolean');
+
+  final asNeededBooleanElement =
+      _i1.ColumnSerializable('asNeededBooleanElement');
+
+  final asNeededCodeableConcept =
+      _i1.ColumnSerializable('asNeededCodeableConcept');
+
+  final authoredOn = _i1.ColumnDateTime('authoredOn');
+
+  final authoredOnElement = _i1.ColumnSerializable('authoredOnElement');
+
+  final requester = _i1.ColumnSerializable('requester');
+
+  final performerType = _i1.ColumnSerializable('performerType');
+
+  final performer = _i1.ColumnSerializable('performer');
+
+  final location = _i1.ColumnSerializable('location');
+
+  final reason = _i1.ColumnSerializable('reason');
+
+  final insurance = _i1.ColumnSerializable('insurance');
+
+  final supportingInfo = _i1.ColumnSerializable('supportingInfo');
+
+  final specimen = _i1.ColumnSerializable('specimen');
+
+  final bodySite = _i1.ColumnSerializable('bodySite');
+
+  final bodyStructure = _i1.ColumnSerializable('bodyStructure');
+
+  final note = _i1.ColumnSerializable('note');
+
+  final patientInstruction = _i1.ColumnSerializable('patientInstruction');
+
+  final relevantHistory = _i1.ColumnSerializable('relevantHistory');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        identifier,
+        instantiatesCanonical,
+        instantiatesUri,
+        instantiatesUriElement,
+        basedOn,
+        replaces,
+        requisition,
+        status,
+        statusElement,
+        intent,
+        intentElement,
+        category,
+        priority,
+        priorityElement,
+        doNotPerform,
+        doNotPerformElement,
+        code,
+        orderDetail,
+        quantityQuantity,
+        quantityRatio,
+        quantityRange,
+        subject,
+        focus,
+        encounter,
+        occurrenceDateTime,
+        occurrenceDateTimeElement,
+        occurrencePeriod,
+        occurrenceTiming,
+        asNeededBoolean,
+        asNeededBooleanElement,
+        asNeededCodeableConcept,
+        authoredOn,
+        authoredOnElement,
+        requester,
+        performerType,
+        performer,
+        location,
+        reason,
+        insurance,
+        supportingInfo,
+        specimen,
+        bodySite,
+        bodyStructure,
+        note,
+        patientInstruction,
+        relevantHistory,
+      ];
+}
+
+@Deprecated('Use ServiceRequestTable.t instead.')
+ServiceRequestTable tServiceRequest = ServiceRequestTable();

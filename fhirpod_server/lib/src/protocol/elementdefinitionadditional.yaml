@@ -1,6 +1,6 @@
 class: ElementDefinitionAdditional
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   purpose: String?

@@ -1,6 +1,6 @@
 class: InsurancePlanBenefit1
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   type: CodeableConcept

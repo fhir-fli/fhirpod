@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class MedicationRequest extends _i1.SerializableEntity {
+class MedicationRequest extends _i1.TableRow {
   MedicationRequest({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -63,16 +64,18 @@ class MedicationRequest extends _i1.SerializableEntity {
     this.dispenseRequest,
     this.substitution,
     this.eventHistory,
-  });
+  }) : super(id);
 
   factory MedicationRequest.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return MedicationRequest(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -182,9 +185,11 @@ class MedicationRequest extends _i1.SerializableEntity {
     );
   }
 
+  static final t = MedicationRequestTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -287,10 +292,72 @@ class MedicationRequest extends _i1.SerializableEntity {
   List<_i2.Reference>? eventHistory;
 
   @override
+  String get tableName => 'medicationrequest';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'identifier': identifier,
+      'basedOn': basedOn,
+      'priorPrescription': priorPrescription,
+      'groupIdentifier': groupIdentifier,
+      'status': status,
+      'statusElement': statusElement,
+      'statusReason': statusReason,
+      'statusChanged': statusChanged,
+      'statusChangedElement': statusChangedElement,
+      'intent': intent,
+      'intentElement': intentElement,
+      'category': category,
+      'priority': priority,
+      'priorityElement': priorityElement,
+      'doNotPerform': doNotPerform,
+      'doNotPerformElement': doNotPerformElement,
+      'medication': medication,
+      'subject': subject,
+      'informationSource': informationSource,
+      'encounter': encounter,
+      'supportingInformation': supportingInformation,
+      'authoredOn': authoredOn,
+      'authoredOnElement': authoredOnElement,
+      'requester': requester,
+      'reported': reported,
+      'reportedElement': reportedElement,
+      'performerType': performerType,
+      'performer': performer,
+      'device': device,
+      'recorder': recorder,
+      'reason': reason,
+      'courseOfTherapyType': courseOfTherapyType,
+      'insurance': insurance,
+      'note': note,
+      'renderedDosageInstruction': renderedDosageInstruction,
+      'renderedDosageInstructionElement': renderedDosageInstructionElement,
+      'effectiveDosePeriod': effectiveDosePeriod,
+      'dosageInstruction': dosageInstruction,
+      'dispenseRequest': dispenseRequest,
+      'substitution': substitution,
+      'eventHistory': eventHistory,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -347,8 +414,9 @@ class MedicationRequest extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -401,4 +469,460 @@ class MedicationRequest extends _i1.SerializableEntity {
       'eventHistory': eventHistory,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'basedOn':
+        basedOn = value;
+        return;
+      case 'priorPrescription':
+        priorPrescription = value;
+        return;
+      case 'groupIdentifier':
+        groupIdentifier = value;
+        return;
+      case 'status':
+        status = value;
+        return;
+      case 'statusElement':
+        statusElement = value;
+        return;
+      case 'statusReason':
+        statusReason = value;
+        return;
+      case 'statusChanged':
+        statusChanged = value;
+        return;
+      case 'statusChangedElement':
+        statusChangedElement = value;
+        return;
+      case 'intent':
+        intent = value;
+        return;
+      case 'intentElement':
+        intentElement = value;
+        return;
+      case 'category':
+        category = value;
+        return;
+      case 'priority':
+        priority = value;
+        return;
+      case 'priorityElement':
+        priorityElement = value;
+        return;
+      case 'doNotPerform':
+        doNotPerform = value;
+        return;
+      case 'doNotPerformElement':
+        doNotPerformElement = value;
+        return;
+      case 'medication':
+        medication = value;
+        return;
+      case 'subject':
+        subject = value;
+        return;
+      case 'informationSource':
+        informationSource = value;
+        return;
+      case 'encounter':
+        encounter = value;
+        return;
+      case 'supportingInformation':
+        supportingInformation = value;
+        return;
+      case 'authoredOn':
+        authoredOn = value;
+        return;
+      case 'authoredOnElement':
+        authoredOnElement = value;
+        return;
+      case 'requester':
+        requester = value;
+        return;
+      case 'reported':
+        reported = value;
+        return;
+      case 'reportedElement':
+        reportedElement = value;
+        return;
+      case 'performerType':
+        performerType = value;
+        return;
+      case 'performer':
+        performer = value;
+        return;
+      case 'device':
+        device = value;
+        return;
+      case 'recorder':
+        recorder = value;
+        return;
+      case 'reason':
+        reason = value;
+        return;
+      case 'courseOfTherapyType':
+        courseOfTherapyType = value;
+        return;
+      case 'insurance':
+        insurance = value;
+        return;
+      case 'note':
+        note = value;
+        return;
+      case 'renderedDosageInstruction':
+        renderedDosageInstruction = value;
+        return;
+      case 'renderedDosageInstructionElement':
+        renderedDosageInstructionElement = value;
+        return;
+      case 'effectiveDosePeriod':
+        effectiveDosePeriod = value;
+        return;
+      case 'dosageInstruction':
+        dosageInstruction = value;
+        return;
+      case 'dispenseRequest':
+        dispenseRequest = value;
+        return;
+      case 'substitution':
+        substitution = value;
+        return;
+      case 'eventHistory':
+        eventHistory = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<MedicationRequest>> find(
+    _i1.Session session, {
+    MedicationRequestExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<MedicationRequest>(
+      where: where != null ? where(MedicationRequest.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<MedicationRequest?> findSingleRow(
+    _i1.Session session, {
+    MedicationRequestExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<MedicationRequest>(
+      where: where != null ? where(MedicationRequest.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<MedicationRequest?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<MedicationRequest>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required MedicationRequestExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<MedicationRequest>(
+      where: where(MedicationRequest.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    MedicationRequest row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    MedicationRequest row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    MedicationRequest row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    MedicationRequestExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<MedicationRequest>(
+      where: where != null ? where(MedicationRequest.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef MedicationRequestExpressionBuilder = _i1.Expression Function(
+    MedicationRequestTable);
+
+class MedicationRequestTable extends _i1.Table {
+  MedicationRequestTable() : super(tableName: 'medicationrequest');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final basedOn = _i1.ColumnSerializable('basedOn');
+
+  final priorPrescription = _i1.ColumnSerializable('priorPrescription');
+
+  final groupIdentifier = _i1.ColumnSerializable('groupIdentifier');
+
+  final status = _i1.ColumnString('status');
+
+  final statusElement = _i1.ColumnSerializable('statusElement');
+
+  final statusReason = _i1.ColumnSerializable('statusReason');
+
+  final statusChanged = _i1.ColumnDateTime('statusChanged');
+
+  final statusChangedElement = _i1.ColumnSerializable('statusChangedElement');
+
+  final intent = _i1.ColumnString('intent');
+
+  final intentElement = _i1.ColumnSerializable('intentElement');
+
+  final category = _i1.ColumnSerializable('category');
+
+  final priority = _i1.ColumnString('priority');
+
+  final priorityElement = _i1.ColumnSerializable('priorityElement');
+
+  final doNotPerform = _i1.ColumnBool('doNotPerform');
+
+  final doNotPerformElement = _i1.ColumnSerializable('doNotPerformElement');
+
+  final medication = _i1.ColumnSerializable('medication');
+
+  final subject = _i1.ColumnSerializable('subject');
+
+  final informationSource = _i1.ColumnSerializable('informationSource');
+
+  final encounter = _i1.ColumnSerializable('encounter');
+
+  final supportingInformation = _i1.ColumnSerializable('supportingInformation');
+
+  final authoredOn = _i1.ColumnDateTime('authoredOn');
+
+  final authoredOnElement = _i1.ColumnSerializable('authoredOnElement');
+
+  final requester = _i1.ColumnSerializable('requester');
+
+  final reported = _i1.ColumnBool('reported');
+
+  final reportedElement = _i1.ColumnSerializable('reportedElement');
+
+  final performerType = _i1.ColumnSerializable('performerType');
+
+  final performer = _i1.ColumnSerializable('performer');
+
+  final device = _i1.ColumnSerializable('device');
+
+  final recorder = _i1.ColumnSerializable('recorder');
+
+  final reason = _i1.ColumnSerializable('reason');
+
+  final courseOfTherapyType = _i1.ColumnSerializable('courseOfTherapyType');
+
+  final insurance = _i1.ColumnSerializable('insurance');
+
+  final note = _i1.ColumnSerializable('note');
+
+  final renderedDosageInstruction =
+      _i1.ColumnString('renderedDosageInstruction');
+
+  final renderedDosageInstructionElement =
+      _i1.ColumnSerializable('renderedDosageInstructionElement');
+
+  final effectiveDosePeriod = _i1.ColumnSerializable('effectiveDosePeriod');
+
+  final dosageInstruction = _i1.ColumnSerializable('dosageInstruction');
+
+  final dispenseRequest = _i1.ColumnSerializable('dispenseRequest');
+
+  final substitution = _i1.ColumnSerializable('substitution');
+
+  final eventHistory = _i1.ColumnSerializable('eventHistory');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        identifier,
+        basedOn,
+        priorPrescription,
+        groupIdentifier,
+        status,
+        statusElement,
+        statusReason,
+        statusChanged,
+        statusChangedElement,
+        intent,
+        intentElement,
+        category,
+        priority,
+        priorityElement,
+        doNotPerform,
+        doNotPerformElement,
+        medication,
+        subject,
+        informationSource,
+        encounter,
+        supportingInformation,
+        authoredOn,
+        authoredOnElement,
+        requester,
+        reported,
+        reportedElement,
+        performerType,
+        performer,
+        device,
+        recorder,
+        reason,
+        courseOfTherapyType,
+        insurance,
+        note,
+        renderedDosageInstruction,
+        renderedDosageInstructionElement,
+        effectiveDosePeriod,
+        dosageInstruction,
+        dispenseRequest,
+        substitution,
+        eventHistory,
+      ];
+}
+
+@Deprecated('Use MedicationRequestTable.t instead.')
+MedicationRequestTable tMedicationRequest = MedicationRequestTable();

@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class DeviceDefinition extends _i1.SerializableEntity {
+class DeviceDefinition extends _i1.TableRow {
   DeviceDefinition({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -52,16 +53,18 @@ class DeviceDefinition extends _i1.SerializableEntity {
     this.guideline,
     this.correctiveAction,
     this.chargeItem,
-  });
+  }) : super(id);
 
   factory DeviceDefinition.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return DeviceDefinition(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -160,9 +163,11 @@ class DeviceDefinition extends _i1.SerializableEntity {
     );
   }
 
+  static final t = DeviceDefinitionTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -243,10 +248,61 @@ class DeviceDefinition extends _i1.SerializableEntity {
   List<_i2.DeviceDefinitionChargeItem>? chargeItem;
 
   @override
+  String get tableName => 'devicedefinition';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'description': description,
+      'descriptionElement': descriptionElement,
+      'identifier': identifier,
+      'udiDeviceIdentifier': udiDeviceIdentifier,
+      'regulatoryIdentifier': regulatoryIdentifier,
+      'partNumber': partNumber,
+      'partNumberElement': partNumberElement,
+      'manufacturer': manufacturer,
+      'deviceName': deviceName,
+      'modelNumber': modelNumber,
+      'modelNumberElement': modelNumberElement,
+      'classification': classification,
+      'conformsTo': conformsTo,
+      'hasPart': hasPart,
+      'packaging': packaging,
+      'version': version,
+      'safety': safety,
+      'shelfLifeStorage': shelfLifeStorage,
+      'languageCode': languageCode,
+      'property': property,
+      'owner': owner,
+      'contact': contact,
+      'link': link,
+      'note': note,
+      'material': material,
+      'productionIdentifierInUdi': productionIdentifierInUdi,
+      'productionIdentifierInUdiElement': productionIdentifierInUdiElement,
+      'guideline': guideline,
+      'correctiveAction': correctiveAction,
+      'chargeItem': chargeItem,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -292,8 +348,9 @@ class DeviceDefinition extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -335,4 +392,394 @@ class DeviceDefinition extends _i1.SerializableEntity {
       'chargeItem': chargeItem,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'description':
+        description = value;
+        return;
+      case 'descriptionElement':
+        descriptionElement = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'udiDeviceIdentifier':
+        udiDeviceIdentifier = value;
+        return;
+      case 'regulatoryIdentifier':
+        regulatoryIdentifier = value;
+        return;
+      case 'partNumber':
+        partNumber = value;
+        return;
+      case 'partNumberElement':
+        partNumberElement = value;
+        return;
+      case 'manufacturer':
+        manufacturer = value;
+        return;
+      case 'deviceName':
+        deviceName = value;
+        return;
+      case 'modelNumber':
+        modelNumber = value;
+        return;
+      case 'modelNumberElement':
+        modelNumberElement = value;
+        return;
+      case 'classification':
+        classification = value;
+        return;
+      case 'conformsTo':
+        conformsTo = value;
+        return;
+      case 'hasPart':
+        hasPart = value;
+        return;
+      case 'packaging':
+        packaging = value;
+        return;
+      case 'version':
+        version = value;
+        return;
+      case 'safety':
+        safety = value;
+        return;
+      case 'shelfLifeStorage':
+        shelfLifeStorage = value;
+        return;
+      case 'languageCode':
+        languageCode = value;
+        return;
+      case 'property':
+        property = value;
+        return;
+      case 'owner':
+        owner = value;
+        return;
+      case 'contact':
+        contact = value;
+        return;
+      case 'link':
+        link = value;
+        return;
+      case 'note':
+        note = value;
+        return;
+      case 'material':
+        material = value;
+        return;
+      case 'productionIdentifierInUdi':
+        productionIdentifierInUdi = value;
+        return;
+      case 'productionIdentifierInUdiElement':
+        productionIdentifierInUdiElement = value;
+        return;
+      case 'guideline':
+        guideline = value;
+        return;
+      case 'correctiveAction':
+        correctiveAction = value;
+        return;
+      case 'chargeItem':
+        chargeItem = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<DeviceDefinition>> find(
+    _i1.Session session, {
+    DeviceDefinitionExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<DeviceDefinition>(
+      where: where != null ? where(DeviceDefinition.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<DeviceDefinition?> findSingleRow(
+    _i1.Session session, {
+    DeviceDefinitionExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<DeviceDefinition>(
+      where: where != null ? where(DeviceDefinition.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<DeviceDefinition?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<DeviceDefinition>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required DeviceDefinitionExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<DeviceDefinition>(
+      where: where(DeviceDefinition.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    DeviceDefinition row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    DeviceDefinition row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    DeviceDefinition row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    DeviceDefinitionExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<DeviceDefinition>(
+      where: where != null ? where(DeviceDefinition.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef DeviceDefinitionExpressionBuilder = _i1.Expression Function(
+    DeviceDefinitionTable);
+
+class DeviceDefinitionTable extends _i1.Table {
+  DeviceDefinitionTable() : super(tableName: 'devicedefinition');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final description = _i1.ColumnString('description');
+
+  final descriptionElement = _i1.ColumnSerializable('descriptionElement');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final udiDeviceIdentifier = _i1.ColumnSerializable('udiDeviceIdentifier');
+
+  final regulatoryIdentifier = _i1.ColumnSerializable('regulatoryIdentifier');
+
+  final partNumber = _i1.ColumnString('partNumber');
+
+  final partNumberElement = _i1.ColumnSerializable('partNumberElement');
+
+  final manufacturer = _i1.ColumnSerializable('manufacturer');
+
+  final deviceName = _i1.ColumnSerializable('deviceName');
+
+  final modelNumber = _i1.ColumnString('modelNumber');
+
+  final modelNumberElement = _i1.ColumnSerializable('modelNumberElement');
+
+  final classification = _i1.ColumnSerializable('classification');
+
+  final conformsTo = _i1.ColumnSerializable('conformsTo');
+
+  final hasPart = _i1.ColumnSerializable('hasPart');
+
+  final packaging = _i1.ColumnSerializable('packaging');
+
+  final version = _i1.ColumnSerializable('version');
+
+  final safety = _i1.ColumnSerializable('safety');
+
+  final shelfLifeStorage = _i1.ColumnSerializable('shelfLifeStorage');
+
+  final languageCode = _i1.ColumnSerializable('languageCode');
+
+  final property = _i1.ColumnSerializable('property');
+
+  final owner = _i1.ColumnSerializable('owner');
+
+  final contact = _i1.ColumnSerializable('contact');
+
+  final link = _i1.ColumnSerializable('link');
+
+  final note = _i1.ColumnSerializable('note');
+
+  final material = _i1.ColumnSerializable('material');
+
+  final productionIdentifierInUdi =
+      _i1.ColumnSerializable('productionIdentifierInUdi');
+
+  final productionIdentifierInUdiElement =
+      _i1.ColumnSerializable('productionIdentifierInUdiElement');
+
+  final guideline = _i1.ColumnSerializable('guideline');
+
+  final correctiveAction = _i1.ColumnSerializable('correctiveAction');
+
+  final chargeItem = _i1.ColumnSerializable('chargeItem');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        description,
+        descriptionElement,
+        identifier,
+        udiDeviceIdentifier,
+        regulatoryIdentifier,
+        partNumber,
+        partNumberElement,
+        manufacturer,
+        deviceName,
+        modelNumber,
+        modelNumberElement,
+        classification,
+        conformsTo,
+        hasPart,
+        packaging,
+        version,
+        safety,
+        shelfLifeStorage,
+        languageCode,
+        property,
+        owner,
+        contact,
+        link,
+        note,
+        material,
+        productionIdentifierInUdi,
+        productionIdentifierInUdiElement,
+        guideline,
+        correctiveAction,
+        chargeItem,
+      ];
+}
+
+@Deprecated('Use DeviceDefinitionTable.t instead.')
+DeviceDefinitionTable tDeviceDefinition = DeviceDefinitionTable();

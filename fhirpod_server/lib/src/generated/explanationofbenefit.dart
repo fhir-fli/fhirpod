@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class ExplanationOfBenefit extends _i1.SerializableEntity {
+class ExplanationOfBenefit extends _i1.TableRow {
   ExplanationOfBenefit({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -78,16 +79,18 @@ class ExplanationOfBenefit extends _i1.SerializableEntity {
     this.processNote,
     this.benefitPeriod,
     this.benefitBalance,
-  });
+  }) : super(id);
 
   factory ExplanationOfBenefit.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return ExplanationOfBenefit(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -234,9 +237,11 @@ class ExplanationOfBenefit extends _i1.SerializableEntity {
     );
   }
 
+  static final t = ExplanationOfBenefitTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -369,10 +374,87 @@ class ExplanationOfBenefit extends _i1.SerializableEntity {
   List<_i2.ExplanationOfBenefitBenefitBalance>? benefitBalance;
 
   @override
+  String get tableName => 'explanationofbenefit';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'identifier': identifier,
+      'traceNumber': traceNumber,
+      'status': status,
+      'statusElement': statusElement,
+      'type': type,
+      'subType': subType,
+      'use': use,
+      'useElement': useElement,
+      'patient': patient,
+      'billablePeriod': billablePeriod,
+      'created': created,
+      'createdElement': createdElement,
+      'enterer': enterer,
+      'insurer': insurer,
+      'provider': provider,
+      'priority': priority,
+      'fundsReserveRequested': fundsReserveRequested,
+      'fundsReserve': fundsReserve,
+      'related': related,
+      'prescription': prescription,
+      'originalPrescription': originalPrescription,
+      'event': event,
+      'payee': payee,
+      'referral': referral,
+      'encounter': encounter,
+      'facility': facility,
+      'claim': claim,
+      'claimResponse': claimResponse,
+      'outcome': outcome,
+      'outcomeElement': outcomeElement,
+      'decision': decision,
+      'disposition': disposition,
+      'dispositionElement': dispositionElement,
+      'preAuthRef': preAuthRef,
+      'preAuthRefElement': preAuthRefElement,
+      'preAuthRefPeriod': preAuthRefPeriod,
+      'diagnosisRelatedGroup': diagnosisRelatedGroup,
+      'careTeam': careTeam,
+      'supportingInfo': supportingInfo,
+      'diagnosis': diagnosis,
+      'procedure': procedure,
+      'precedence': precedence,
+      'precedenceElement': precedenceElement,
+      'insurance': insurance,
+      'accident': accident,
+      'patientPaid': patientPaid,
+      'item': item,
+      'addItem': addItem,
+      'adjudication': adjudication,
+      'total': total,
+      'payment': payment,
+      'formCode': formCode,
+      'form': form,
+      'processNote': processNote,
+      'benefitPeriod': benefitPeriod,
+      'benefitBalance': benefitBalance,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -444,8 +526,9 @@ class ExplanationOfBenefit extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -513,4 +596,548 @@ class ExplanationOfBenefit extends _i1.SerializableEntity {
       'benefitBalance': benefitBalance,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'traceNumber':
+        traceNumber = value;
+        return;
+      case 'status':
+        status = value;
+        return;
+      case 'statusElement':
+        statusElement = value;
+        return;
+      case 'type':
+        type = value;
+        return;
+      case 'subType':
+        subType = value;
+        return;
+      case 'use':
+        use = value;
+        return;
+      case 'useElement':
+        useElement = value;
+        return;
+      case 'patient':
+        patient = value;
+        return;
+      case 'billablePeriod':
+        billablePeriod = value;
+        return;
+      case 'created':
+        created = value;
+        return;
+      case 'createdElement':
+        createdElement = value;
+        return;
+      case 'enterer':
+        enterer = value;
+        return;
+      case 'insurer':
+        insurer = value;
+        return;
+      case 'provider':
+        provider = value;
+        return;
+      case 'priority':
+        priority = value;
+        return;
+      case 'fundsReserveRequested':
+        fundsReserveRequested = value;
+        return;
+      case 'fundsReserve':
+        fundsReserve = value;
+        return;
+      case 'related':
+        related = value;
+        return;
+      case 'prescription':
+        prescription = value;
+        return;
+      case 'originalPrescription':
+        originalPrescription = value;
+        return;
+      case 'event':
+        event = value;
+        return;
+      case 'payee':
+        payee = value;
+        return;
+      case 'referral':
+        referral = value;
+        return;
+      case 'encounter':
+        encounter = value;
+        return;
+      case 'facility':
+        facility = value;
+        return;
+      case 'claim':
+        claim = value;
+        return;
+      case 'claimResponse':
+        claimResponse = value;
+        return;
+      case 'outcome':
+        outcome = value;
+        return;
+      case 'outcomeElement':
+        outcomeElement = value;
+        return;
+      case 'decision':
+        decision = value;
+        return;
+      case 'disposition':
+        disposition = value;
+        return;
+      case 'dispositionElement':
+        dispositionElement = value;
+        return;
+      case 'preAuthRef':
+        preAuthRef = value;
+        return;
+      case 'preAuthRefElement':
+        preAuthRefElement = value;
+        return;
+      case 'preAuthRefPeriod':
+        preAuthRefPeriod = value;
+        return;
+      case 'diagnosisRelatedGroup':
+        diagnosisRelatedGroup = value;
+        return;
+      case 'careTeam':
+        careTeam = value;
+        return;
+      case 'supportingInfo':
+        supportingInfo = value;
+        return;
+      case 'diagnosis':
+        diagnosis = value;
+        return;
+      case 'procedure':
+        procedure = value;
+        return;
+      case 'precedence':
+        precedence = value;
+        return;
+      case 'precedenceElement':
+        precedenceElement = value;
+        return;
+      case 'insurance':
+        insurance = value;
+        return;
+      case 'accident':
+        accident = value;
+        return;
+      case 'patientPaid':
+        patientPaid = value;
+        return;
+      case 'item':
+        item = value;
+        return;
+      case 'addItem':
+        addItem = value;
+        return;
+      case 'adjudication':
+        adjudication = value;
+        return;
+      case 'total':
+        total = value;
+        return;
+      case 'payment':
+        payment = value;
+        return;
+      case 'formCode':
+        formCode = value;
+        return;
+      case 'form':
+        form = value;
+        return;
+      case 'processNote':
+        processNote = value;
+        return;
+      case 'benefitPeriod':
+        benefitPeriod = value;
+        return;
+      case 'benefitBalance':
+        benefitBalance = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<ExplanationOfBenefit>> find(
+    _i1.Session session, {
+    ExplanationOfBenefitExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<ExplanationOfBenefit>(
+      where: where != null ? where(ExplanationOfBenefit.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<ExplanationOfBenefit?> findSingleRow(
+    _i1.Session session, {
+    ExplanationOfBenefitExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<ExplanationOfBenefit>(
+      where: where != null ? where(ExplanationOfBenefit.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<ExplanationOfBenefit?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<ExplanationOfBenefit>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required ExplanationOfBenefitExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<ExplanationOfBenefit>(
+      where: where(ExplanationOfBenefit.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    ExplanationOfBenefit row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    ExplanationOfBenefit row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    ExplanationOfBenefit row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    ExplanationOfBenefitExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<ExplanationOfBenefit>(
+      where: where != null ? where(ExplanationOfBenefit.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef ExplanationOfBenefitExpressionBuilder = _i1.Expression Function(
+    ExplanationOfBenefitTable);
+
+class ExplanationOfBenefitTable extends _i1.Table {
+  ExplanationOfBenefitTable() : super(tableName: 'explanationofbenefit');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final traceNumber = _i1.ColumnSerializable('traceNumber');
+
+  final status = _i1.ColumnString('status');
+
+  final statusElement = _i1.ColumnSerializable('statusElement');
+
+  final type = _i1.ColumnSerializable('type');
+
+  final subType = _i1.ColumnSerializable('subType');
+
+  final use = _i1.ColumnString('use');
+
+  final useElement = _i1.ColumnSerializable('useElement');
+
+  final patient = _i1.ColumnSerializable('patient');
+
+  final billablePeriod = _i1.ColumnSerializable('billablePeriod');
+
+  final created = _i1.ColumnDateTime('created');
+
+  final createdElement = _i1.ColumnSerializable('createdElement');
+
+  final enterer = _i1.ColumnSerializable('enterer');
+
+  final insurer = _i1.ColumnSerializable('insurer');
+
+  final provider = _i1.ColumnSerializable('provider');
+
+  final priority = _i1.ColumnSerializable('priority');
+
+  final fundsReserveRequested = _i1.ColumnSerializable('fundsReserveRequested');
+
+  final fundsReserve = _i1.ColumnSerializable('fundsReserve');
+
+  final related = _i1.ColumnSerializable('related');
+
+  final prescription = _i1.ColumnSerializable('prescription');
+
+  final originalPrescription = _i1.ColumnSerializable('originalPrescription');
+
+  final event = _i1.ColumnSerializable('event');
+
+  final payee = _i1.ColumnSerializable('payee');
+
+  final referral = _i1.ColumnSerializable('referral');
+
+  final encounter = _i1.ColumnSerializable('encounter');
+
+  final facility = _i1.ColumnSerializable('facility');
+
+  final claim = _i1.ColumnSerializable('claim');
+
+  final claimResponse = _i1.ColumnSerializable('claimResponse');
+
+  final outcome = _i1.ColumnString('outcome');
+
+  final outcomeElement = _i1.ColumnSerializable('outcomeElement');
+
+  final decision = _i1.ColumnSerializable('decision');
+
+  final disposition = _i1.ColumnString('disposition');
+
+  final dispositionElement = _i1.ColumnSerializable('dispositionElement');
+
+  final preAuthRef = _i1.ColumnSerializable('preAuthRef');
+
+  final preAuthRefElement = _i1.ColumnSerializable('preAuthRefElement');
+
+  final preAuthRefPeriod = _i1.ColumnSerializable('preAuthRefPeriod');
+
+  final diagnosisRelatedGroup = _i1.ColumnSerializable('diagnosisRelatedGroup');
+
+  final careTeam = _i1.ColumnSerializable('careTeam');
+
+  final supportingInfo = _i1.ColumnSerializable('supportingInfo');
+
+  final diagnosis = _i1.ColumnSerializable('diagnosis');
+
+  final procedure = _i1.ColumnSerializable('procedure');
+
+  final precedence = _i1.ColumnInt('precedence');
+
+  final precedenceElement = _i1.ColumnSerializable('precedenceElement');
+
+  final insurance = _i1.ColumnSerializable('insurance');
+
+  final accident = _i1.ColumnSerializable('accident');
+
+  final patientPaid = _i1.ColumnSerializable('patientPaid');
+
+  final item = _i1.ColumnSerializable('item');
+
+  final addItem = _i1.ColumnSerializable('addItem');
+
+  final adjudication = _i1.ColumnSerializable('adjudication');
+
+  final total = _i1.ColumnSerializable('total');
+
+  final payment = _i1.ColumnSerializable('payment');
+
+  final formCode = _i1.ColumnSerializable('formCode');
+
+  final form = _i1.ColumnSerializable('form');
+
+  final processNote = _i1.ColumnSerializable('processNote');
+
+  final benefitPeriod = _i1.ColumnSerializable('benefitPeriod');
+
+  final benefitBalance = _i1.ColumnSerializable('benefitBalance');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        identifier,
+        traceNumber,
+        status,
+        statusElement,
+        type,
+        subType,
+        use,
+        useElement,
+        patient,
+        billablePeriod,
+        created,
+        createdElement,
+        enterer,
+        insurer,
+        provider,
+        priority,
+        fundsReserveRequested,
+        fundsReserve,
+        related,
+        prescription,
+        originalPrescription,
+        event,
+        payee,
+        referral,
+        encounter,
+        facility,
+        claim,
+        claimResponse,
+        outcome,
+        outcomeElement,
+        decision,
+        disposition,
+        dispositionElement,
+        preAuthRef,
+        preAuthRefElement,
+        preAuthRefPeriod,
+        diagnosisRelatedGroup,
+        careTeam,
+        supportingInfo,
+        diagnosis,
+        procedure,
+        precedence,
+        precedenceElement,
+        insurance,
+        accident,
+        patientPaid,
+        item,
+        addItem,
+        adjudication,
+        total,
+        payment,
+        formCode,
+        form,
+        processNote,
+        benefitPeriod,
+        benefitBalance,
+      ];
+}
+
+@Deprecated('Use ExplanationOfBenefitTable.t instead.')
+ExplanationOfBenefitTable tExplanationOfBenefit = ExplanationOfBenefitTable();

@@ -1,6 +1,6 @@
 class: TestReportTeardown
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   action: List<TestReportAction2>

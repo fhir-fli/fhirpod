@@ -12,7 +12,7 @@ import 'protocol.dart' as _i2;
 class MedicationKnowledgeRelatedMedicationKnowledge
     extends _i1.SerializableEntity {
   MedicationKnowledgeRelatedMedicationKnowledge({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     required this.type,
@@ -24,7 +24,8 @@ class MedicationKnowledgeRelatedMedicationKnowledge
     _i1.SerializationManager serializationManager,
   ) {
     return MedicationKnowledgeRelatedMedicationKnowledge(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -37,7 +38,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -50,7 +51,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'type': type,
@@ -61,7 +62,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'type': type,

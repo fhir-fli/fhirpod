@@ -1,7 +1,8 @@
 class: PractitionerRole
+table: practitionerrole
 fields: 
   resourceType: String
-  id: String?
+  fhirId: String?
   meta: FhirMeta?
   implicitRules: String?
   implicitRulesElement: Element?

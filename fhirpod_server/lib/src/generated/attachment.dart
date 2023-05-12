@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class Attachment extends _i1.SerializableEntity {
   Attachment({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.contentType,
     this.contentTypeElement,
@@ -46,7 +46,8 @@ class Attachment extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return Attachment(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       contentType: serializationManager
@@ -101,7 +102,7 @@ class Attachment extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -160,7 +161,7 @@ class Attachment extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'contentType': contentType,
       'contentTypeElement': contentTypeElement,
@@ -194,7 +195,7 @@ class Attachment extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'contentType': contentType,
       'contentTypeElement': contentTypeElement,

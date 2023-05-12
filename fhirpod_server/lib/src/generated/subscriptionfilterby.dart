@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class SubscriptionFilterBy extends _i1.SerializableEntity {
   SubscriptionFilterBy({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     this.resourceType,
@@ -31,7 +31,8 @@ class SubscriptionFilterBy extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return SubscriptionFilterBy(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -60,7 +61,7 @@ class SubscriptionFilterBy extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -89,7 +90,7 @@ class SubscriptionFilterBy extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'resourceType': resourceType,
@@ -108,7 +109,7 @@ class SubscriptionFilterBy extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'resourceType': resourceType,

@@ -1,7 +1,8 @@
 class: ImmunizationEvaluation
+table: immunizationevaluation
 fields: 
   resourceType: String
-  id: String?
+  fhirId: String?
   meta: FhirMeta?
   implicitRules: String?
   implicitRulesElement: Element?

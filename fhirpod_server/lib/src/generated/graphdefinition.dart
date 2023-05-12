@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class GraphDefinition extends _i1.SerializableEntity {
+class GraphDefinition extends _i1.TableRow {
   GraphDefinition({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -57,16 +58,18 @@ class GraphDefinition extends _i1.SerializableEntity {
     this.startElement,
     this.node,
     this.link,
-  });
+  }) : super(id);
 
   factory GraphDefinition.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return GraphDefinition(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -160,9 +163,11 @@ class GraphDefinition extends _i1.SerializableEntity {
     );
   }
 
+  static final t = GraphDefinitionTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -253,10 +258,66 @@ class GraphDefinition extends _i1.SerializableEntity {
   List<_i2.GraphDefinitionLink>? link;
 
   @override
+  String get tableName => 'graphdefinition';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'url': url,
+      'urlElement': urlElement,
+      'identifier': identifier,
+      'version': version,
+      'versionElement': versionElement,
+      'versionAlgorithmString': versionAlgorithmString,
+      'versionAlgorithmStringElement': versionAlgorithmStringElement,
+      'versionAlgorithmCoding': versionAlgorithmCoding,
+      'name': name,
+      'nameElement': nameElement,
+      'title': title,
+      'titleElement': titleElement,
+      'status': status,
+      'statusElement': statusElement,
+      'experimental': experimental,
+      'experimentalElement': experimentalElement,
+      'date': date,
+      'dateElement': dateElement,
+      'publisher': publisher,
+      'publisherElement': publisherElement,
+      'contact': contact,
+      'description': description,
+      'descriptionElement': descriptionElement,
+      'useContext': useContext,
+      'jurisdiction': jurisdiction,
+      'purpose': purpose,
+      'purposeElement': purposeElement,
+      'copyright': copyright,
+      'copyrightElement': copyrightElement,
+      'copyrightLabel': copyrightLabel,
+      'copyrightLabelElement': copyrightLabelElement,
+      'start': start,
+      'startElement': startElement,
+      'node': node,
+      'link': link,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -307,8 +368,9 @@ class GraphDefinition extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -355,4 +417,424 @@ class GraphDefinition extends _i1.SerializableEntity {
       'link': link,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'url':
+        url = value;
+        return;
+      case 'urlElement':
+        urlElement = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'version':
+        version = value;
+        return;
+      case 'versionElement':
+        versionElement = value;
+        return;
+      case 'versionAlgorithmString':
+        versionAlgorithmString = value;
+        return;
+      case 'versionAlgorithmStringElement':
+        versionAlgorithmStringElement = value;
+        return;
+      case 'versionAlgorithmCoding':
+        versionAlgorithmCoding = value;
+        return;
+      case 'name':
+        name = value;
+        return;
+      case 'nameElement':
+        nameElement = value;
+        return;
+      case 'title':
+        title = value;
+        return;
+      case 'titleElement':
+        titleElement = value;
+        return;
+      case 'status':
+        status = value;
+        return;
+      case 'statusElement':
+        statusElement = value;
+        return;
+      case 'experimental':
+        experimental = value;
+        return;
+      case 'experimentalElement':
+        experimentalElement = value;
+        return;
+      case 'date':
+        date = value;
+        return;
+      case 'dateElement':
+        dateElement = value;
+        return;
+      case 'publisher':
+        publisher = value;
+        return;
+      case 'publisherElement':
+        publisherElement = value;
+        return;
+      case 'contact':
+        contact = value;
+        return;
+      case 'description':
+        description = value;
+        return;
+      case 'descriptionElement':
+        descriptionElement = value;
+        return;
+      case 'useContext':
+        useContext = value;
+        return;
+      case 'jurisdiction':
+        jurisdiction = value;
+        return;
+      case 'purpose':
+        purpose = value;
+        return;
+      case 'purposeElement':
+        purposeElement = value;
+        return;
+      case 'copyright':
+        copyright = value;
+        return;
+      case 'copyrightElement':
+        copyrightElement = value;
+        return;
+      case 'copyrightLabel':
+        copyrightLabel = value;
+        return;
+      case 'copyrightLabelElement':
+        copyrightLabelElement = value;
+        return;
+      case 'start':
+        start = value;
+        return;
+      case 'startElement':
+        startElement = value;
+        return;
+      case 'node':
+        node = value;
+        return;
+      case 'link':
+        link = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<GraphDefinition>> find(
+    _i1.Session session, {
+    GraphDefinitionExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<GraphDefinition>(
+      where: where != null ? where(GraphDefinition.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<GraphDefinition?> findSingleRow(
+    _i1.Session session, {
+    GraphDefinitionExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<GraphDefinition>(
+      where: where != null ? where(GraphDefinition.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<GraphDefinition?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<GraphDefinition>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required GraphDefinitionExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<GraphDefinition>(
+      where: where(GraphDefinition.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    GraphDefinition row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    GraphDefinition row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    GraphDefinition row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    GraphDefinitionExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<GraphDefinition>(
+      where: where != null ? where(GraphDefinition.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef GraphDefinitionExpressionBuilder = _i1.Expression Function(
+    GraphDefinitionTable);
+
+class GraphDefinitionTable extends _i1.Table {
+  GraphDefinitionTable() : super(tableName: 'graphdefinition');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final url = _i1.ColumnString('url');
+
+  final urlElement = _i1.ColumnSerializable('urlElement');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final version = _i1.ColumnString('version');
+
+  final versionElement = _i1.ColumnSerializable('versionElement');
+
+  final versionAlgorithmString = _i1.ColumnString('versionAlgorithmString');
+
+  final versionAlgorithmStringElement =
+      _i1.ColumnSerializable('versionAlgorithmStringElement');
+
+  final versionAlgorithmCoding =
+      _i1.ColumnSerializable('versionAlgorithmCoding');
+
+  final name = _i1.ColumnString('name');
+
+  final nameElement = _i1.ColumnSerializable('nameElement');
+
+  final title = _i1.ColumnString('title');
+
+  final titleElement = _i1.ColumnSerializable('titleElement');
+
+  final status = _i1.ColumnString('status');
+
+  final statusElement = _i1.ColumnSerializable('statusElement');
+
+  final experimental = _i1.ColumnBool('experimental');
+
+  final experimentalElement = _i1.ColumnSerializable('experimentalElement');
+
+  final date = _i1.ColumnDateTime('date');
+
+  final dateElement = _i1.ColumnSerializable('dateElement');
+
+  final publisher = _i1.ColumnString('publisher');
+
+  final publisherElement = _i1.ColumnSerializable('publisherElement');
+
+  final contact = _i1.ColumnSerializable('contact');
+
+  final description = _i1.ColumnString('description');
+
+  final descriptionElement = _i1.ColumnSerializable('descriptionElement');
+
+  final useContext = _i1.ColumnSerializable('useContext');
+
+  final jurisdiction = _i1.ColumnSerializable('jurisdiction');
+
+  final purpose = _i1.ColumnString('purpose');
+
+  final purposeElement = _i1.ColumnSerializable('purposeElement');
+
+  final copyright = _i1.ColumnString('copyright');
+
+  final copyrightElement = _i1.ColumnSerializable('copyrightElement');
+
+  final copyrightLabel = _i1.ColumnString('copyrightLabel');
+
+  final copyrightLabelElement = _i1.ColumnSerializable('copyrightLabelElement');
+
+  final start = _i1.ColumnString('start');
+
+  final startElement = _i1.ColumnSerializable('startElement');
+
+  final node = _i1.ColumnSerializable('node');
+
+  final link = _i1.ColumnSerializable('link');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        url,
+        urlElement,
+        identifier,
+        version,
+        versionElement,
+        versionAlgorithmString,
+        versionAlgorithmStringElement,
+        versionAlgorithmCoding,
+        name,
+        nameElement,
+        title,
+        titleElement,
+        status,
+        statusElement,
+        experimental,
+        experimentalElement,
+        date,
+        dateElement,
+        publisher,
+        publisherElement,
+        contact,
+        description,
+        descriptionElement,
+        useContext,
+        jurisdiction,
+        purpose,
+        purposeElement,
+        copyright,
+        copyrightElement,
+        copyrightLabel,
+        copyrightLabelElement,
+        start,
+        startElement,
+        node,
+        link,
+      ];
+}
+
+@Deprecated('Use GraphDefinitionTable.t instead.')
+GraphDefinitionTable tGraphDefinition = GraphDefinitionTable();

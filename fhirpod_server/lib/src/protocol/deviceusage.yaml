@@ -1,7 +1,8 @@
 class: DeviceUsage
+table: deviceusage
 fields: 
   resourceType: String
-  id: String?
+  fhirId: String?
   meta: FhirMeta?
   implicitRules: String?
   implicitRulesElement: Element?

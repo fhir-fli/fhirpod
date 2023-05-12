@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class SubstanceReferenceInformationGene extends _i1.SerializableEntity {
   SubstanceReferenceInformationGene({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     this.geneSequenceOrigin,
@@ -24,7 +24,8 @@ class SubstanceReferenceInformationGene extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return SubstanceReferenceInformationGene(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -40,7 +41,7 @@ class SubstanceReferenceInformationGene extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -55,7 +56,7 @@ class SubstanceReferenceInformationGene extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'geneSequenceOrigin': geneSequenceOrigin,

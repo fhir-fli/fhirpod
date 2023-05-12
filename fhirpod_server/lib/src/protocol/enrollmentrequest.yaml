@@ -1,7 +1,8 @@
 class: EnrollmentRequest
+table: enrollmentrequest
 fields: 
   resourceType: String
-  id: String?
+  fhirId: String?
   meta: FhirMeta?
   implicitRules: String?
   implicitRulesElement: Element?

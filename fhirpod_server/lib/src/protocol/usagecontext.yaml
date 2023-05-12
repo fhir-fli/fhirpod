@@ -1,6 +1,6 @@
 class: UsageContext
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   code: Coding
   valueCodeableConcept: CodeableConcept?

@@ -12,7 +12,7 @@ import 'protocol.dart' as _i2;
 class AdministrableProductDefinitionRouteOfAdministration
     extends _i1.SerializableEntity {
   AdministrableProductDefinitionRouteOfAdministration({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     required this.code,
@@ -29,7 +29,8 @@ class AdministrableProductDefinitionRouteOfAdministration
     _i1.SerializationManager serializationManager,
   ) {
     return AdministrableProductDefinitionRouteOfAdministration(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -53,7 +54,7 @@ class AdministrableProductDefinitionRouteOfAdministration
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -76,7 +77,7 @@ class AdministrableProductDefinitionRouteOfAdministration
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'code': code,
@@ -92,7 +93,7 @@ class AdministrableProductDefinitionRouteOfAdministration
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'code': code,

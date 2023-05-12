@@ -1,7 +1,8 @@
 class: StructureDefinition
+table: structuredefinition
 fields: 
   resourceType: String
-  id: String?
+  fhirId: String?
   meta: FhirMeta?
   implicitRules: String?
   implicitRulesElement: Element?

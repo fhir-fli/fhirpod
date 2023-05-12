@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class ElementDefinitionAdditional extends _i1.SerializableEntity {
   ElementDefinitionAdditional({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     this.purpose,
@@ -31,7 +31,8 @@ class ElementDefinitionAdditional extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return ElementDefinitionAdditional(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -59,7 +60,7 @@ class ElementDefinitionAdditional extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -88,7 +89,7 @@ class ElementDefinitionAdditional extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'purpose': purpose,
@@ -107,7 +108,7 @@ class ElementDefinitionAdditional extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'purpose': purpose,

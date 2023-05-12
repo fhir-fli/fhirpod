@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class FamilyMemberHistory extends _i1.SerializableEntity {
+class FamilyMemberHistory extends _i1.TableRow {
   FamilyMemberHistory({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -60,16 +61,18 @@ class FamilyMemberHistory extends _i1.SerializableEntity {
     this.note,
     this.condition,
     this.procedure,
-  });
+  }) : super(id);
 
   factory FamilyMemberHistory.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return FamilyMemberHistory(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -172,9 +175,11 @@ class FamilyMemberHistory extends _i1.SerializableEntity {
     );
   }
 
+  static final t = FamilyMemberHistoryTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -271,10 +276,69 @@ class FamilyMemberHistory extends _i1.SerializableEntity {
   List<_i2.FamilyMemberHistoryProcedure>? procedure;
 
   @override
+  String get tableName => 'familymemberhistory';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'identifier': identifier,
+      'instantiatesCanonical': instantiatesCanonical,
+      'instantiatesUri': instantiatesUri,
+      'instantiatesUriElement': instantiatesUriElement,
+      'status': status,
+      'statusElement': statusElement,
+      'dataAbsentReason': dataAbsentReason,
+      'patient': patient,
+      'date': date,
+      'dateElement': dateElement,
+      'participant': participant,
+      'name': name,
+      'nameElement': nameElement,
+      'relationship': relationship,
+      'sex': sex,
+      'bornPeriod': bornPeriod,
+      'bornDate': bornDate,
+      'bornDateElement': bornDateElement,
+      'bornString': bornString,
+      'bornStringElement': bornStringElement,
+      'ageAge': ageAge,
+      'ageRange': ageRange,
+      'ageString': ageString,
+      'ageStringElement': ageStringElement,
+      'estimatedAge': estimatedAge,
+      'estimatedAgeElement': estimatedAgeElement,
+      'deceasedBoolean': deceasedBoolean,
+      'deceasedBooleanElement': deceasedBooleanElement,
+      'deceasedAge': deceasedAge,
+      'deceasedRange': deceasedRange,
+      'deceasedDate': deceasedDate,
+      'deceasedDateElement': deceasedDateElement,
+      'deceasedString': deceasedString,
+      'deceasedStringElement': deceasedStringElement,
+      'reason': reason,
+      'note': note,
+      'condition': condition,
+      'procedure': procedure,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -328,8 +392,9 @@ class FamilyMemberHistory extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -379,4 +444,442 @@ class FamilyMemberHistory extends _i1.SerializableEntity {
       'procedure': procedure,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'instantiatesCanonical':
+        instantiatesCanonical = value;
+        return;
+      case 'instantiatesUri':
+        instantiatesUri = value;
+        return;
+      case 'instantiatesUriElement':
+        instantiatesUriElement = value;
+        return;
+      case 'status':
+        status = value;
+        return;
+      case 'statusElement':
+        statusElement = value;
+        return;
+      case 'dataAbsentReason':
+        dataAbsentReason = value;
+        return;
+      case 'patient':
+        patient = value;
+        return;
+      case 'date':
+        date = value;
+        return;
+      case 'dateElement':
+        dateElement = value;
+        return;
+      case 'participant':
+        participant = value;
+        return;
+      case 'name':
+        name = value;
+        return;
+      case 'nameElement':
+        nameElement = value;
+        return;
+      case 'relationship':
+        relationship = value;
+        return;
+      case 'sex':
+        sex = value;
+        return;
+      case 'bornPeriod':
+        bornPeriod = value;
+        return;
+      case 'bornDate':
+        bornDate = value;
+        return;
+      case 'bornDateElement':
+        bornDateElement = value;
+        return;
+      case 'bornString':
+        bornString = value;
+        return;
+      case 'bornStringElement':
+        bornStringElement = value;
+        return;
+      case 'ageAge':
+        ageAge = value;
+        return;
+      case 'ageRange':
+        ageRange = value;
+        return;
+      case 'ageString':
+        ageString = value;
+        return;
+      case 'ageStringElement':
+        ageStringElement = value;
+        return;
+      case 'estimatedAge':
+        estimatedAge = value;
+        return;
+      case 'estimatedAgeElement':
+        estimatedAgeElement = value;
+        return;
+      case 'deceasedBoolean':
+        deceasedBoolean = value;
+        return;
+      case 'deceasedBooleanElement':
+        deceasedBooleanElement = value;
+        return;
+      case 'deceasedAge':
+        deceasedAge = value;
+        return;
+      case 'deceasedRange':
+        deceasedRange = value;
+        return;
+      case 'deceasedDate':
+        deceasedDate = value;
+        return;
+      case 'deceasedDateElement':
+        deceasedDateElement = value;
+        return;
+      case 'deceasedString':
+        deceasedString = value;
+        return;
+      case 'deceasedStringElement':
+        deceasedStringElement = value;
+        return;
+      case 'reason':
+        reason = value;
+        return;
+      case 'note':
+        note = value;
+        return;
+      case 'condition':
+        condition = value;
+        return;
+      case 'procedure':
+        procedure = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<FamilyMemberHistory>> find(
+    _i1.Session session, {
+    FamilyMemberHistoryExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<FamilyMemberHistory>(
+      where: where != null ? where(FamilyMemberHistory.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<FamilyMemberHistory?> findSingleRow(
+    _i1.Session session, {
+    FamilyMemberHistoryExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<FamilyMemberHistory>(
+      where: where != null ? where(FamilyMemberHistory.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<FamilyMemberHistory?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<FamilyMemberHistory>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required FamilyMemberHistoryExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<FamilyMemberHistory>(
+      where: where(FamilyMemberHistory.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    FamilyMemberHistory row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    FamilyMemberHistory row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    FamilyMemberHistory row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    FamilyMemberHistoryExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<FamilyMemberHistory>(
+      where: where != null ? where(FamilyMemberHistory.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef FamilyMemberHistoryExpressionBuilder = _i1.Expression Function(
+    FamilyMemberHistoryTable);
+
+class FamilyMemberHistoryTable extends _i1.Table {
+  FamilyMemberHistoryTable() : super(tableName: 'familymemberhistory');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final instantiatesCanonical = _i1.ColumnSerializable('instantiatesCanonical');
+
+  final instantiatesUri = _i1.ColumnSerializable('instantiatesUri');
+
+  final instantiatesUriElement =
+      _i1.ColumnSerializable('instantiatesUriElement');
+
+  final status = _i1.ColumnString('status');
+
+  final statusElement = _i1.ColumnSerializable('statusElement');
+
+  final dataAbsentReason = _i1.ColumnSerializable('dataAbsentReason');
+
+  final patient = _i1.ColumnSerializable('patient');
+
+  final date = _i1.ColumnDateTime('date');
+
+  final dateElement = _i1.ColumnSerializable('dateElement');
+
+  final participant = _i1.ColumnSerializable('participant');
+
+  final name = _i1.ColumnString('name');
+
+  final nameElement = _i1.ColumnSerializable('nameElement');
+
+  final relationship = _i1.ColumnSerializable('relationship');
+
+  final sex = _i1.ColumnSerializable('sex');
+
+  final bornPeriod = _i1.ColumnSerializable('bornPeriod');
+
+  final bornDate = _i1.ColumnDateTime('bornDate');
+
+  final bornDateElement = _i1.ColumnSerializable('bornDateElement');
+
+  final bornString = _i1.ColumnString('bornString');
+
+  final bornStringElement = _i1.ColumnSerializable('bornStringElement');
+
+  final ageAge = _i1.ColumnSerializable('ageAge');
+
+  final ageRange = _i1.ColumnSerializable('ageRange');
+
+  final ageString = _i1.ColumnString('ageString');
+
+  final ageStringElement = _i1.ColumnSerializable('ageStringElement');
+
+  final estimatedAge = _i1.ColumnBool('estimatedAge');
+
+  final estimatedAgeElement = _i1.ColumnSerializable('estimatedAgeElement');
+
+  final deceasedBoolean = _i1.ColumnBool('deceasedBoolean');
+
+  final deceasedBooleanElement =
+      _i1.ColumnSerializable('deceasedBooleanElement');
+
+  final deceasedAge = _i1.ColumnSerializable('deceasedAge');
+
+  final deceasedRange = _i1.ColumnSerializable('deceasedRange');
+
+  final deceasedDate = _i1.ColumnDateTime('deceasedDate');
+
+  final deceasedDateElement = _i1.ColumnSerializable('deceasedDateElement');
+
+  final deceasedString = _i1.ColumnString('deceasedString');
+
+  final deceasedStringElement = _i1.ColumnSerializable('deceasedStringElement');
+
+  final reason = _i1.ColumnSerializable('reason');
+
+  final note = _i1.ColumnSerializable('note');
+
+  final condition = _i1.ColumnSerializable('condition');
+
+  final procedure = _i1.ColumnSerializable('procedure');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        identifier,
+        instantiatesCanonical,
+        instantiatesUri,
+        instantiatesUriElement,
+        status,
+        statusElement,
+        dataAbsentReason,
+        patient,
+        date,
+        dateElement,
+        participant,
+        name,
+        nameElement,
+        relationship,
+        sex,
+        bornPeriod,
+        bornDate,
+        bornDateElement,
+        bornString,
+        bornStringElement,
+        ageAge,
+        ageRange,
+        ageString,
+        ageStringElement,
+        estimatedAge,
+        estimatedAgeElement,
+        deceasedBoolean,
+        deceasedBooleanElement,
+        deceasedAge,
+        deceasedRange,
+        deceasedDate,
+        deceasedDateElement,
+        deceasedString,
+        deceasedStringElement,
+        reason,
+        note,
+        condition,
+        procedure,
+      ];
+}
+
+@Deprecated('Use FamilyMemberHistoryTable.t instead.')
+FamilyMemberHistoryTable tFamilyMemberHistory = FamilyMemberHistoryTable();

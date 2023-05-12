@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class RegulatedAuthorization extends _i1.SerializableEntity {
+class RegulatedAuthorization extends _i1.TableRow {
   RegulatedAuthorization({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -39,16 +40,18 @@ class RegulatedAuthorization extends _i1.SerializableEntity {
     this.regulator,
     this.attachedDocument,
     this.case_,
-  });
+  }) : super(id);
 
   factory RegulatedAuthorization.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return RegulatedAuthorization(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -106,9 +109,11 @@ class RegulatedAuthorization extends _i1.SerializableEntity {
     );
   }
 
+  static final t = RegulatedAuthorizationTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -163,10 +168,48 @@ class RegulatedAuthorization extends _i1.SerializableEntity {
   _i2.RegulatedAuthorizationCase? case_;
 
   @override
+  String get tableName => 'regulatedauthorization';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'identifier': identifier,
+      'subject': subject,
+      'type': type,
+      'description': description,
+      'descriptionElement': descriptionElement,
+      'region': region,
+      'status': status,
+      'statusDate': statusDate,
+      'statusDateElement': statusDateElement,
+      'validityPeriod': validityPeriod,
+      'indication': indication,
+      'intendedUse': intendedUse,
+      'basis': basis,
+      'holder': holder,
+      'regulator': regulator,
+      'attachedDocument': attachedDocument,
+      'case_': case_,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -199,8 +242,9 @@ class RegulatedAuthorization extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -229,4 +273,315 @@ class RegulatedAuthorization extends _i1.SerializableEntity {
       'case_': case_,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'subject':
+        subject = value;
+        return;
+      case 'type':
+        type = value;
+        return;
+      case 'description':
+        description = value;
+        return;
+      case 'descriptionElement':
+        descriptionElement = value;
+        return;
+      case 'region':
+        region = value;
+        return;
+      case 'status':
+        status = value;
+        return;
+      case 'statusDate':
+        statusDate = value;
+        return;
+      case 'statusDateElement':
+        statusDateElement = value;
+        return;
+      case 'validityPeriod':
+        validityPeriod = value;
+        return;
+      case 'indication':
+        indication = value;
+        return;
+      case 'intendedUse':
+        intendedUse = value;
+        return;
+      case 'basis':
+        basis = value;
+        return;
+      case 'holder':
+        holder = value;
+        return;
+      case 'regulator':
+        regulator = value;
+        return;
+      case 'attachedDocument':
+        attachedDocument = value;
+        return;
+      case 'case_':
+        case_ = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<RegulatedAuthorization>> find(
+    _i1.Session session, {
+    RegulatedAuthorizationExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<RegulatedAuthorization>(
+      where: where != null ? where(RegulatedAuthorization.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<RegulatedAuthorization?> findSingleRow(
+    _i1.Session session, {
+    RegulatedAuthorizationExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<RegulatedAuthorization>(
+      where: where != null ? where(RegulatedAuthorization.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<RegulatedAuthorization?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<RegulatedAuthorization>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required RegulatedAuthorizationExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<RegulatedAuthorization>(
+      where: where(RegulatedAuthorization.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    RegulatedAuthorization row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    RegulatedAuthorization row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    RegulatedAuthorization row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    RegulatedAuthorizationExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<RegulatedAuthorization>(
+      where: where != null ? where(RegulatedAuthorization.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef RegulatedAuthorizationExpressionBuilder = _i1.Expression Function(
+    RegulatedAuthorizationTable);
+
+class RegulatedAuthorizationTable extends _i1.Table {
+  RegulatedAuthorizationTable() : super(tableName: 'regulatedauthorization');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final subject = _i1.ColumnSerializable('subject');
+
+  final type = _i1.ColumnSerializable('type');
+
+  final description = _i1.ColumnString('description');
+
+  final descriptionElement = _i1.ColumnSerializable('descriptionElement');
+
+  final region = _i1.ColumnSerializable('region');
+
+  final status = _i1.ColumnSerializable('status');
+
+  final statusDate = _i1.ColumnDateTime('statusDate');
+
+  final statusDateElement = _i1.ColumnSerializable('statusDateElement');
+
+  final validityPeriod = _i1.ColumnSerializable('validityPeriod');
+
+  final indication = _i1.ColumnSerializable('indication');
+
+  final intendedUse = _i1.ColumnSerializable('intendedUse');
+
+  final basis = _i1.ColumnSerializable('basis');
+
+  final holder = _i1.ColumnSerializable('holder');
+
+  final regulator = _i1.ColumnSerializable('regulator');
+
+  final attachedDocument = _i1.ColumnSerializable('attachedDocument');
+
+  final case_ = _i1.ColumnSerializable('case_');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        identifier,
+        subject,
+        type,
+        description,
+        descriptionElement,
+        region,
+        status,
+        statusDate,
+        statusDateElement,
+        validityPeriod,
+        indication,
+        intendedUse,
+        basis,
+        holder,
+        regulator,
+        attachedDocument,
+        case_,
+      ];
+}
+
+@Deprecated('Use RegulatedAuthorizationTable.t instead.')
+RegulatedAuthorizationTable tRegulatedAuthorization =
+    RegulatedAuthorizationTable();

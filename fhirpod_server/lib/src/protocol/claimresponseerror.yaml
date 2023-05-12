@@ -1,6 +1,6 @@
 class: ClaimResponseError
 fields: 
-  id: String?
+  fhirId: String?
   extension_: List<FhirExtension>?
   modifierExtension: List<FhirExtension>?
   itemSequence: int?

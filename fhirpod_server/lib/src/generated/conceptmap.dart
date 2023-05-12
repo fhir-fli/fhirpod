@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class ConceptMap extends _i1.SerializableEntity {
+class ConceptMap extends _i1.TableRow {
   ConceptMap({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -75,16 +76,18 @@ class ConceptMap extends _i1.SerializableEntity {
     this.targetScopeCanonical,
     this.targetScopeCanonicalElement,
     this.group,
-  });
+  }) : super(id);
 
   factory ConceptMap.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return ConceptMap(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -218,9 +221,11 @@ class ConceptMap extends _i1.SerializableEntity {
     );
   }
 
+  static final t = ConceptMapTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -347,10 +352,84 @@ class ConceptMap extends _i1.SerializableEntity {
   List<_i2.ConceptMapGroup>? group;
 
   @override
+  String get tableName => 'conceptmap';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'url': url,
+      'urlElement': urlElement,
+      'identifier': identifier,
+      'version': version,
+      'versionElement': versionElement,
+      'versionAlgorithmString': versionAlgorithmString,
+      'versionAlgorithmStringElement': versionAlgorithmStringElement,
+      'versionAlgorithmCoding': versionAlgorithmCoding,
+      'name': name,
+      'nameElement': nameElement,
+      'title': title,
+      'titleElement': titleElement,
+      'status': status,
+      'statusElement': statusElement,
+      'experimental': experimental,
+      'experimentalElement': experimentalElement,
+      'date': date,
+      'dateElement': dateElement,
+      'publisher': publisher,
+      'publisherElement': publisherElement,
+      'contact': contact,
+      'description': description,
+      'descriptionElement': descriptionElement,
+      'useContext': useContext,
+      'jurisdiction': jurisdiction,
+      'purpose': purpose,
+      'purposeElement': purposeElement,
+      'copyright': copyright,
+      'copyrightElement': copyrightElement,
+      'copyrightLabel': copyrightLabel,
+      'copyrightLabelElement': copyrightLabelElement,
+      'approvalDate': approvalDate,
+      'approvalDateElement': approvalDateElement,
+      'lastReviewDate': lastReviewDate,
+      'lastReviewDateElement': lastReviewDateElement,
+      'effectivePeriod': effectivePeriod,
+      'topic': topic,
+      'author': author,
+      'editor': editor,
+      'reviewer': reviewer,
+      'endorser': endorser,
+      'relatedArtifact': relatedArtifact,
+      'property': property,
+      'additionalAttribute': additionalAttribute,
+      'sourceScopeUri': sourceScopeUri,
+      'sourceScopeUriElement': sourceScopeUriElement,
+      'sourceScopeCanonical': sourceScopeCanonical,
+      'sourceScopeCanonicalElement': sourceScopeCanonicalElement,
+      'targetScopeUri': targetScopeUri,
+      'targetScopeUriElement': targetScopeUriElement,
+      'targetScopeCanonical': targetScopeCanonical,
+      'targetScopeCanonicalElement': targetScopeCanonicalElement,
+      'group': group,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -419,8 +498,9 @@ class ConceptMap extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -485,4 +565,533 @@ class ConceptMap extends _i1.SerializableEntity {
       'group': group,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'url':
+        url = value;
+        return;
+      case 'urlElement':
+        urlElement = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'version':
+        version = value;
+        return;
+      case 'versionElement':
+        versionElement = value;
+        return;
+      case 'versionAlgorithmString':
+        versionAlgorithmString = value;
+        return;
+      case 'versionAlgorithmStringElement':
+        versionAlgorithmStringElement = value;
+        return;
+      case 'versionAlgorithmCoding':
+        versionAlgorithmCoding = value;
+        return;
+      case 'name':
+        name = value;
+        return;
+      case 'nameElement':
+        nameElement = value;
+        return;
+      case 'title':
+        title = value;
+        return;
+      case 'titleElement':
+        titleElement = value;
+        return;
+      case 'status':
+        status = value;
+        return;
+      case 'statusElement':
+        statusElement = value;
+        return;
+      case 'experimental':
+        experimental = value;
+        return;
+      case 'experimentalElement':
+        experimentalElement = value;
+        return;
+      case 'date':
+        date = value;
+        return;
+      case 'dateElement':
+        dateElement = value;
+        return;
+      case 'publisher':
+        publisher = value;
+        return;
+      case 'publisherElement':
+        publisherElement = value;
+        return;
+      case 'contact':
+        contact = value;
+        return;
+      case 'description':
+        description = value;
+        return;
+      case 'descriptionElement':
+        descriptionElement = value;
+        return;
+      case 'useContext':
+        useContext = value;
+        return;
+      case 'jurisdiction':
+        jurisdiction = value;
+        return;
+      case 'purpose':
+        purpose = value;
+        return;
+      case 'purposeElement':
+        purposeElement = value;
+        return;
+      case 'copyright':
+        copyright = value;
+        return;
+      case 'copyrightElement':
+        copyrightElement = value;
+        return;
+      case 'copyrightLabel':
+        copyrightLabel = value;
+        return;
+      case 'copyrightLabelElement':
+        copyrightLabelElement = value;
+        return;
+      case 'approvalDate':
+        approvalDate = value;
+        return;
+      case 'approvalDateElement':
+        approvalDateElement = value;
+        return;
+      case 'lastReviewDate':
+        lastReviewDate = value;
+        return;
+      case 'lastReviewDateElement':
+        lastReviewDateElement = value;
+        return;
+      case 'effectivePeriod':
+        effectivePeriod = value;
+        return;
+      case 'topic':
+        topic = value;
+        return;
+      case 'author':
+        author = value;
+        return;
+      case 'editor':
+        editor = value;
+        return;
+      case 'reviewer':
+        reviewer = value;
+        return;
+      case 'endorser':
+        endorser = value;
+        return;
+      case 'relatedArtifact':
+        relatedArtifact = value;
+        return;
+      case 'property':
+        property = value;
+        return;
+      case 'additionalAttribute':
+        additionalAttribute = value;
+        return;
+      case 'sourceScopeUri':
+        sourceScopeUri = value;
+        return;
+      case 'sourceScopeUriElement':
+        sourceScopeUriElement = value;
+        return;
+      case 'sourceScopeCanonical':
+        sourceScopeCanonical = value;
+        return;
+      case 'sourceScopeCanonicalElement':
+        sourceScopeCanonicalElement = value;
+        return;
+      case 'targetScopeUri':
+        targetScopeUri = value;
+        return;
+      case 'targetScopeUriElement':
+        targetScopeUriElement = value;
+        return;
+      case 'targetScopeCanonical':
+        targetScopeCanonical = value;
+        return;
+      case 'targetScopeCanonicalElement':
+        targetScopeCanonicalElement = value;
+        return;
+      case 'group':
+        group = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<ConceptMap>> find(
+    _i1.Session session, {
+    ConceptMapExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<ConceptMap>(
+      where: where != null ? where(ConceptMap.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<ConceptMap?> findSingleRow(
+    _i1.Session session, {
+    ConceptMapExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<ConceptMap>(
+      where: where != null ? where(ConceptMap.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<ConceptMap?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<ConceptMap>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required ConceptMapExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<ConceptMap>(
+      where: where(ConceptMap.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    ConceptMap row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    ConceptMap row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    ConceptMap row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    ConceptMapExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<ConceptMap>(
+      where: where != null ? where(ConceptMap.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef ConceptMapExpressionBuilder = _i1.Expression Function(ConceptMapTable);
+
+class ConceptMapTable extends _i1.Table {
+  ConceptMapTable() : super(tableName: 'conceptmap');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final url = _i1.ColumnString('url');
+
+  final urlElement = _i1.ColumnSerializable('urlElement');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final version = _i1.ColumnString('version');
+
+  final versionElement = _i1.ColumnSerializable('versionElement');
+
+  final versionAlgorithmString = _i1.ColumnString('versionAlgorithmString');
+
+  final versionAlgorithmStringElement =
+      _i1.ColumnSerializable('versionAlgorithmStringElement');
+
+  final versionAlgorithmCoding =
+      _i1.ColumnSerializable('versionAlgorithmCoding');
+
+  final name = _i1.ColumnString('name');
+
+  final nameElement = _i1.ColumnSerializable('nameElement');
+
+  final title = _i1.ColumnString('title');
+
+  final titleElement = _i1.ColumnSerializable('titleElement');
+
+  final status = _i1.ColumnString('status');
+
+  final statusElement = _i1.ColumnSerializable('statusElement');
+
+  final experimental = _i1.ColumnBool('experimental');
+
+  final experimentalElement = _i1.ColumnSerializable('experimentalElement');
+
+  final date = _i1.ColumnDateTime('date');
+
+  final dateElement = _i1.ColumnSerializable('dateElement');
+
+  final publisher = _i1.ColumnString('publisher');
+
+  final publisherElement = _i1.ColumnSerializable('publisherElement');
+
+  final contact = _i1.ColumnSerializable('contact');
+
+  final description = _i1.ColumnString('description');
+
+  final descriptionElement = _i1.ColumnSerializable('descriptionElement');
+
+  final useContext = _i1.ColumnSerializable('useContext');
+
+  final jurisdiction = _i1.ColumnSerializable('jurisdiction');
+
+  final purpose = _i1.ColumnString('purpose');
+
+  final purposeElement = _i1.ColumnSerializable('purposeElement');
+
+  final copyright = _i1.ColumnString('copyright');
+
+  final copyrightElement = _i1.ColumnSerializable('copyrightElement');
+
+  final copyrightLabel = _i1.ColumnString('copyrightLabel');
+
+  final copyrightLabelElement = _i1.ColumnSerializable('copyrightLabelElement');
+
+  final approvalDate = _i1.ColumnDateTime('approvalDate');
+
+  final approvalDateElement = _i1.ColumnSerializable('approvalDateElement');
+
+  final lastReviewDate = _i1.ColumnDateTime('lastReviewDate');
+
+  final lastReviewDateElement = _i1.ColumnSerializable('lastReviewDateElement');
+
+  final effectivePeriod = _i1.ColumnSerializable('effectivePeriod');
+
+  final topic = _i1.ColumnSerializable('topic');
+
+  final author = _i1.ColumnSerializable('author');
+
+  final editor = _i1.ColumnSerializable('editor');
+
+  final reviewer = _i1.ColumnSerializable('reviewer');
+
+  final endorser = _i1.ColumnSerializable('endorser');
+
+  final relatedArtifact = _i1.ColumnSerializable('relatedArtifact');
+
+  final property = _i1.ColumnSerializable('property');
+
+  final additionalAttribute = _i1.ColumnSerializable('additionalAttribute');
+
+  final sourceScopeUri = _i1.ColumnString('sourceScopeUri');
+
+  final sourceScopeUriElement = _i1.ColumnSerializable('sourceScopeUriElement');
+
+  final sourceScopeCanonical = _i1.ColumnString('sourceScopeCanonical');
+
+  final sourceScopeCanonicalElement =
+      _i1.ColumnSerializable('sourceScopeCanonicalElement');
+
+  final targetScopeUri = _i1.ColumnString('targetScopeUri');
+
+  final targetScopeUriElement = _i1.ColumnSerializable('targetScopeUriElement');
+
+  final targetScopeCanonical = _i1.ColumnString('targetScopeCanonical');
+
+  final targetScopeCanonicalElement =
+      _i1.ColumnSerializable('targetScopeCanonicalElement');
+
+  final group = _i1.ColumnSerializable('group');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        url,
+        urlElement,
+        identifier,
+        version,
+        versionElement,
+        versionAlgorithmString,
+        versionAlgorithmStringElement,
+        versionAlgorithmCoding,
+        name,
+        nameElement,
+        title,
+        titleElement,
+        status,
+        statusElement,
+        experimental,
+        experimentalElement,
+        date,
+        dateElement,
+        publisher,
+        publisherElement,
+        contact,
+        description,
+        descriptionElement,
+        useContext,
+        jurisdiction,
+        purpose,
+        purposeElement,
+        copyright,
+        copyrightElement,
+        copyrightLabel,
+        copyrightLabelElement,
+        approvalDate,
+        approvalDateElement,
+        lastReviewDate,
+        lastReviewDateElement,
+        effectivePeriod,
+        topic,
+        author,
+        editor,
+        reviewer,
+        endorser,
+        relatedArtifact,
+        property,
+        additionalAttribute,
+        sourceScopeUri,
+        sourceScopeUriElement,
+        sourceScopeCanonical,
+        sourceScopeCanonicalElement,
+        targetScopeUri,
+        targetScopeUriElement,
+        targetScopeCanonical,
+        targetScopeCanonicalElement,
+        group,
+      ];
+}
+
+@Deprecated('Use ConceptMapTable.t instead.')
+ConceptMapTable tConceptMap = ConceptMapTable();

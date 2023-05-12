@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class DeviceAssociation extends _i1.SerializableEntity {
+class DeviceAssociation extends _i1.TableRow {
   DeviceAssociation({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -31,16 +32,18 @@ class DeviceAssociation extends _i1.SerializableEntity {
     this.bodyStructure,
     this.period,
     this.operation,
-  });
+  }) : super(id);
 
   factory DeviceAssociation.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return DeviceAssociation(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -83,9 +86,11 @@ class DeviceAssociation extends _i1.SerializableEntity {
     );
   }
 
+  static final t = DeviceAssociationTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -124,10 +129,40 @@ class DeviceAssociation extends _i1.SerializableEntity {
   List<_i2.DeviceAssociationOperation>? operation;
 
   @override
+  String get tableName => 'deviceassociation';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'identifier': identifier,
+      'device': device,
+      'category': category,
+      'status': status,
+      'statusReason': statusReason,
+      'subject': subject,
+      'bodyStructure': bodyStructure,
+      'period': period,
+      'operation': operation,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -152,8 +187,9 @@ class DeviceAssociation extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -174,4 +210,266 @@ class DeviceAssociation extends _i1.SerializableEntity {
       'operation': operation,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'device':
+        device = value;
+        return;
+      case 'category':
+        category = value;
+        return;
+      case 'status':
+        status = value;
+        return;
+      case 'statusReason':
+        statusReason = value;
+        return;
+      case 'subject':
+        subject = value;
+        return;
+      case 'bodyStructure':
+        bodyStructure = value;
+        return;
+      case 'period':
+        period = value;
+        return;
+      case 'operation':
+        operation = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<DeviceAssociation>> find(
+    _i1.Session session, {
+    DeviceAssociationExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<DeviceAssociation>(
+      where: where != null ? where(DeviceAssociation.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<DeviceAssociation?> findSingleRow(
+    _i1.Session session, {
+    DeviceAssociationExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<DeviceAssociation>(
+      where: where != null ? where(DeviceAssociation.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<DeviceAssociation?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<DeviceAssociation>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required DeviceAssociationExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<DeviceAssociation>(
+      where: where(DeviceAssociation.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    DeviceAssociation row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    DeviceAssociation row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    DeviceAssociation row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    DeviceAssociationExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<DeviceAssociation>(
+      where: where != null ? where(DeviceAssociation.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef DeviceAssociationExpressionBuilder = _i1.Expression Function(
+    DeviceAssociationTable);
+
+class DeviceAssociationTable extends _i1.Table {
+  DeviceAssociationTable() : super(tableName: 'deviceassociation');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final device = _i1.ColumnSerializable('device');
+
+  final category = _i1.ColumnSerializable('category');
+
+  final status = _i1.ColumnSerializable('status');
+
+  final statusReason = _i1.ColumnSerializable('statusReason');
+
+  final subject = _i1.ColumnSerializable('subject');
+
+  final bodyStructure = _i1.ColumnSerializable('bodyStructure');
+
+  final period = _i1.ColumnSerializable('period');
+
+  final operation = _i1.ColumnSerializable('operation');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        identifier,
+        device,
+        category,
+        status,
+        statusReason,
+        subject,
+        bodyStructure,
+        period,
+        operation,
+      ];
+}
+
+@Deprecated('Use DeviceAssociationTable.t instead.')
+DeviceAssociationTable tDeviceAssociation = DeviceAssociationTable();

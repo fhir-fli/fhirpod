@@ -11,7 +11,7 @@ import 'protocol.dart' as _i2;
 
 class Availability extends _i1.SerializableEntity {
   Availability({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.availableTime,
     this.notAvailableTime,
@@ -22,7 +22,8 @@ class Availability extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return Availability(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       availableTime: serializationManager
@@ -34,7 +35,7 @@ class Availability extends _i1.SerializableEntity {
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -45,7 +46,7 @@ class Availability extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'availableTime': availableTime,
       'notAvailableTime': notAvailableTime,

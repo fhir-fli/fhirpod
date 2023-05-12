@@ -12,7 +12,7 @@ import 'protocol.dart' as _i2;
 class BiologicallyDerivedProductDispensePerformer
     extends _i1.SerializableEntity {
   BiologicallyDerivedProductDispensePerformer({
-    this.id,
+    this.fhirId,
     this.extension_,
     this.modifierExtension,
     this.function_,
@@ -24,7 +24,8 @@ class BiologicallyDerivedProductDispensePerformer
     _i1.SerializationManager serializationManager,
   ) {
     return BiologicallyDerivedProductDispensePerformer(
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
           jsonSerialization['extension_']),
       modifierExtension:
@@ -37,7 +38,7 @@ class BiologicallyDerivedProductDispensePerformer
     );
   }
 
-  String? id;
+  String? fhirId;
 
   List<_i2.FhirExtension>? extension_;
 
@@ -50,7 +51,7 @@ class BiologicallyDerivedProductDispensePerformer
   @override
   Map<String, dynamic> toJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'function_': function_,
@@ -61,7 +62,7 @@ class BiologicallyDerivedProductDispensePerformer
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'id': id,
+      'fhirId': fhirId,
       'extension_': extension_,
       'modifierExtension': modifierExtension,
       'function_': function_,

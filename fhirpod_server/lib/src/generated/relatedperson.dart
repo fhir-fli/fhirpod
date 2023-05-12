@@ -9,10 +9,11 @@
 import 'package:serverpod/serverpod.dart' as _i1;
 import 'protocol.dart' as _i2;
 
-class RelatedPerson extends _i1.SerializableEntity {
+class RelatedPerson extends _i1.TableRow {
   RelatedPerson({
+    int? id,
     required this.resourceType,
-    this.id,
+    this.fhirId,
     this.meta,
     this.implicitRules,
     this.implicitRulesElement,
@@ -37,16 +38,18 @@ class RelatedPerson extends _i1.SerializableEntity {
     this.photo,
     this.period,
     this.communication,
-  });
+  }) : super(id);
 
   factory RelatedPerson.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
     return RelatedPerson(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
-      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      fhirId: serializationManager
+          .deserialize<String?>(jsonSerialization['fhirId']),
       meta: serializationManager
           .deserialize<_i2.FhirMeta?>(jsonSerialization['meta']),
       implicitRules: serializationManager
@@ -101,9 +104,11 @@ class RelatedPerson extends _i1.SerializableEntity {
     );
   }
 
+  static final t = RelatedPersonTable();
+
   String resourceType;
 
-  String? id;
+  String? fhirId;
 
   _i2.FhirMeta? meta;
 
@@ -154,10 +159,46 @@ class RelatedPerson extends _i1.SerializableEntity {
   List<_i2.RelatedPersonCommunication>? communication;
 
   @override
+  String get tableName => 'relatedperson';
+  @override
   Map<String, dynamic> toJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
+      'meta': meta,
+      'implicitRules': implicitRules,
+      'implicitRulesElement': implicitRulesElement,
+      'language': language,
+      'languageElement': languageElement,
+      'text': text,
+      'contained': contained,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'identifier': identifier,
+      'active': active,
+      'activeElement': activeElement,
+      'patient': patient,
+      'relationship': relationship,
+      'name': name,
+      'telecom': telecom,
+      'gender': gender,
+      'genderElement': genderElement,
+      'birthDate': birthDate,
+      'birthDateElement': birthDateElement,
+      'address': address,
+      'photo': photo,
+      'period': period,
+      'communication': communication,
+    };
+  }
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -188,8 +229,9 @@ class RelatedPerson extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> allToJson() {
     return {
-      'resourceType': resourceType,
       'id': id,
+      'resourceType': resourceType,
+      'fhirId': fhirId,
       'meta': meta,
       'implicitRules': implicitRules,
       'implicitRulesElement': implicitRulesElement,
@@ -216,4 +258,302 @@ class RelatedPerson extends _i1.SerializableEntity {
       'communication': communication,
     };
   }
+
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'resourceType':
+        resourceType = value;
+        return;
+      case 'fhirId':
+        fhirId = value;
+        return;
+      case 'meta':
+        meta = value;
+        return;
+      case 'implicitRules':
+        implicitRules = value;
+        return;
+      case 'implicitRulesElement':
+        implicitRulesElement = value;
+        return;
+      case 'language':
+        language = value;
+        return;
+      case 'languageElement':
+        languageElement = value;
+        return;
+      case 'text':
+        text = value;
+        return;
+      case 'contained':
+        contained = value;
+        return;
+      case 'extension_':
+        extension_ = value;
+        return;
+      case 'modifierExtension':
+        modifierExtension = value;
+        return;
+      case 'identifier':
+        identifier = value;
+        return;
+      case 'active':
+        active = value;
+        return;
+      case 'activeElement':
+        activeElement = value;
+        return;
+      case 'patient':
+        patient = value;
+        return;
+      case 'relationship':
+        relationship = value;
+        return;
+      case 'name':
+        name = value;
+        return;
+      case 'telecom':
+        telecom = value;
+        return;
+      case 'gender':
+        gender = value;
+        return;
+      case 'genderElement':
+        genderElement = value;
+        return;
+      case 'birthDate':
+        birthDate = value;
+        return;
+      case 'birthDateElement':
+        birthDateElement = value;
+        return;
+      case 'address':
+        address = value;
+        return;
+      case 'photo':
+        photo = value;
+        return;
+      case 'period':
+        period = value;
+        return;
+      case 'communication':
+        communication = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  static Future<List<RelatedPerson>> find(
+    _i1.Session session, {
+    RelatedPersonExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<RelatedPerson>(
+      where: where != null ? where(RelatedPerson.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<RelatedPerson?> findSingleRow(
+    _i1.Session session, {
+    RelatedPersonExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<RelatedPerson>(
+      where: where != null ? where(RelatedPerson.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<RelatedPerson?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<RelatedPerson>(id);
+  }
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required RelatedPersonExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<RelatedPerson>(
+      where: where(RelatedPerson.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    RelatedPerson row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> update(
+    _i1.Session session,
+    RelatedPerson row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> insert(
+    _i1.Session session,
+    RelatedPerson row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> count(
+    _i1.Session session, {
+    RelatedPersonExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<RelatedPerson>(
+      where: where != null ? where(RelatedPerson.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
 }
+
+typedef RelatedPersonExpressionBuilder = _i1.Expression Function(
+    RelatedPersonTable);
+
+class RelatedPersonTable extends _i1.Table {
+  RelatedPersonTable() : super(tableName: 'relatedperson');
+
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  final id = _i1.ColumnInt('id');
+
+  final resourceType = _i1.ColumnString('resourceType');
+
+  final fhirId = _i1.ColumnString('fhirId');
+
+  final meta = _i1.ColumnSerializable('meta');
+
+  final implicitRules = _i1.ColumnString('implicitRules');
+
+  final implicitRulesElement = _i1.ColumnSerializable('implicitRulesElement');
+
+  final language = _i1.ColumnString('language');
+
+  final languageElement = _i1.ColumnSerializable('languageElement');
+
+  final text = _i1.ColumnSerializable('text');
+
+  final contained = _i1.ColumnSerializable('contained');
+
+  final extension_ = _i1.ColumnSerializable('extension_');
+
+  final modifierExtension = _i1.ColumnSerializable('modifierExtension');
+
+  final identifier = _i1.ColumnSerializable('identifier');
+
+  final active = _i1.ColumnBool('active');
+
+  final activeElement = _i1.ColumnSerializable('activeElement');
+
+  final patient = _i1.ColumnSerializable('patient');
+
+  final relationship = _i1.ColumnSerializable('relationship');
+
+  final name = _i1.ColumnSerializable('name');
+
+  final telecom = _i1.ColumnSerializable('telecom');
+
+  final gender = _i1.ColumnString('gender');
+
+  final genderElement = _i1.ColumnSerializable('genderElement');
+
+  final birthDate = _i1.ColumnDateTime('birthDate');
+
+  final birthDateElement = _i1.ColumnSerializable('birthDateElement');
+
+  final address = _i1.ColumnSerializable('address');
+
+  final photo = _i1.ColumnSerializable('photo');
+
+  final period = _i1.ColumnSerializable('period');
+
+  final communication = _i1.ColumnSerializable('communication');
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        resourceType,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        contained,
+        extension_,
+        modifierExtension,
+        identifier,
+        active,
+        activeElement,
+        patient,
+        relationship,
+        name,
+        telecom,
+        gender,
+        genderElement,
+        birthDate,
+        birthDateElement,
+        address,
+        photo,
+        period,
+        communication,
+      ];
+}
+
+@Deprecated('Use RelatedPersonTable.t instead.')
+RelatedPersonTable tRelatedPerson = RelatedPersonTable();
