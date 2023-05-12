@@ -1,0 +1,11 @@
+class: MedicationKnowledgeMedicineClassification
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  sourceString: String?
+  sourceStringElement: Element?
+  sourceUri: String?
+  sourceUriElement: Element?
+  classification: List<CodeableConcept>?

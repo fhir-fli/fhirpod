@@ -1,0 +1,35 @@
+class: Consent
+table: consent
+fields: 
+  resourceType: String
+  fhirId: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  status: String?
+  statusElement: Element?
+  category: List<CodeableConcept>?
+  subject: Reference?
+  date: DateTime?
+  dateElement: Element?
+  period: Period?
+  grantor: List<Reference>?
+  grantee: List<Reference>?
+  manager: List<Reference>?
+  controller: List<Reference>?
+  sourceAttachment: List<Attachment>?
+  sourceReference: List<Reference>?
+  regulatoryBasis: List<CodeableConcept>?
+  policyBasis: ConsentPolicyBasis?
+  policyText: List<Reference>?
+  verification: List<ConsentVerification>?
+  decision: String?
+  decisionElement: Element?
+  provision: List<ConsentProvision>?

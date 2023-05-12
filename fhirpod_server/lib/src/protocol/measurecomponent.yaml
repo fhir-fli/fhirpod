@@ -1,0 +1,12 @@
+class: MeasureComponent
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  linkId: String?
+  linkIdElement: Element?
+  code: CodeableConcept?
+  description: String?
+  descriptionElement: Element?
+  criteria: Expression?
+  groupDefinition: Reference?

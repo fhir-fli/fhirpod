@@ -1,0 +1,18 @@
+class: ImplementationGuidePage
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  sourceUrl: String?
+  sourceUrlElement: Element?
+  sourceString: String?
+  sourceStringElement: Element?
+  sourceMarkdown: String?
+  sourceMarkdownElement: Element?
+  name: String?
+  nameElement: Element?
+  title: String?
+  titleElement: Element?
+  generation: String?
+  generationElement: Element?
+  page: List<ImplementationGuidePage>?

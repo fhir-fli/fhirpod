@@ -1,0 +1,15 @@
+class: Binary
+table: binary
+fields: 
+  resourceType: String
+  fhirId: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  contentType: String?
+  contentTypeElement: Element?
+  securityContext: Reference?
+  data: String?
+  dataElement: Element?

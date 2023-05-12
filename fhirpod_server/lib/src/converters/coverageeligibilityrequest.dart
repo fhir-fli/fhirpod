@@ -1,0 +1,36 @@
+import 'package:fhir/r5.dart' as client;
+import 'package:fhirpod_server/src/generated/protocol.dart' as server;
+client.CoverageEligibilityRequest coverageeligibilityrequestoverageEligibilityRequestToServer(server.CoverageEligibilityRequest resource) => client.CoverageEligibilityRequest(
+
+id: resource.id == null ? null : resource.id,
+meta: resource.meta == null ? null : resource.meta,
+implicitRules: resource.implicitRules == null ? null : resource.implicitRules,
+implicitRulesElement: resource.implicitRulesElement == null ? null : resource.implicitRulesElement,
+language: resource.language == null ? null : resource.language,
+languageElement: resource.languageElement == null ? null : resource.languageElement,
+text: resource.text == null ? null : resource.text,
+contained: resource.contained == null ? null : resource.contained,
+extension_: resource.extension_ == null ? null : resource.extension_,
+modifierExtension: resource.modifierExtension == null ? null : resource.modifierExtension,
+identifier: resource.identifier == null ? null : resource.identifier,
+status: resource.status == null ? null : resource.status,
+statusElement: resource.statusElement == null ? null : resource.statusElement,
+priority: resource.priority == null ? null : resource.priority,
+purpose: resource.purpose == null ? null : resource.purpose,
+purposeElement: resource.purposeElement == null ? null : resource.purposeElement,
+patient: resource.patient == null ? null : resource.patient,
+event: resource.event == null ? null : resource.event,
+servicedDate: resource.servicedDate == null ? null : resource.servicedDate,
+servicedDateElement: resource.servicedDateElement == null ? null : resource.servicedDateElement,
+servicedPeriod: resource.servicedPeriod == null ? null : resource.servicedPeriod,
+created: resource.created == null ? null : resource.created,
+createdElement: resource.createdElement == null ? null : resource.createdElement,
+enterer: resource.enterer == null ? null : resource.enterer,
+provider: resource.provider == null ? null : resource.provider,
+insurer: resource.insurer == null ? null : resource.insurer,
+facility: resource.facility == null ? null : resource.facility,
+supportingInfo: resource.supportingInfo == null ? null : resource.supportingInfo,
+insurance: resource.insurance == null ? null : resource.insurance,
+item: resource.item == null ? null : resource.item,
+
+);

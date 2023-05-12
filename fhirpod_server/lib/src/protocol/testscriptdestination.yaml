@@ -1,0 +1,10 @@
+class: TestScriptDestination
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  index: int?
+  indexElement: Element?
+  profile: Coding
+  url: String?
+  urlElement: Element?

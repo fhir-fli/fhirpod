@@ -1,0 +1,37 @@
+import 'package:fhir/r5.dart' as client;
+import 'package:fhirpod_server/src/generated/protocol.dart' as server;
+client.MeasureReport measurereporteasureReportToServer(server.MeasureReport resource) => client.MeasureReport(
+
+id: resource.id == null ? null : resource.id,
+meta: resource.meta == null ? null : resource.meta,
+implicitRules: resource.implicitRules == null ? null : resource.implicitRules,
+implicitRulesElement: resource.implicitRulesElement == null ? null : resource.implicitRulesElement,
+language: resource.language == null ? null : resource.language,
+languageElement: resource.languageElement == null ? null : resource.languageElement,
+text: resource.text == null ? null : resource.text,
+contained: resource.contained == null ? null : resource.contained,
+extension_: resource.extension_ == null ? null : resource.extension_,
+modifierExtension: resource.modifierExtension == null ? null : resource.modifierExtension,
+identifier: resource.identifier == null ? null : resource.identifier,
+status: resource.status == null ? null : resource.status,
+statusElement: resource.statusElement == null ? null : resource.statusElement,
+type: resource.type == null ? null : resource.type,
+typeElement: resource.typeElement == null ? null : resource.typeElement,
+dataUpdateType: resource.dataUpdateType == null ? null : resource.dataUpdateType,
+dataUpdateTypeElement: resource.dataUpdateTypeElement == null ? null : resource.dataUpdateTypeElement,
+measure: resource.measure == null ? null : resource.measure,
+subject: resource.subject == null ? null : resource.subject,
+date: resource.date == null ? null : resource.date,
+dateElement: resource.dateElement == null ? null : resource.dateElement,
+reporter: resource.reporter == null ? null : resource.reporter,
+reportingVendor: resource.reportingVendor == null ? null : resource.reportingVendor,
+location: resource.location == null ? null : resource.location,
+period: resource.period == null ? null : resource.period,
+inputParameters: resource.inputParameters == null ? null : resource.inputParameters,
+scoring: resource.scoring == null ? null : resource.scoring,
+improvementNotation: resource.improvementNotation == null ? null : resource.improvementNotation,
+group: resource.group == null ? null : resource.group,
+supplementalData: resource.supplementalData == null ? null : resource.supplementalData,
+evaluatedResource: resource.evaluatedResource == null ? null : resource.evaluatedResource,
+
+);

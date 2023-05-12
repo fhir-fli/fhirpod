@@ -1,0 +1,10 @@
+class: BodyStructureIncludedStructure
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  structure: CodeableConcept
+  laterality: CodeableConcept?
+  bodyLandmarkOrientation: List<BodyStructureBodyLandmarkOrientation>?
+  spatialReference: List<Reference>?
+  qualifier: List<CodeableConcept>?

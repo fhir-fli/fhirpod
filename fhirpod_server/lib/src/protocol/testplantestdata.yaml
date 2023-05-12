@@ -1,0 +1,10 @@
+class: TestPlanTestData
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: Coding
+  content: Reference?
+  sourceString: String?
+  sourceStringElement: Element?
+  sourceReference: Reference?

@@ -1,0 +1,32 @@
+class: TestReport
+table: testreport
+fields: 
+  resourceType: String
+  fhirId: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: Identifier?
+  name: String?
+  nameElement: Element?
+  status: String?
+  statusElement: Element?
+  testScript: String
+  result: String?
+  resultElement: Element?
+  score: double?
+  scoreElement: Element?
+  tester: String?
+  testerElement: Element?
+  issued: DateTime?
+  issuedElement: Element?
+  participant: List<TestReportParticipant>?
+  setup: TestReportSetup?
+  test: List<TestReportTest>?
+  teardown: TestReportTeardown?

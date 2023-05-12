@@ -1,0 +1,7 @@
+class: NutritionIntakeIngredientLabel
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  nutrient: CodeableReference
+  amount: Quantity

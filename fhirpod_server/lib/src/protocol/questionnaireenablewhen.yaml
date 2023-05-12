@@ -1,0 +1,26 @@
+class: QuestionnaireEnableWhen
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  question: String?
+  questionElement: Element?
+  operator_: String?
+  operatorElement: Element?
+  answerBoolean: bool?
+  answerBooleanElement: Element?
+  answerDecimal: double?
+  answerDecimalElement: Element?
+  answerInteger: int?
+  answerIntegerElement: Element?
+  answerDate: DateTime?
+  answerDateElement: Element?
+  answerDateTime: DateTime?
+  answerDateTimeElement: Element?
+  answerTime: String?
+  answerTimeElement: Element?
+  answerString: String?
+  answerStringElement: Element?
+  answerCoding: Coding?
+  answerQuantity: Quantity?
+  answerReference: Reference?

@@ -1,0 +1,10 @@
+class: ClinicalUseDefinitionInteraction
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  interactant: List<ClinicalUseDefinitionInteractant>?
+  type: CodeableConcept?
+  effect: CodeableReference?
+  incidence: CodeableConcept?
+  management: List<CodeableConcept>?

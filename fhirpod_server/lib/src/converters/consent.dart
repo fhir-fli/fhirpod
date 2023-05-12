@@ -1,0 +1,37 @@
+import 'package:fhir/r5.dart' as client;
+import 'package:fhirpod_server/src/generated/protocol.dart' as server;
+client.Consent consentonsentToServer(server.Consent resource) => client.Consent(
+
+id: resource.id == null ? null : resource.id,
+meta: resource.meta == null ? null : resource.meta,
+implicitRules: resource.implicitRules == null ? null : resource.implicitRules,
+implicitRulesElement: resource.implicitRulesElement == null ? null : resource.implicitRulesElement,
+language: resource.language == null ? null : resource.language,
+languageElement: resource.languageElement == null ? null : resource.languageElement,
+text: resource.text == null ? null : resource.text,
+contained: resource.contained == null ? null : resource.contained,
+extension_: resource.extension_ == null ? null : resource.extension_,
+modifierExtension: resource.modifierExtension == null ? null : resource.modifierExtension,
+identifier: resource.identifier == null ? null : resource.identifier,
+status: resource.status == null ? null : resource.status,
+statusElement: resource.statusElement == null ? null : resource.statusElement,
+category: resource.category == null ? null : resource.category,
+subject: resource.subject == null ? null : resource.subject,
+date: resource.date == null ? null : resource.date,
+dateElement: resource.dateElement == null ? null : resource.dateElement,
+period: resource.period == null ? null : resource.period,
+grantor: resource.grantor == null ? null : resource.grantor,
+grantee: resource.grantee == null ? null : resource.grantee,
+manager: resource.manager == null ? null : resource.manager,
+controller: resource.controller == null ? null : resource.controller,
+sourceAttachment: resource.sourceAttachment == null ? null : resource.sourceAttachment,
+sourceReference: resource.sourceReference == null ? null : resource.sourceReference,
+regulatoryBasis: resource.regulatoryBasis == null ? null : resource.regulatoryBasis,
+policyBasis: resource.policyBasis == null ? null : resource.policyBasis,
+policyText: resource.policyText == null ? null : resource.policyText,
+verification: resource.verification == null ? null : resource.verification,
+decision: resource.decision == null ? null : resource.decision,
+decisionElement: resource.decisionElement == null ? null : resource.decisionElement,
+provision: resource.provision == null ? null : resource.provision,
+
+);

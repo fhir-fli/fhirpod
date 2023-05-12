@@ -1,0 +1,11 @@
+class: EvidenceReportTarget
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  url: String?
+  urlElement: Element?
+  identifier: Identifier?
+  display: String?
+  displayElement: Element?
+  resource: Reference?

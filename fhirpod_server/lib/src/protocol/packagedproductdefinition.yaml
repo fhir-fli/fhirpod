@@ -1,0 +1,33 @@
+class: PackagedProductDefinition
+table: packagedproductdefinition
+fields: 
+  resourceType: String
+  fhirId: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  name: String?
+  nameElement: Element?
+  type: CodeableConcept?
+  packageFor: List<Reference>?
+  status: CodeableConcept?
+  statusDate: DateTime?
+  statusDateElement: Element?
+  containedItemQuantity: List<Quantity>?
+  description: String?
+  descriptionElement: Element?
+  legalStatusOfSupply: List<PackagedProductDefinitionLegalStatusOfSupply>?
+  marketingStatus: List<MarketingStatus>?
+  copackagedIndicator: bool?
+  copackagedIndicatorElement: Element?
+  manufacturer: List<Reference>?
+  attachedDocument: List<Reference>?
+  packaging: PackagedProductDefinitionPackaging?
+  characteristic: List<PackagedProductDefinitionProperty>?

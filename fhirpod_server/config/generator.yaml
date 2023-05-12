@@ -1,6 +1,3 @@
 type: server
 
 client_package_path: ../fhirpod_client
-
-extraClasses:
-  - package:fhir_serial/r5.dart:BackboneType

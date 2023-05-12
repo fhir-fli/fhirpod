@@ -1,0 +1,7 @@
+class: IngredientSubstance
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableReference
+  strength: List<IngredientStrength>?

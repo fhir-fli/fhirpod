@@ -1,0 +1,11 @@
+class: ClinicalUseDefinitionContraindication
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  diseaseSymptomProcedure: CodeableReference?
+  diseaseStatus: CodeableReference?
+  comorbidity: List<CodeableReference>?
+  indication: List<Reference>?
+  applicability: Expression?
+  otherTherapy: List<ClinicalUseDefinitionOtherTherapy>?

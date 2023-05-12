@@ -1,0 +1,4 @@
+class: Element
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?

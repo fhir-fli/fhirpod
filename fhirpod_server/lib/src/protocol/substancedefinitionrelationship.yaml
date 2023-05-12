@@ -1,0 +1,17 @@
+class: SubstanceDefinitionRelationship
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  substanceDefinitionReference: Reference?
+  substanceDefinitionCodeableConcept: CodeableConcept?
+  type: CodeableConcept
+  isDefining: bool?
+  isDefiningElement: Element?
+  amountQuantity: Quantity?
+  amountRatio: Ratio?
+  amountString: String?
+  amountStringElement: Element?
+  ratioHighLimitAmount: Ratio?
+  comparator: CodeableConcept?
+  source: List<Reference>?

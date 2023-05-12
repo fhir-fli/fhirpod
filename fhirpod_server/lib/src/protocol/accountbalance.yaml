@@ -1,0 +1,10 @@
+class: AccountBalance
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  aggregate: CodeableConcept?
+  term: CodeableConcept?
+  estimate: bool?
+  estimateElement: Element?
+  amount: Money

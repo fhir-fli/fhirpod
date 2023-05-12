@@ -1,0 +1,8 @@
+class: DeviceDefinitionDistributor
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  name: String?
+  nameElement: Element?
+  organizationReference: List<Reference>?

@@ -1,0 +1,47 @@
+class: MedicinalProductDefinition
+table: medicinalproductdefinition
+fields: 
+  resourceType: String
+  fhirId: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  type: CodeableConcept?
+  domain: CodeableConcept?
+  version: String?
+  versionElement: Element?
+  status: CodeableConcept?
+  statusDate: DateTime?
+  statusDateElement: Element?
+  description: String?
+  descriptionElement: Element?
+  combinedPharmaceuticalDoseForm: CodeableConcept?
+  route: List<CodeableConcept>?
+  indication: String?
+  indicationElement: Element?
+  legalStatusOfSupply: CodeableConcept?
+  additionalMonitoringIndicator: CodeableConcept?
+  specialMeasures: List<CodeableConcept>?
+  pediatricUseIndicator: CodeableConcept?
+  classification: List<CodeableConcept>?
+  marketingStatus: List<MarketingStatus>?
+  packagedMedicinalProduct: List<CodeableConcept>?
+  comprisedOf: List<Reference>?
+  ingredient: List<CodeableConcept>?
+  impurity: List<CodeableReference>?
+  attachedDocument: List<Reference>?
+  masterFile: List<Reference>?
+  contact: List<MedicinalProductDefinitionContact>?
+  clinicalTrial: List<Reference>?
+  code: List<Coding>?
+  name: List<MedicinalProductDefinitionName>
+  crossReference: List<MedicinalProductDefinitionCrossReference>?
+  operation: List<MedicinalProductDefinitionOperation>?
+  characteristic: List<MedicinalProductDefinitionCharacteristic>?

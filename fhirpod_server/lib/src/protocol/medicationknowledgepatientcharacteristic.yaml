@@ -1,0 +1,9 @@
+class: MedicationKnowledgePatientCharacteristic
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  valueCodeableConcept: CodeableConcept?
+  valueQuantity: Quantity?
+  valueRange: Range?

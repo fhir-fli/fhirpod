@@ -1,0 +1,9 @@
+class: TerminologyCapabilitiesSoftware
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  name: String?
+  nameElement: Element?
+  version: String?
+  versionElement: Element?

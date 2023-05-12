@@ -1,0 +1,7 @@
+class: ImmunizationProgramEligibility
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  program: CodeableConcept
+  programStatus: CodeableConcept

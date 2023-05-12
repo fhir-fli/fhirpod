@@ -1,0 +1,8 @@
+class: CitationVersion
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  value: String?
+  valueElement: Element?
+  baseCitation: Reference?

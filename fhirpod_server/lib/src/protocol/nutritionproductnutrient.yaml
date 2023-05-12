@@ -1,0 +1,7 @@
+class: NutritionProductNutrient
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  item: CodeableReference?
+  amount: List<Ratio>?

@@ -1,0 +1,14 @@
+class: CodeSystemConcept
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: String?
+  codeElement: Element?
+  display: String?
+  displayElement: Element?
+  definition: String?
+  definitionElement: Element?
+  designation: List<CodeSystemDesignation>?
+  property: List<CodeSystemProperty1>?
+  concept: List<CodeSystemConcept>?

@@ -1,0 +1,9 @@
+class: NutritionOrderAdministration
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  schedule: NutritionOrderSchedule2?
+  quantity: Quantity?
+  rateQuantity: Quantity?
+  rateRatio: Ratio?

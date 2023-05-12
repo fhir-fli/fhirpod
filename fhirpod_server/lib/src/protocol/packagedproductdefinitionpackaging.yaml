@@ -1,0 +1,18 @@
+class: PackagedProductDefinitionPackaging
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  type: CodeableConcept?
+  componentPart: bool?
+  componentPartElement: Element?
+  quantity: int?
+  quantityElement: Element?
+  material: List<CodeableConcept>?
+  alternateMaterial: List<CodeableConcept>?
+  shelfLifeStorage: List<ProductShelfLife>?
+  manufacturer: List<Reference>?
+  property: List<PackagedProductDefinitionProperty>?
+  containedItem: List<PackagedProductDefinitionContainedItem>?
+  packaging: List<PackagedProductDefinitionPackaging>?

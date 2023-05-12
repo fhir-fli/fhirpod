@@ -1,0 +1,10 @@
+class: Population
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  ageRange: Range?
+  ageCodeableConcept: CodeableConcept?
+  gender: CodeableConcept?
+  race: CodeableConcept?
+  physiologicalCondition: CodeableConcept?

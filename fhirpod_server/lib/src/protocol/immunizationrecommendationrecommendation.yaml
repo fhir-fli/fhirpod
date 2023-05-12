@@ -1,0 +1,21 @@
+class: ImmunizationRecommendationRecommendation
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  vaccineCode: List<CodeableConcept>?
+  targetDisease: List<CodeableConcept>?
+  contraindicatedVaccineCode: List<CodeableConcept>?
+  forecastStatus: CodeableConcept
+  forecastReason: List<CodeableConcept>?
+  dateCriterion: List<ImmunizationRecommendationDateCriterion>?
+  description: String?
+  descriptionElement: Element?
+  series: String?
+  seriesElement: Element?
+  doseNumber: String?
+  doseNumberElement: Element?
+  seriesDoses: String?
+  seriesDosesElement: Element?
+  supportingImmunization: List<Reference>?
+  supportingPatientInformation: List<Reference>?

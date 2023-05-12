@@ -1,0 +1,7 @@
+class: InsurancePlanLimit
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  value: Quantity?
+  code: CodeableConcept?

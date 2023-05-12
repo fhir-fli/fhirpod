@@ -1,0 +1,9 @@
+class: MedicationKnowledgeDosingGuideline
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  treatmentIntent: CodeableConcept?
+  dosage: List<MedicationKnowledgeDosage>?
+  administrationTreatment: CodeableConcept?
+  patientCharacteristic: List<MedicationKnowledgePatientCharacteristic>?

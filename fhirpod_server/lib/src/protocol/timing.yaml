@@ -1,0 +1,9 @@
+class: Timing
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  event: List<DateTime>?
+  eventElement: List<Element>?
+  repeat: TimingRepeat?
+  code: CodeableConcept?

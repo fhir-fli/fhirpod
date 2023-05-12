@@ -1,0 +1,8 @@
+class: ImmunizationRecommendationDateCriterion
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableConcept
+  value: DateTime?
+  valueElement: Element?

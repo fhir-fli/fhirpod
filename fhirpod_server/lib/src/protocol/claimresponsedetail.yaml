@@ -1,0 +1,13 @@
+class: ClaimResponseDetail
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  detailSequence: int?
+  detailSequenceElement: Element?
+  traceNumber: List<Identifier>?
+  noteNumber: List<int>?
+  noteNumberElement: List<Element>?
+  reviewOutcome: ClaimResponseReviewOutcome?
+  adjudication: List<ClaimResponseAdjudication>?
+  subDetail: List<ClaimResponseSubDetail>?

@@ -1,0 +1,8 @@
+class: SubstanceIngredient
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  quantity: Ratio?
+  substanceCodeableConcept: CodeableConcept?
+  substanceReference: Reference?

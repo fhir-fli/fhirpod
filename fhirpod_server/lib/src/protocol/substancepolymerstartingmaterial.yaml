@@ -1,0 +1,10 @@
+class: SubstancePolymerStartingMaterial
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableConcept?
+  category: CodeableConcept?
+  isDefining: bool?
+  isDefiningElement: Element?
+  amount: Quantity?

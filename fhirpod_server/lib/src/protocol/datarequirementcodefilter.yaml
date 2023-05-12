@@ -1,0 +1,11 @@
+class: DataRequirementCodeFilter
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  path: String?
+  pathElement: Element?
+  searchParam: String?
+  searchParamElement: Element?
+  valueSet: String?
+  code: List<Coding>?

@@ -1,0 +1,7 @@
+class: ClinicalUseDefinitionOtherTherapy
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  relationshipType: CodeableConcept
+  treatment: CodeableReference

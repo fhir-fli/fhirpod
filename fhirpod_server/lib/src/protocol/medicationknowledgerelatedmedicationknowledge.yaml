@@ -1,0 +1,7 @@
+class: MedicationKnowledgeRelatedMedicationKnowledge
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  reference: List<Reference>

@@ -1,0 +1,7 @@
+class: NutritionOrderTexture
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  modifier: CodeableConcept?
+  foodType: CodeableConcept?

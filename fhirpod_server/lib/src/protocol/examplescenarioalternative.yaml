@@ -1,0 +1,10 @@
+class: ExampleScenarioAlternative
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  title: String?
+  titleElement: Element?
+  description: String?
+  descriptionElement: Element?
+  step: List<ExampleScenarioStep>?

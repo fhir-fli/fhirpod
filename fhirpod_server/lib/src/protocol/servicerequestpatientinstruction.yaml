@@ -1,0 +1,8 @@
+class: ServiceRequestPatientInstruction
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  instructionMarkdown: String?
+  instructionMarkdownElement: Element?
+  instructionReference: Reference?

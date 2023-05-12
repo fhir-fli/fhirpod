@@ -1,0 +1,27 @@
+class: InventoryReport
+table: inventoryreport
+fields: 
+  resourceType: String
+  fhirId: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  status: String?
+  statusElement: Element?
+  countType: String?
+  countTypeElement: Element?
+  operationType: CodeableConcept?
+  operationTypeReason: CodeableConcept?
+  reportedDateTime: DateTime?
+  reportedDateTimeElement: Element?
+  reporter: Reference?
+  reportingPeriod: Period?
+  inventoryListing: List<InventoryReportInventoryListing>?
+  note: List<Annotation>?

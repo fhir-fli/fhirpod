@@ -1,0 +1,6 @@
+class: TestReportSetup
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  action: List<TestReportAction>

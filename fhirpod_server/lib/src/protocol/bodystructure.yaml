@@ -1,0 +1,24 @@
+class: BodyStructure
+table: bodystructure
+fields: 
+  resourceType: String
+  fhirId: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  active: bool?
+  activeElement: Element?
+  morphology: CodeableConcept?
+  includedStructure: List<BodyStructureIncludedStructure>
+  excludedStructure: List<BodyStructureIncludedStructure>?
+  description: String?
+  descriptionElement: Element?
+  image: List<Attachment>?
+  patient: Reference

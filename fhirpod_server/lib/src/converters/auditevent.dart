@@ -1,0 +1,35 @@
+import 'package:fhir/r5.dart' as client;
+import 'package:fhirpod_server/src/generated/protocol.dart' as server;
+client.AuditEvent auditeventuditEventToServer(server.AuditEvent resource) => client.AuditEvent(
+
+id: resource.id == null ? null : resource.id,
+meta: resource.meta == null ? null : resource.meta,
+implicitRules: resource.implicitRules == null ? null : resource.implicitRules,
+implicitRulesElement: resource.implicitRulesElement == null ? null : resource.implicitRulesElement,
+language: resource.language == null ? null : resource.language,
+languageElement: resource.languageElement == null ? null : resource.languageElement,
+text: resource.text == null ? null : resource.text,
+contained: resource.contained == null ? null : resource.contained,
+extension_: resource.extension_ == null ? null : resource.extension_,
+modifierExtension: resource.modifierExtension == null ? null : resource.modifierExtension,
+category: resource.category == null ? null : resource.category,
+code: resource.code == null ? null : resource.code,
+action: resource.action == null ? null : resource.action,
+actionElement: resource.actionElement == null ? null : resource.actionElement,
+severity: resource.severity == null ? null : resource.severity,
+severityElement: resource.severityElement == null ? null : resource.severityElement,
+occurredPeriod: resource.occurredPeriod == null ? null : resource.occurredPeriod,
+occurredDateTime: resource.occurredDateTime == null ? null : resource.occurredDateTime,
+occurredDateTimeElement: resource.occurredDateTimeElement == null ? null : resource.occurredDateTimeElement,
+recorded: resource.recorded == null ? null : resource.recorded,
+recordedElement: resource.recordedElement == null ? null : resource.recordedElement,
+outcome: resource.outcome == null ? null : resource.outcome,
+authorization: resource.authorization == null ? null : resource.authorization,
+basedOn: resource.basedOn == null ? null : resource.basedOn,
+patient: resource.patient == null ? null : resource.patient,
+encounter: resource.encounter == null ? null : resource.encounter,
+agent: resource.agent == null ? null : resource.agent,
+source: resource.source == null ? null : resource.source,
+entity: resource.entity == null ? null : resource.entity,
+
+);

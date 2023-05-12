@@ -1,0 +1,13 @@
+class: PatientContact
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  relationship: List<CodeableConcept>?
+  name: HumanName?
+  telecom: List<ContactPoint>?
+  address: Address?
+  gender: String?
+  genderElement: Element?
+  organization: Reference?
+  period: Period?

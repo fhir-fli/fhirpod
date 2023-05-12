@@ -1,0 +1,11 @@
+class: ListEntry
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  flag: CodeableConcept?
+  deleted: bool?
+  deletedElement: Element?
+  date: DateTime?
+  dateElement: Element?
+  item: Reference

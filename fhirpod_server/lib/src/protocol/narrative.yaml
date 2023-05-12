@@ -1,0 +1,7 @@
+class: Narrative
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  status: String?
+  statusElement: Element?
+  div: String

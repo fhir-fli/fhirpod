@@ -1,0 +1,11 @@
+class: ElementDefinitionBinding
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  strength: String?
+  strengthElement: Element?
+  description: String?
+  descriptionElement: Element?
+  valueSet: String?
+  additional: List<ElementDefinitionAdditional>?

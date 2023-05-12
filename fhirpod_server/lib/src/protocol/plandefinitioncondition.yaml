@@ -1,0 +1,8 @@
+class: PlanDefinitionCondition
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  kind: String?
+  kindElement: Element?
+  expression: Expression?

@@ -1,0 +1,11 @@
+class: Parameters
+table: parameters
+fields: 
+  resourceType: String
+  fhirId: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  parameter: List<ParametersParameter>?

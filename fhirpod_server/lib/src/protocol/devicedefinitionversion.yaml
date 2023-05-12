@@ -1,0 +1,9 @@
+class: DeviceDefinitionVersion
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept?
+  component: Identifier?
+  value: String?
+  valueElement: Element?

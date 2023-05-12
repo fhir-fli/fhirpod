@@ -1,0 +1,17 @@
+class: ImplementationGuideResource
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  reference: Reference
+  fhirVersion: List<String>?
+  fhirVersionElement: List<Element>?
+  name: String?
+  nameElement: Element?
+  description: String?
+  descriptionElement: Element?
+  isExample: bool?
+  isExampleElement: Element?
+  profile: List<String>?
+  groupingId: String?
+  groupingIdElement: Element?

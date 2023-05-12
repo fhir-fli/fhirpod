@@ -1,0 +1,8 @@
+class: PlanDefinitionDynamicValue
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  path: String?
+  pathElement: Element?
+  expression: Expression?

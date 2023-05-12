@@ -1,0 +1,8 @@
+class: CapabilityStatementSupportedMessage
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  mode: String?
+  modeElement: Element?
+  definition: String

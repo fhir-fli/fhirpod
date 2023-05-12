@@ -1,0 +1,8 @@
+class: Money
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  value: double?
+  valueElement: Element?
+  currency: String?
+  currencyElement: Element?

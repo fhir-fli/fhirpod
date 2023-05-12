@@ -1,0 +1,15 @@
+class: EvidenceReportCharacteristic
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableConcept
+  valueReference: Reference?
+  valueCodeableConcept: CodeableConcept?
+  valueBoolean: bool?
+  valueBooleanElement: Element?
+  valueQuantity: Quantity?
+  valueRange: Range?
+  exclude: bool?
+  excludeElement: Element?
+  period: Period?

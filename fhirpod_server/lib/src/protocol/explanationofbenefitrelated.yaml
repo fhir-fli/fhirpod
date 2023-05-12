@@ -1,0 +1,8 @@
+class: ExplanationOfBenefitRelated
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  claim: Reference?
+  relationship: CodeableConcept?
+  reference: Identifier?

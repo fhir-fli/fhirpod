@@ -1,0 +1,10 @@
+class: DeviceDefinitionConformsTo
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  category: CodeableConcept?
+  specification: CodeableConcept
+  version: List<String>?
+  versionElement: List<Element>?
+  source: List<RelatedArtifact>?

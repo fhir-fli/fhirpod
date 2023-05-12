@@ -1,0 +1,6 @@
+class: TestScriptSetup
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  action: List<TestScriptAction>

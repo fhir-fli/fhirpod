@@ -1,0 +1,10 @@
+class: DeviceDefinitionMaterial
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  substance: CodeableConcept
+  alternate: bool?
+  alternateElement: Element?
+  allergenicIndicator: bool?
+  allergenicIndicatorElement: Element?

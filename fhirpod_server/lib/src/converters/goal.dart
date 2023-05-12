@@ -1,0 +1,38 @@
+import 'package:fhir/r5.dart' as client;
+import 'package:fhirpod_server/src/generated/protocol.dart' as server;
+client.Goal goaloalToServer(server.Goal resource) => client.Goal(
+
+id: resource.id == null ? null : resource.id,
+meta: resource.meta == null ? null : resource.meta,
+implicitRules: resource.implicitRules == null ? null : resource.implicitRules,
+implicitRulesElement: resource.implicitRulesElement == null ? null : resource.implicitRulesElement,
+language: resource.language == null ? null : resource.language,
+languageElement: resource.languageElement == null ? null : resource.languageElement,
+text: resource.text == null ? null : resource.text,
+contained: resource.contained == null ? null : resource.contained,
+extension_: resource.extension_ == null ? null : resource.extension_,
+modifierExtension: resource.modifierExtension == null ? null : resource.modifierExtension,
+identifier: resource.identifier == null ? null : resource.identifier,
+lifecycleStatus: resource.lifecycleStatus == null ? null : resource.lifecycleStatus,
+lifecycleStatusElement: resource.lifecycleStatusElement == null ? null : resource.lifecycleStatusElement,
+achievementStatus: resource.achievementStatus == null ? null : resource.achievementStatus,
+category: resource.category == null ? null : resource.category,
+continuous: resource.continuous == null ? null : resource.continuous,
+continuousElement: resource.continuousElement == null ? null : resource.continuousElement,
+priority: resource.priority == null ? null : resource.priority,
+description: resource.description == null ? null : resource.description,
+subject: resource.subject == null ? null : resource.subject,
+startDate: resource.startDate == null ? null : resource.startDate,
+startDateElement: resource.startDateElement == null ? null : resource.startDateElement,
+startCodeableConcept: resource.startCodeableConcept == null ? null : resource.startCodeableConcept,
+target: resource.target == null ? null : resource.target,
+statusDate: resource.statusDate == null ? null : resource.statusDate,
+statusDateElement: resource.statusDateElement == null ? null : resource.statusDateElement,
+statusReason: resource.statusReason == null ? null : resource.statusReason,
+statusReasonElement: resource.statusReasonElement == null ? null : resource.statusReasonElement,
+source: resource.source == null ? null : resource.source,
+addresses: resource.addresses == null ? null : resource.addresses,
+note: resource.note == null ? null : resource.note,
+outcome: resource.outcome == null ? null : resource.outcome,
+
+);

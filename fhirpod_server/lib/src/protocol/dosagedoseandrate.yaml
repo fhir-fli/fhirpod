@@ -1,0 +1,11 @@
+class: DosageDoseAndRate
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept?
+  doseRange: Range?
+  doseQuantity: Quantity?
+  rateRatio: Ratio?
+  rateRange: Range?
+  rateQuantity: Quantity?

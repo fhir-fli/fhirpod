@@ -1,0 +1,8 @@
+class: ConsentPolicyBasis
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  reference: Reference?
+  url: String?
+  urlElement: Element?

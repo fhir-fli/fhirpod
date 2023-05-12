@@ -1,0 +1,10 @@
+class: DeviceDefinitionCorrectiveAction
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  recall: bool?
+  recallElement: Element?
+  scope: String?
+  scopeElement: Element?
+  period: Period

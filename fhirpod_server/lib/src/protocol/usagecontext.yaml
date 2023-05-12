@@ -1,0 +1,9 @@
+class: UsageContext
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  code: Coding
+  valueCodeableConcept: CodeableConcept?
+  valueQuantity: Quantity?
+  valueRange: Range?
+  valueReference: Reference?

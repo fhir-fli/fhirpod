@@ -1,0 +1,10 @@
+class: BiologicallyDerivedProductCollection
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  collector: Reference?
+  source: Reference?
+  collectedDateTime: DateTime?
+  collectedDateTimeElement: Element?
+  collectedPeriod: Period?

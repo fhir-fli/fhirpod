@@ -1,0 +1,7 @@
+class: GenomicStudyOutput
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  file: Reference?
+  type: CodeableConcept?

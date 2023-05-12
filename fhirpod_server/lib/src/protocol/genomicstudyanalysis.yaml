@@ -1,0 +1,26 @@
+class: GenomicStudyAnalysis
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  methodType: List<CodeableConcept>?
+  changeType: List<CodeableConcept>?
+  genomeBuild: CodeableConcept?
+  instantiatesCanonical: String?
+  instantiatesUri: String?
+  instantiatesUriElement: Element?
+  title: String?
+  titleElement: Element?
+  focus: List<Reference>?
+  specimen: List<Reference>?
+  date: DateTime?
+  dateElement: Element?
+  note: List<Annotation>?
+  protocolPerformed: Reference?
+  regionsStudied: List<Reference>?
+  regionsCalled: List<Reference>?
+  input: List<GenomicStudyInput>?
+  output: List<GenomicStudyOutput>?
+  performer: List<GenomicStudyPerformer>?
+  device: List<GenomicStudyDevice>?

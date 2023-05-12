@@ -1,0 +1,13 @@
+class: ImplementationGuideManifest
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  rendering: String?
+  renderingElement: Element?
+  resource: List<ImplementationGuideResource1>
+  page: List<ImplementationGuidePage1>?
+  image: List<String>?
+  imageElement: List<Element>?
+  other: List<String>?
+  otherElement: List<Element>?

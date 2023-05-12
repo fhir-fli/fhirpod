@@ -1,0 +1,13 @@
+class: InvoiceLineItem
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  sequence: int?
+  sequenceElement: Element?
+  servicedDate: DateTime?
+  servicedDateElement: Element?
+  servicedPeriod: Period?
+  chargeItemReference: Reference?
+  chargeItemCodeableConcept: CodeableConcept?
+  priceComponent: List<MonetaryComponent>?

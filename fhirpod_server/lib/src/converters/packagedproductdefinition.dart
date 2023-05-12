@@ -1,0 +1,35 @@
+import 'package:fhir/r5.dart' as client;
+import 'package:fhirpod_server/src/generated/protocol.dart' as server;
+client.PackagedProductDefinition packagedproductdefinitionackagedProductDefinitionToServer(server.PackagedProductDefinition resource) => client.PackagedProductDefinition(
+
+id: resource.id == null ? null : resource.id,
+meta: resource.meta == null ? null : resource.meta,
+implicitRules: resource.implicitRules == null ? null : resource.implicitRules,
+implicitRulesElement: resource.implicitRulesElement == null ? null : resource.implicitRulesElement,
+language: resource.language == null ? null : resource.language,
+languageElement: resource.languageElement == null ? null : resource.languageElement,
+text: resource.text == null ? null : resource.text,
+contained: resource.contained == null ? null : resource.contained,
+extension_: resource.extension_ == null ? null : resource.extension_,
+modifierExtension: resource.modifierExtension == null ? null : resource.modifierExtension,
+identifier: resource.identifier == null ? null : resource.identifier,
+name: resource.name == null ? null : resource.name,
+nameElement: resource.nameElement == null ? null : resource.nameElement,
+type: resource.type == null ? null : resource.type,
+packageFor: resource.packageFor == null ? null : resource.packageFor,
+status: resource.status == null ? null : resource.status,
+statusDate: resource.statusDate == null ? null : resource.statusDate,
+statusDateElement: resource.statusDateElement == null ? null : resource.statusDateElement,
+containedItemQuantity: resource.containedItemQuantity == null ? null : resource.containedItemQuantity,
+description: resource.description == null ? null : resource.description,
+descriptionElement: resource.descriptionElement == null ? null : resource.descriptionElement,
+legalStatusOfSupply: resource.legalStatusOfSupply == null ? null : resource.legalStatusOfSupply,
+marketingStatus: resource.marketingStatus == null ? null : resource.marketingStatus,
+copackagedIndicator: resource.copackagedIndicator == null ? null : resource.copackagedIndicator,
+copackagedIndicatorElement: resource.copackagedIndicatorElement == null ? null : resource.copackagedIndicatorElement,
+manufacturer: resource.manufacturer == null ? null : resource.manufacturer,
+attachedDocument: resource.attachedDocument == null ? null : resource.attachedDocument,
+packaging: resource.packaging == null ? null : resource.packaging,
+characteristic: resource.characteristic == null ? null : resource.characteristic,
+
+);

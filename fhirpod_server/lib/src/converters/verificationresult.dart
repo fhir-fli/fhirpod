@@ -1,0 +1,35 @@
+import 'package:fhir/r5.dart' as client;
+import 'package:fhirpod_server/src/generated/protocol.dart' as server;
+client.VerificationResult verificationresulterificationResultToServer(server.VerificationResult resource) => client.VerificationResult(
+
+id: resource.id == null ? null : resource.id,
+meta: resource.meta == null ? null : resource.meta,
+implicitRules: resource.implicitRules == null ? null : resource.implicitRules,
+implicitRulesElement: resource.implicitRulesElement == null ? null : resource.implicitRulesElement,
+language: resource.language == null ? null : resource.language,
+languageElement: resource.languageElement == null ? null : resource.languageElement,
+text: resource.text == null ? null : resource.text,
+contained: resource.contained == null ? null : resource.contained,
+extension_: resource.extension_ == null ? null : resource.extension_,
+modifierExtension: resource.modifierExtension == null ? null : resource.modifierExtension,
+target: resource.target == null ? null : resource.target,
+targetLocation: resource.targetLocation == null ? null : resource.targetLocation,
+targetLocationElement: resource.targetLocationElement == null ? null : resource.targetLocationElement,
+need: resource.need == null ? null : resource.need,
+status: resource.status == null ? null : resource.status,
+statusElement: resource.statusElement == null ? null : resource.statusElement,
+statusDate: resource.statusDate == null ? null : resource.statusDate,
+statusDateElement: resource.statusDateElement == null ? null : resource.statusDateElement,
+validationType: resource.validationType == null ? null : resource.validationType,
+validationProcess: resource.validationProcess == null ? null : resource.validationProcess,
+frequency: resource.frequency == null ? null : resource.frequency,
+lastPerformed: resource.lastPerformed == null ? null : resource.lastPerformed,
+lastPerformedElement: resource.lastPerformedElement == null ? null : resource.lastPerformedElement,
+nextScheduled: resource.nextScheduled == null ? null : resource.nextScheduled,
+nextScheduledElement: resource.nextScheduledElement == null ? null : resource.nextScheduledElement,
+failureAction: resource.failureAction == null ? null : resource.failureAction,
+primarySource: resource.primarySource == null ? null : resource.primarySource,
+attestation: resource.attestation == null ? null : resource.attestation,
+validator: resource.validator == null ? null : resource.validator,
+
+);

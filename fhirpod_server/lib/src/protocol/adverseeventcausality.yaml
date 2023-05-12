@@ -1,0 +1,8 @@
+class: AdverseEventCausality
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  assessmentMethod: CodeableConcept?
+  entityRelatedness: CodeableConcept?
+  author: Reference?

@@ -1,0 +1,8 @@
+class: AuditEventSource
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  site: Reference?
+  observer: Reference
+  type: List<CodeableConcept>?

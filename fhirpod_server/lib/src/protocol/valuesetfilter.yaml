@@ -1,0 +1,11 @@
+class: ValueSetFilter
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  property: String?
+  propertyElement: Element?
+  op: String?
+  opElement: Element?
+  value: String?
+  valueElement: Element?

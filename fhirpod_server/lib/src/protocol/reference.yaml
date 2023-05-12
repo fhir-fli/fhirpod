@@ -1,0 +1,11 @@
+class: Reference
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  reference: String?
+  referenceElement: Element?
+  type: String?
+  typeElement: Element?
+  identifier: Identifier?
+  display: String?
+  displayElement: Element?

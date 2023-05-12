@@ -1,0 +1,36 @@
+class: DeviceUsage
+table: deviceusage
+fields: 
+  resourceType: String
+  fhirId: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  basedOn: List<Reference>?
+  status: String?
+  statusElement: Element?
+  category: List<CodeableConcept>?
+  patient: Reference
+  derivedFrom: List<Reference>?
+  context: Reference?
+  timingTiming: Timing?
+  timingPeriod: Period?
+  timingDateTime: DateTime?
+  timingDateTimeElement: Element?
+  dateAsserted: DateTime?
+  dateAssertedElement: Element?
+  usageStatus: CodeableConcept?
+  usageReason: List<CodeableConcept>?
+  adherence: DeviceUsageAdherence?
+  informationSource: Reference?
+  device: CodeableReference
+  reason: List<CodeableReference>?
+  bodySite: CodeableReference?
+  note: List<Annotation>?

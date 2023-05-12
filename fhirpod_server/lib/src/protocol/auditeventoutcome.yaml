@@ -1,0 +1,7 @@
+class: AuditEventOutcome
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: Coding
+  detail: List<CodeableConcept>?

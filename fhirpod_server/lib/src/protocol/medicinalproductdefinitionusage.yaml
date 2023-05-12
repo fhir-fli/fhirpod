@@ -1,0 +1,8 @@
+class: MedicinalProductDefinitionUsage
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  country: CodeableConcept
+  jurisdiction: CodeableConcept?
+  language: CodeableConcept

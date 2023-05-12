@@ -1,0 +1,40 @@
+class: Coverage
+table: coverage
+fields: 
+  resourceType: String
+  fhirId: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  status: String?
+  statusElement: Element?
+  kind: String?
+  kindElement: Element?
+  paymentBy: List<CoveragePaymentBy>?
+  type: CodeableConcept?
+  policyHolder: Reference?
+  subscriber: Reference?
+  subscriberId: List<Identifier>?
+  beneficiary: Reference
+  dependent: String?
+  dependentElement: Element?
+  relationship: CodeableConcept?
+  period: Period?
+  insurer: Reference?
+  class_: List<CoverageClass>?
+  order: int?
+  orderElement: Element?
+  network: String?
+  networkElement: Element?
+  costToBeneficiary: List<CoverageCostToBeneficiary>?
+  subrogation: bool?
+  subrogationElement: Element?
+  contract: List<Reference>?
+  insurancePlan: Reference?

@@ -1,0 +1,38 @@
+import 'package:fhir/r5.dart' as client;
+import 'package:fhirpod_server/src/generated/protocol.dart' as server;
+client.DeviceUsage deviceusageeviceUsageToServer(server.DeviceUsage resource) => client.DeviceUsage(
+
+id: resource.id == null ? null : resource.id,
+meta: resource.meta == null ? null : resource.meta,
+implicitRules: resource.implicitRules == null ? null : resource.implicitRules,
+implicitRulesElement: resource.implicitRulesElement == null ? null : resource.implicitRulesElement,
+language: resource.language == null ? null : resource.language,
+languageElement: resource.languageElement == null ? null : resource.languageElement,
+text: resource.text == null ? null : resource.text,
+contained: resource.contained == null ? null : resource.contained,
+extension_: resource.extension_ == null ? null : resource.extension_,
+modifierExtension: resource.modifierExtension == null ? null : resource.modifierExtension,
+identifier: resource.identifier == null ? null : resource.identifier,
+basedOn: resource.basedOn == null ? null : resource.basedOn,
+status: resource.status == null ? null : resource.status,
+statusElement: resource.statusElement == null ? null : resource.statusElement,
+category: resource.category == null ? null : resource.category,
+patient: resource.patient == null ? null : resource.patient,
+derivedFrom: resource.derivedFrom == null ? null : resource.derivedFrom,
+context: resource.context == null ? null : resource.context,
+timingTiming: resource.timingTiming == null ? null : resource.timingTiming,
+timingPeriod: resource.timingPeriod == null ? null : resource.timingPeriod,
+timingDateTime: resource.timingDateTime == null ? null : resource.timingDateTime,
+timingDateTimeElement: resource.timingDateTimeElement == null ? null : resource.timingDateTimeElement,
+dateAsserted: resource.dateAsserted == null ? null : resource.dateAsserted,
+dateAssertedElement: resource.dateAssertedElement == null ? null : resource.dateAssertedElement,
+usageStatus: resource.usageStatus == null ? null : resource.usageStatus,
+usageReason: resource.usageReason == null ? null : resource.usageReason,
+adherence: resource.adherence == null ? null : resource.adherence,
+informationSource: resource.informationSource == null ? null : resource.informationSource,
+device: resource.device == null ? null : resource.device,
+reason: resource.reason == null ? null : resource.reason,
+bodySite: resource.bodySite == null ? null : resource.bodySite,
+note: resource.note == null ? null : resource.note,
+
+);

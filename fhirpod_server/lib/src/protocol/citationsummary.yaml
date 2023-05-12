@@ -1,0 +1,8 @@
+class: CitationSummary
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  style: CodeableConcept?
+  text: String?
+  textElement: Element?

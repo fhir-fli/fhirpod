@@ -1,0 +1,10 @@
+class: ClaimResponseReviewOutcome
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  decision: CodeableConcept?
+  reason: List<CodeableConcept>?
+  preAuthRef: String?
+  preAuthRefElement: Element?
+  preAuthPeriod: Period?

@@ -1,0 +1,7 @@
+class: SubstancePolymerMonomerSet
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  ratioType: CodeableConcept?
+  startingMaterial: List<SubstancePolymerStartingMaterial>?

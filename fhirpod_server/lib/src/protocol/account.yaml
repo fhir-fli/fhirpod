@@ -1,0 +1,35 @@
+class: Account
+table: account
+fields: 
+  resourceType: String
+  fhirId: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  status: String?
+  statusElement: Element?
+  billingStatus: CodeableConcept?
+  type: CodeableConcept?
+  name: String?
+  nameElement: Element?
+  subject: List<Reference>?
+  servicePeriod: Period?
+  coverage: List<AccountCoverage>?
+  owner: Reference?
+  description: String?
+  descriptionElement: Element?
+  guarantor: List<AccountGuarantor>?
+  diagnosis: List<AccountDiagnosis>?
+  procedure: List<AccountProcedure>?
+  relatedAccount: List<AccountRelatedAccount>?
+  currency: CodeableConcept?
+  balance: List<AccountBalance>?
+  calculatedAt: DateTime?
+  calculatedAtElement: Element?

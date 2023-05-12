@@ -1,0 +1,7 @@
+class: MedicationKnowledgeIndicationGuideline
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  indication: List<CodeableReference>?
+  dosingGuideline: List<MedicationKnowledgeDosingGuideline>?

@@ -1,0 +1,27 @@
+class: StructureMapSource
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  context: String?
+  contextElement: Element?
+  min: int?
+  minElement: Element?
+  max: String?
+  maxElement: Element?
+  type: String?
+  typeElement: Element?
+  defaultValue: String?
+  defaultValueElement: Element?
+  element: String?
+  elementElement: Element?
+  listMode: String?
+  listModeElement: Element?
+  variable: String?
+  variableElement: Element?
+  condition: String?
+  conditionElement: Element?
+  check: String?
+  checkElement: Element?
+  logMessage: String?
+  logMessageElement: Element?

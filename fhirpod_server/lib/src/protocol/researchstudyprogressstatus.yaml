@@ -1,0 +1,9 @@
+class: ResearchStudyProgressStatus
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  state: CodeableConcept
+  actual: bool?
+  actualElement: Element?
+  period: Period?

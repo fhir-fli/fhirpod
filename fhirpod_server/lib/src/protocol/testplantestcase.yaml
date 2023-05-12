@@ -1,0 +1,12 @@
+class: TestPlanTestCase
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  sequence: int?
+  sequenceElement: Element?
+  scope: List<Reference>?
+  dependency: List<TestPlanDependency1>?
+  testRun: List<TestPlanTestRun>?
+  testData: List<TestPlanTestData>?
+  assertion: List<TestPlanAssertion>?

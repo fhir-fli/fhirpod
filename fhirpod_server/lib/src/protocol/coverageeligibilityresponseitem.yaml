@@ -1,0 +1,24 @@
+class: CoverageEligibilityResponseItem
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  category: CodeableConcept?
+  productOrService: CodeableConcept?
+  modifier: List<CodeableConcept>?
+  provider: Reference?
+  excluded: bool?
+  excludedElement: Element?
+  name: String?
+  nameElement: Element?
+  description: String?
+  descriptionElement: Element?
+  network: CodeableConcept?
+  unit: CodeableConcept?
+  term: CodeableConcept?
+  benefit: List<CoverageEligibilityResponseBenefit>?
+  authorizationRequired: bool?
+  authorizationRequiredElement: Element?
+  authorizationSupporting: List<CodeableConcept>?
+  authorizationUrl: String?
+  authorizationUrlElement: Element?

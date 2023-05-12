@@ -1,0 +1,33 @@
+class: Person
+table: person
+fields: 
+  resourceType: String
+  fhirId: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  active: bool?
+  activeElement: Element?
+  name: List<HumanName>?
+  telecom: List<ContactPoint>?
+  gender: String?
+  genderElement: Element?
+  birthDate: DateTime?
+  birthDateElement: Element?
+  deceasedBoolean: bool?
+  deceasedBooleanElement: Element?
+  deceasedDateTime: DateTime?
+  deceasedDateTimeElement: Element?
+  address: List<Address>?
+  maritalStatus: CodeableConcept?
+  photo: List<Attachment>?
+  communication: List<PersonCommunication>?
+  managingOrganization: Reference?
+  link: List<PersonLink>?

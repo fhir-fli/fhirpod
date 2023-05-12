@@ -1,0 +1,9 @@
+class: SubstanceSourceMaterialOrganismGeneral
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  kingdom: CodeableConcept?
+  phylum: CodeableConcept?
+  class_: CodeableConcept?
+  order: CodeableConcept?

@@ -1,0 +1,29 @@
+class: SupplyDelivery
+table: supplydelivery
+fields: 
+  resourceType: String
+  fhirId: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  basedOn: List<Reference>?
+  partOf: List<Reference>?
+  status: String?
+  statusElement: Element?
+  patient: Reference?
+  type: CodeableConcept?
+  suppliedItem: List<SupplyDeliverySuppliedItem>?
+  occurrenceDateTime: DateTime?
+  occurrenceDateTimeElement: Element?
+  occurrencePeriod: Period?
+  occurrenceTiming: Timing?
+  supplier: Reference?
+  destination: Reference?
+  receiver: List<Reference>?

@@ -1,0 +1,7 @@
+class: GenomicStudyPerformer
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  actor: Reference?
+  role: CodeableConcept?

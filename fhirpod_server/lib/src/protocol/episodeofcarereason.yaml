@@ -1,0 +1,7 @@
+class: EpisodeOfCareReason
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  use: CodeableConcept?
+  value: List<CodeableReference>?

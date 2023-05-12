@@ -1,0 +1,10 @@
+class: MedicinalProductDefinitionName
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  productName: String?
+  productNameElement: Element?
+  type: CodeableConcept?
+  part_: List<MedicinalProductDefinitionPart>?
+  usage: List<MedicinalProductDefinitionUsage>?

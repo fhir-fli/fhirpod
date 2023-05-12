@@ -1,0 +1,8 @@
+class: CitationContributionInstance
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  time: DateTime?
+  timeElement: Element?

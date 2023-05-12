@@ -1,0 +1,6 @@
+class: StructureDefinitionDifferential
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  element: List<ElementDefinition>

@@ -1,0 +1,9 @@
+class: GenomicStudyInput
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  file: Reference?
+  type: CodeableConcept?
+  generatedByIdentifier: Identifier?
+  generatedByReference: Reference?

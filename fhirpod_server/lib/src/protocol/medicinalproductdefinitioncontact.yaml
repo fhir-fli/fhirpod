@@ -1,0 +1,7 @@
+class: MedicinalProductDefinitionContact
+fields: 
+  fhirId: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept?
+  contact: Reference
