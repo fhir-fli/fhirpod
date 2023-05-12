@@ -1,0 +1,6 @@
+class: Ratio
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  numerator: Quantity?
+  denominator: Quantity?

@@ -1,0 +1,6 @@
+class: Range
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  low: Quantity?
+  high: Quantity?

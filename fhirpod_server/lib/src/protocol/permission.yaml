@@ -1,0 +1,23 @@
+class: Permission
+fields:
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  status: String?
+  statusElement: Element?
+  asserter: Reference?
+  date: List<DateTime>?
+  dateElement: List<Element>?
+  validity: Period?
+  justification: PermissionJustification?
+  combining: String?
+  combiningElement: Element?
+  rule: List<PermissionRule>?

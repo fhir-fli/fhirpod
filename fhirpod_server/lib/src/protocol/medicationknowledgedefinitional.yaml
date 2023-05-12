@@ -1,0 +1,10 @@
+class: MedicationKnowledgeDefinitional
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  definition: List<Reference>?
+  doseForm: CodeableConcept?
+  intendedRoute: List<CodeableConcept>?
+  ingredient: List<MedicationKnowledgeIngredient>?
+  drugCharacteristic: List<MedicationKnowledgeDrugCharacteristic>?

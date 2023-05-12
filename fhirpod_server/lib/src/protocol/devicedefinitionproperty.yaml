@@ -1,0 +1,16 @@
+class: DeviceDefinitionProperty
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  valueQuantity: Quantity?
+  valueCodeableConcept: CodeableConcept?
+  valueString: String?
+  valueStringElement: Element?
+  valueBoolean: bool?
+  valueBooleanElement: Element?
+  valueInteger: int?
+  valueIntegerElement: Element?
+  valueRange: Range?
+  valueAttachment: Attachment?

@@ -1,0 +1,32 @@
+class: VerificationResult
+fields:
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  target: List<Reference>?
+  targetLocation: List<String>?
+  targetLocationElement: List<Element>?
+  need: CodeableConcept?
+  status: String?
+  statusElement: Element?
+  statusDate: DateTime?
+  statusDateElement: Element?
+  validationType: CodeableConcept?
+  validationProcess: List<CodeableConcept>?
+  frequency: Timing?
+  lastPerformed: DateTime?
+  lastPerformedElement: Element?
+  nextScheduled: DateTime?
+  nextScheduledElement: Element?
+  failureAction: CodeableConcept?
+  primarySource: List<VerificationResultPrimarySource>?
+  attestation: VerificationResultAttestation?
+  validator: List<VerificationResultValidator>?

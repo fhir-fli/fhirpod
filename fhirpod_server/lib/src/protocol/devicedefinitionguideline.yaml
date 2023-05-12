@@ -1,0 +1,14 @@
+class: DeviceDefinitionGuideline
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  useContext: List<UsageContext>?
+  usageInstruction: String?
+  usageInstructionElement: Element?
+  relatedArtifact: List<RelatedArtifact>?
+  indication: List<CodeableConcept>?
+  contraindication: List<CodeableConcept>?
+  warning: List<CodeableConcept>?
+  intendedUse: String?
+  intendedUseElement: Element?

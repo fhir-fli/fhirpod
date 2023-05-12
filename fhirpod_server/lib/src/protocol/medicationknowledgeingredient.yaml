@@ -1,0 +1,10 @@
+class: MedicationKnowledgeIngredient
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  item: CodeableReference
+  type: CodeableConcept?
+  strengthRatio: Ratio?
+  strengthCodeableConcept: CodeableConcept?
+  strengthQuantity: Quantity?

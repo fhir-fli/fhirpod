@@ -1,0 +1,10 @@
+class: ObservationTriggeredBy
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  observation: Reference
+  type: String?
+  typeElement: Element?
+  reason: String?
+  reasonElement: Element?

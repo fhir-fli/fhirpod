@@ -1,0 +1,14 @@
+class: ImagingSelectionInstance
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  uid: String?
+  uidElement: Element?
+  number: int?
+  numberElement: Element?
+  sopClass: Coding?
+  subset: List<String>?
+  subsetElement: List<Element>?
+  imageRegion2D: List<ImagingSelectionImageRegion2D>?
+  imageRegion3D: List<ImagingSelectionImageRegion3D>?

@@ -1,0 +1,11 @@
+class: MolecularSequenceRelative
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  coordinateSystem: CodeableConcept
+  ordinalPosition: int?
+  ordinalPositionElement: Element?
+  sequenceRange: Range?
+  startingSequence: MolecularSequenceStartingSequence?
+  edit: List<MolecularSequenceEdit>?

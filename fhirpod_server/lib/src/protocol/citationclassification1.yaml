@@ -1,0 +1,8 @@
+class: CitationClassification1
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept?
+  classifier: List<CodeableConcept>?
+  artifactAssessment: List<Reference>?

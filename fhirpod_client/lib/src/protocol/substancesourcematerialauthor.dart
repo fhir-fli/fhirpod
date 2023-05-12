@@ -1,0 +1,65 @@
+/* AUTOMATICALLY GENERATED CODE DO NOT MODIFY */
+/*   To generate run: "serverpod generate"    */
+
+// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: public_member_api_docs
+// ignore_for_file: implementation_imports
+
+// ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:serverpod_client/serverpod_client.dart' as _i1;
+import 'protocol.dart' as _i2;
+
+class SubstanceSourceMaterialAuthor extends _i1.SerializableEntity {
+  SubstanceSourceMaterialAuthor({
+    this.id,
+    this.extension_,
+    this.modifierExtension,
+    this.authorType,
+    this.authorDescription,
+    this.authorDescriptionElement,
+  });
+
+  factory SubstanceSourceMaterialAuthor.fromJson(
+    Map<String, dynamic> jsonSerialization,
+    _i1.SerializationManager serializationManager,
+  ) {
+    return SubstanceSourceMaterialAuthor(
+      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
+          jsonSerialization['extension_']),
+      modifierExtension:
+          serializationManager.deserialize<List<_i2.FhirExtension>?>(
+              jsonSerialization['modifierExtension']),
+      authorType: serializationManager
+          .deserialize<_i2.CodeableConcept?>(jsonSerialization['authorType']),
+      authorDescription: serializationManager
+          .deserialize<String?>(jsonSerialization['authorDescription']),
+      authorDescriptionElement: serializationManager.deserialize<_i2.Element?>(
+          jsonSerialization['authorDescriptionElement']),
+    );
+  }
+
+  String? id;
+
+  List<_i2.FhirExtension>? extension_;
+
+  List<_i2.FhirExtension>? modifierExtension;
+
+  _i2.CodeableConcept? authorType;
+
+  String? authorDescription;
+
+  _i2.Element? authorDescriptionElement;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'authorType': authorType,
+      'authorDescription': authorDescription,
+      'authorDescriptionElement': authorDescriptionElement,
+    };
+  }
+}

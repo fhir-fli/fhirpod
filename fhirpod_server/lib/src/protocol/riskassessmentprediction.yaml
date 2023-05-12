@@ -1,0 +1,16 @@
+class: RiskAssessmentPrediction
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  outcome: CodeableConcept?
+  probabilityDecimal: double?
+  probabilityDecimalElement: Element?
+  probabilityRange: Range?
+  qualitativeRisk: CodeableConcept?
+  relativeRisk: double?
+  relativeRiskElement: Element?
+  whenPeriod: Period?
+  whenRange: Range?
+  rationale: String?
+  rationaleElement: Element?

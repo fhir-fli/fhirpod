@@ -1,0 +1,10 @@
+class: SubstanceDefinitionRepresentation
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept?
+  representation: String?
+  representationElement: Element?
+  format: CodeableConcept?
+  document: Reference?

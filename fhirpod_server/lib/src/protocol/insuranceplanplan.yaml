@@ -1,0 +1,11 @@
+class: InsurancePlanPlan
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  type: CodeableConcept?
+  coverageArea: List<Reference>?
+  network: List<Reference>?
+  generalCost: List<InsurancePlanGeneralCost>?
+  specificCost: List<InsurancePlanSpecificCost>?

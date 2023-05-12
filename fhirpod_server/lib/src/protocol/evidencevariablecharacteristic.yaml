@@ -1,0 +1,25 @@
+class: EvidenceVariableCharacteristic
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  linkId: String?
+  linkIdElement: Element?
+  description: String?
+  descriptionElement: Element?
+  note: List<Annotation>?
+  exclude: bool?
+  excludeElement: Element?
+  definitionReference: Reference?
+  definitionCanonical: String?
+  definitionCodeableConcept: CodeableConcept?
+  definitionExpression: Expression?
+  definitionId: String?
+  definitionIdElement: Element?
+  definitionByTypeAndValue: EvidenceVariableDefinitionByTypeAndValue?
+  definitionByCombination: EvidenceVariableDefinitionByCombination?
+  instancesQuantity: Quantity?
+  instancesRange: Range?
+  durationQuantity: Quantity?
+  durationRange: Range?
+  timeFromEvent: List<EvidenceVariableTimeFromEvent>?

@@ -1,0 +1,8 @@
+class: ChargeItemDefinitionApplicability
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  condition: Expression?
+  effectivePeriod: Period?
+  relatedArtifact: RelatedArtifact?

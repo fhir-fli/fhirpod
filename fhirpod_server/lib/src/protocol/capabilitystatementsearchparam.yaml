@@ -1,0 +1,12 @@
+class: CapabilityStatementSearchParam
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  name: String?
+  nameElement: Element?
+  definition: String?
+  type: String?
+  typeElement: Element?
+  documentation: String?
+  documentationElement: Element?

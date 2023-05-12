@@ -1,0 +1,10 @@
+class: RequestOrchestrationOutput
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  title: String?
+  titleElement: Element?
+  requirement: DataRequirement?
+  relatedData: String?
+  relatedDataElement: Element?

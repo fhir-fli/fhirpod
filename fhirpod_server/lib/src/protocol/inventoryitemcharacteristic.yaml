@@ -1,0 +1,25 @@
+class: InventoryItemCharacteristic
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  characteristicType: CodeableConcept
+  valueString: String?
+  valueStringElement: Element?
+  valueInteger: int?
+  valueIntegerElement: Element?
+  valueDecimal: double?
+  valueDecimalElement: Element?
+  valueBoolean: bool?
+  valueBooleanElement: Element?
+  valueUrl: String?
+  valueUrlElement: Element?
+  valueDateTime: DateTime?
+  valueDateTimeElement: Element?
+  valueQuantity: Quantity?
+  valueRange: Range?
+  valueRatio: Ratio?
+  valueAnnotation: Annotation?
+  valueAddress: Address?
+  valueDuration: String?
+  valueCodeableConcept: CodeableConcept?

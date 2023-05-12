@@ -1,0 +1,11 @@
+class: InsurancePlanGeneralCost
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept?
+  groupSize: int?
+  groupSizeElement: Element?
+  cost: Money?
+  comment: String?
+  commentElement: Element?

@@ -1,0 +1,14 @@
+class: ContractContentDefinition
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  subType: CodeableConcept?
+  publisher: Reference?
+  publicationDate: DateTime?
+  publicationDateElement: Element?
+  publicationStatus: String?
+  publicationStatusElement: Element?
+  copyright: String?
+  copyrightElement: Element?

@@ -1,0 +1,14 @@
+class: Age
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  value: double?
+  valueElement: Element?
+  comparator: String ?
+  comparatorElement: Element?
+  unit: String?
+  unitElement: Element?
+  system: String?
+  systemElement: Element?
+  code: String?
+  codeElement: Element?

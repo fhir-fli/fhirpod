@@ -1,0 +1,13 @@
+class: AccountProcedure
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  sequence: int?
+  sequenceElement: Element?
+  code: CodeableReference
+  dateOfService: DateTime?
+  dateOfServiceElement: Element?
+  type: List<CodeableConcept>?
+  packageCode: List<CodeableConcept>?
+  device: List<Reference>?

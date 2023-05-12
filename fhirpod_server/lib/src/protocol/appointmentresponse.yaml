@@ -1,0 +1,33 @@
+class: AppointmentResponse
+fields:
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  appointment: Reference
+  proposedNewTime: bool?
+  proposedNewTimeElement: Element?
+  start: DateTime?
+  startElement: Element?
+  end: DateTime?
+  endElement: Element?
+  participantType: List<CodeableConcept>?
+  actor: Reference?
+  participantStatus: String?
+  participantStatusElement: Element?
+  comment: String?
+  commentElement: Element?
+  recurring: bool?
+  recurringElement: Element?
+  occurrenceDate: DateTime?
+  occurrenceDateElement: Element?
+  recurrenceId: int?
+  recurrenceIdElement: Element?

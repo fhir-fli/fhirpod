@@ -1,0 +1,18 @@
+class: CitationRelatesTo
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: String?
+  typeElement: Element?
+  classifier: List<CodeableConcept>?
+  label: String?
+  labelElement: Element?
+  display: String?
+  displayElement: Element?
+  citation: String?
+  citationElement: Element?
+  document: Attachment?
+  resource: String?
+  resourceElement: Element?
+  resourceReference: Reference?

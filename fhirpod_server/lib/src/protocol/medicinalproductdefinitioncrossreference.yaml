@@ -1,0 +1,7 @@
+class: MedicinalProductDefinitionCrossReference
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  product: CodeableReference
+  type: CodeableConcept?

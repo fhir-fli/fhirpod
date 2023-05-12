@@ -1,0 +1,15 @@
+class: ServiceRequestParameter
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableConcept
+  valueQuantity: Quantity?
+  valueRatio: Ratio?
+  valueRange: Range?
+  valueBoolean: bool?
+  valueBooleanElement: Element?
+  valueCodeableConcept: CodeableConcept?
+  valueString: String?
+  valueStringElement: Element?
+  valuePeriod: Period?

@@ -1,0 +1,10 @@
+class: MedicationKnowledgeStorageGuideline
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  reference: String?
+  referenceElement: Element?
+  note: List<Annotation>?
+  stabilityDuration: String?
+  environmentalSetting: List<MedicationKnowledgeEnvironmentalSetting>?

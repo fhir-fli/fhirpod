@@ -1,0 +1,13 @@
+class: VerificationResultPrimarySource
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  who: Reference?
+  type: List<CodeableConcept>?
+  communicationMethod: List<CodeableConcept>?
+  validationStatus: CodeableConcept?
+  validationDate: DateTime?
+  validationDateElement: Element?
+  canPushUpdates: CodeableConcept?
+  pushTypeAvailable: List<CodeableConcept>?

@@ -1,0 +1,19 @@
+class: EvidenceReportSection
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  title: String?
+  titleElement: Element?
+  focus: CodeableConcept?
+  focusReference: Reference?
+  author: List<Reference>?
+  text: Narrative?
+  mode: String?
+  modeElement: Element?
+  orderedBy: CodeableConcept?
+  entryClassifier: List<CodeableConcept>?
+  entryReference: List<Reference>?
+  entryQuantity: List<Quantity>?
+  emptyReason: CodeableConcept?
+  section: List<EvidenceReportSection>?

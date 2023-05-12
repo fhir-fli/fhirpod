@@ -1,0 +1,12 @@
+class: SpecimenProcessing
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  description: String?
+  descriptionElement: Element?
+  method: CodeableConcept?
+  additive: List<Reference>?
+  timeDateTime: DateTime?
+  timeDateTimeElement: Element?
+  timePeriod: Period?

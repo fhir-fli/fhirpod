@@ -1,0 +1,9 @@
+class: PermissionData
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  resource: List<PermissionResource>?
+  security: List<Coding>?
+  period: List<Period>?
+  expression: Expression?

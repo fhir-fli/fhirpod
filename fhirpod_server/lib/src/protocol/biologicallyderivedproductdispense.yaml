@@ -1,0 +1,33 @@
+class: BiologicallyDerivedProductDispense
+fields:
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  basedOn: List<Reference>?
+  partOf: List<Reference>?
+  status: String?
+  statusElement: Element?
+  originRelationshipType: CodeableConcept?
+  product: Reference
+  patient: Reference
+  matchStatus: CodeableConcept?
+  performer: List<BiologicallyDerivedProductDispensePerformer>?
+  location: Reference?
+  quantity: Quantity?
+  preparedDate: DateTime?
+  preparedDateElement: Element?
+  whenHandedOver: DateTime?
+  whenHandedOverElement: Element?
+  destination: Reference?
+  note: List<Annotation>?
+  usageInstruction: String?
+  usageInstructionElement: Element?

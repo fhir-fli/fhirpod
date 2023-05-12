@@ -1,0 +1,9 @@
+class: StructureDefinitionContext
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: String?
+  typeElement: Element?
+  expression: String?
+  expressionElement: Element?

@@ -1,0 +1,8 @@
+class: SubstanceSourceMaterialFractionDescription
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  fraction: String?
+  fractionElement: Element?
+  materialType: CodeableConcept?

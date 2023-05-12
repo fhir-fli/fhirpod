@@ -1,0 +1,22 @@
+class: DeviceAssociation
+fields:
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  device: Reference
+  category: List<CodeableConcept>?
+  status: CodeableConcept
+  statusReason: List<CodeableConcept>?
+  subject: Reference?
+  bodyStructure: Reference?
+  period: Period?
+  operation: List<DeviceAssociationOperation>?

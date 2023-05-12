@@ -1,0 +1,9 @@
+class: ProvenanceAgent
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept?
+  role: List<CodeableConcept>?
+  who: Reference
+  onBehalfOf: Reference?

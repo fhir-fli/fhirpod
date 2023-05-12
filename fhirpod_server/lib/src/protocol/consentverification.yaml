@@ -1,0 +1,12 @@
+class: ConsentVerification
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  verified: bool?
+  verifiedElement: Element?
+  verificationType: CodeableConcept?
+  verifiedBy: Reference?
+  verifiedWith: Reference?
+  verificationDate: List<DateTime>?
+  verificationDateElement: List<Element>?

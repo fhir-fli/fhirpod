@@ -1,0 +1,8 @@
+class: ClaimRelated
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  claim: Reference?
+  relationship: CodeableConcept?
+  reference: Identifier?

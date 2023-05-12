@@ -1,0 +1,23 @@
+class: Dosage
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  sequence: int?
+  sequenceElement: Element?
+  text: String?
+  textElement: Element?
+  additionalInstruction: List<CodeableConcept>?
+  patientInstruction: String?
+  patientInstructionElement: Element?
+  timing: Timing?
+  asNeeded: bool?
+  asNeededElement: Element?
+  asNeededFor: List<CodeableConcept>?
+  site: CodeableConcept?
+  route: CodeableConcept?
+  method: CodeableConcept?
+  doseAndRate: List<DosageDoseAndRate>?
+  maxDosePerPeriod: List<Ratio>?
+  maxDosePerAdministration: Quantity?
+  maxDosePerLifetime: Quantity?

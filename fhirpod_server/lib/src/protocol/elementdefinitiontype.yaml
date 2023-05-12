@@ -1,0 +1,13 @@
+class: ElementDefinitionType
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: String?
+  codeElement: Element?
+  profile: List<String>?
+  targetProfile: List<String>?
+  aggregation: String?
+  aggregationElement: List<Element>?
+  versioning: String ?
+  versioningElement: Element?

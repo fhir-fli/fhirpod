@@ -1,0 +1,15 @@
+class: CompartmentDefinitionResource
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: String?
+  codeElement: Element?
+  param: List<String>?
+  paramElement: List<Element>?
+  documentation: String?
+  documentationElement: Element?
+  startParam: String?
+  startParamElement: Element?
+  endParam: String?
+  endParamElement: Element?

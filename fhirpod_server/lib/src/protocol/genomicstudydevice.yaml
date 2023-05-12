@@ -1,0 +1,7 @@
+class: GenomicStudyDevice
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  device: Reference?
+  function_: CodeableConcept?

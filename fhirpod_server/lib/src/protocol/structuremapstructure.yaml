@@ -1,0 +1,12 @@
+class: StructureMapStructure
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  url: String
+  mode: String?
+  modeElement: Element?
+  alias: String?
+  aliasElement: Element?
+  documentation: String?
+  documentationElement: Element?

@@ -1,0 +1,15 @@
+class: Signature
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  type: List<Coding>?
+  when: DateTime?
+  whenElement: Element?
+  who: Reference?
+  onBehalfOf: Reference?
+  targetFormat: String?
+  targetFormatElement: Element?
+  sigFormat: String?
+  sigFormatElement: Element?
+  data: String?
+  dataElement: Element?

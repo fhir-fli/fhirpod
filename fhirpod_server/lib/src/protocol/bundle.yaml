@@ -1,0 +1,20 @@
+class: Bundle
+fields:
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  identifier: Identifier?
+  type: String?
+  typeElement: Element?
+  timestamp: DateTime?
+  timestampElement: Element?
+  total: int?
+  totalElement: Element?
+  link: List<BundleLink>?
+  entry: List<BundleEntry>?
+  signature: Signature?
+  issues: Resource?

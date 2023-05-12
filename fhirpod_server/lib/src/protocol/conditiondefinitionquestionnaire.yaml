@@ -1,0 +1,8 @@
+class: ConditionDefinitionQuestionnaire
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  purpose: String?
+  purposeElement: Element?
+  reference: Reference

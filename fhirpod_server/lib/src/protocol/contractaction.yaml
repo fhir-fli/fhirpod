@@ -1,0 +1,34 @@
+class: ContractAction
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  doNotPerform: bool?
+  doNotPerformElement: Element?
+  type: CodeableConcept
+  subject: List<ContractSubject>?
+  intent: CodeableConcept
+  linkId: List<String>?
+  linkIdElement: List<Element>?
+  status: CodeableConcept
+  context: Reference?
+  contextLinkId: List<String>?
+  contextLinkIdElement: List<Element>?
+  occurrenceDateTime: DateTime?
+  occurrenceDateTimeElement: Element?
+  occurrencePeriod: Period?
+  occurrenceTiming: Timing?
+  requester: List<Reference>?
+  requesterLinkId: List<String>?
+  requesterLinkIdElement: List<Element>?
+  performerType: List<CodeableConcept>?
+  performerRole: CodeableConcept?
+  performer: Reference?
+  performerLinkId: List<String>?
+  performerLinkIdElement: List<Element>?
+  reason: List<CodeableReference>?
+  reasonLinkId: List<String>?
+  reasonLinkIdElement: List<Element>?
+  note: List<Annotation>?
+  securityLabelNumber: List<int>?
+  securityLabelNumberElement: List<Element>?

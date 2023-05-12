@@ -8,7 +8,7 @@ environment:
 
 dependencies:
   fhir:
-    path: ../fhir
+    path: ../../fhir/fhir
   serverpod: ^1.1.0
 
 dev_dependencies:

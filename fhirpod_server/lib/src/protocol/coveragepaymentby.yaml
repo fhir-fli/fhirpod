@@ -1,0 +1,8 @@
+class: CoveragePaymentBy
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  party: Reference
+  responsibility: String?
+  responsibilityElement: Element?

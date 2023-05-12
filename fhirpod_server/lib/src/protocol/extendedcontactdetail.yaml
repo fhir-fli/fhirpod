@@ -1,0 +1,10 @@
+class: ExtendedContactDetail
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  purpose: CodeableConcept?
+  name: List<HumanName>?
+  telecom: List<ContactPoint>?
+  address: Address?
+  organization: Reference?
+  period: Period?

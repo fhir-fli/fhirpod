@@ -1,0 +1,10 @@
+class: ProductShelfLife
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept?
+  periodDuration: String?
+  periodString: String?
+  periodStringElement: Element?
+  specialPrecautionsForStorage: List<CodeableConcept>?

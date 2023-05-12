@@ -1,0 +1,17 @@
+class: HumanName
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  use: String ?
+  useElement: Element?
+  text: String?
+  textElement: Element?
+  family: String?
+  familyElement: Element?
+  given: List<String>?
+  givenElement: List<Element>?
+  prefix: List<String>?
+  prefixElement: List<Element>?
+  suffix: List<String>?
+  suffixElement: List<Element>?
+  period: Period?

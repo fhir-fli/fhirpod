@@ -1,0 +1,9 @@
+class: BodyStructureBodyLandmarkOrientation
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  landmarkDescription: List<CodeableConcept>?
+  clockFacePosition: List<CodeableConcept>?
+  distanceFromLandmark: List<BodyStructureDistanceFromLandmark>?
+  surfaceOrientation: List<CodeableConcept>?

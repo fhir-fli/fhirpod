@@ -1,0 +1,9 @@
+class: NutritionOrderSchedule
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  timing: List<Timing>?
+  asNeeded: bool?
+  asNeededElement: Element?
+  asNeededFor: CodeableConcept?

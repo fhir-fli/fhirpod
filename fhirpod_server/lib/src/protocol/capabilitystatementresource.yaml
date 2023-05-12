@@ -1,0 +1,36 @@
+class: CapabilityStatementResource
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: String?
+  typeElement: Element?
+  profile: String?
+  supportedProfile: List<String>?
+  documentation: String?
+  documentationElement: Element?
+  interaction: List<CapabilityStatementInteraction>?
+  versioning: String?
+  versioningElement: Element?
+  readHistory: bool?
+  readHistoryElement: Element?
+  updateCreate: bool?
+  updateCreateElement: Element?
+  conditionalCreate: bool?
+  conditionalCreateElement: Element?
+  conditionalRead: String?
+  conditionalReadElement: Element?
+  conditionalUpdate: bool?
+  conditionalUpdateElement: Element?
+  conditionalPatch: bool?
+  conditionalPatchElement: Element?
+  conditionalDelete: String?
+  conditionalDeleteElement: Element?
+  referencePolicy: List<String>?
+  referencePolicyElement: List<Element>?
+  searchInclude: List<String>?
+  searchIncludeElement: List<Element>?
+  searchRevInclude: List<String>?
+  searchRevIncludeElement: List<Element>?
+  searchParam: List<CapabilityStatementSearchParam>?
+  operation: List<CapabilityStatementOperation>?

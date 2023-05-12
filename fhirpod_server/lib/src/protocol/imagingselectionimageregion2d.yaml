@@ -1,0 +1,9 @@
+class: ImagingSelectionImageRegion2D
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  regionType: String?
+  regionTypeElement: Element?
+  coordinate: List<double>?
+  coordinateElement: List<Element>?

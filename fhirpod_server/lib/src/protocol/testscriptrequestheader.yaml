@@ -1,0 +1,9 @@
+class: TestScriptRequestHeader
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  field: String?
+  fieldElement: Element?
+  value: String?
+  valueElement: Element?

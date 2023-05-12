@@ -1,0 +1,28 @@
+class: BiologicallyDerivedProduct
+fields:
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  productCategory: Coding?
+  productCode: CodeableConcept?
+  parent: List<Reference>?
+  request: List<Reference>?
+  identifier: List<Identifier>?
+  biologicalSourceEvent: Identifier?
+  processingFacility: List<Reference>?
+  division: String?
+  divisionElement: Element?
+  productStatus: Coding?
+  expirationDate: DateTime?
+  expirationDateElement: Element?
+  collection: BiologicallyDerivedProductCollection?
+  storageTempRequirements: Range?
+  property: List<BiologicallyDerivedProductProperty>?

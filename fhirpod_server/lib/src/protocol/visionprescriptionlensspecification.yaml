@@ -1,0 +1,29 @@
+class: VisionPrescriptionLensSpecification
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  product: CodeableConcept
+  eye: String?
+  eyeElement: Element?
+  sphere: double?
+  sphereElement: Element?
+  cylinder: double?
+  cylinderElement: Element?
+  axis: int?
+  axisElement: Element?
+  prism: List<VisionPrescriptionPrism>?
+  add: double?
+  addElement: Element?
+  power: double?
+  powerElement: Element?
+  backCurve: double?
+  backCurveElement: Element?
+  diameter: double?
+  diameterElement: Element?
+  duration: Quantity?
+  color: String?
+  colorElement: Element?
+  brand: String?
+  brandElement: Element?
+  note: List<Annotation>?

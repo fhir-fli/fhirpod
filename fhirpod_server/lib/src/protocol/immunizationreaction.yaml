@@ -1,0 +1,10 @@
+class: ImmunizationReaction
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  date: DateTime?
+  dateElement: Element?
+  manifestation: CodeableReference?
+  reported: bool?
+  reportedElement: Element?

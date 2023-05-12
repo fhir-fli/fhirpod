@@ -1,0 +1,16 @@
+class: VerificationResultAttestation
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  who: Reference?
+  onBehalfOf: Reference?
+  communicationMethod: CodeableConcept?
+  date: DateTime?
+  dateElement: Element?
+  sourceIdentityCertificate: String?
+  sourceIdentityCertificateElement: Element?
+  proxyIdentityCertificate: String?
+  proxyIdentityCertificateElement: Element?
+  proxySignature: Signature?
+  sourceSignature: Signature?

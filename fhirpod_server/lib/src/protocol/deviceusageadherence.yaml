@@ -1,0 +1,7 @@
+class: DeviceUsageAdherence
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableConcept
+  reason: List<CodeableConcept>

@@ -1,0 +1,4 @@
+class: PrimitiveType
+fields:
+  id: String?
+  extension_: List<FhirExtension>?

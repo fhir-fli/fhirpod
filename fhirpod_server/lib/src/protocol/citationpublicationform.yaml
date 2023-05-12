@@ -1,0 +1,32 @@
+class: CitationPublicationForm
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  publishedIn: CitationPublishedIn?
+  citedMedium: CodeableConcept?
+  volume: String?
+  volumeElement: Element?
+  issue: String?
+  issueElement: Element?
+  articleDate: DateTime?
+  articleDateElement: Element?
+  publicationDateText: String?
+  publicationDateTextElement: Element?
+  publicationDateSeason: String?
+  publicationDateSeasonElement: Element?
+  lastRevisionDate: DateTime?
+  lastRevisionDateElement: Element?
+  language: List<CodeableConcept>?
+  accessionNumber: String?
+  accessionNumberElement: Element?
+  pageString: String?
+  pageStringElement: Element?
+  firstPage: String?
+  firstPageElement: Element?
+  lastPage: String?
+  lastPageElement: Element?
+  pageCount: String?
+  pageCountElement: Element?
+  copyright: String?
+  copyrightElement: Element?

@@ -1,0 +1,11 @@
+class: ManufacturedItemDefinitionComponent
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  function_: List<CodeableConcept>?
+  amount: List<Quantity>?
+  constituent: List<ManufacturedItemDefinitionConstituent>?
+  property: List<ManufacturedItemDefinitionProperty>?
+  component: List<ManufacturedItemDefinitionComponent>?

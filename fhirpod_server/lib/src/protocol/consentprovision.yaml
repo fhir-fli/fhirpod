@@ -1,0 +1,17 @@
+class: ConsentProvision
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  period: Period?
+  actor: List<ConsentActor>?
+  action: List<CodeableConcept>?
+  securityLabel: List<Coding>?
+  purpose: List<Coding>?
+  documentType: List<Coding>?
+  resourceType: List<Coding>?
+  code: List<CodeableConcept>?
+  dataPeriod: Period?
+  data: List<ConsentData>?
+  expression: Expression?
+  provision: List<ConsentProvision>?

@@ -1,0 +1,7 @@
+class: AdministrableProductDefinitionTargetSpecies
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableConcept
+  withdrawalPeriod: List<AdministrableProductDefinitionWithdrawalPeriod>?

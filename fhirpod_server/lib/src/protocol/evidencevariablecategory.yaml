@@ -1,0 +1,10 @@
+class: EvidenceVariableCategory
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  name: String?
+  nameElement: Element?
+  valueCodeableConcept: CodeableConcept?
+  valueQuantity: Quantity?
+  valueRange: Range?

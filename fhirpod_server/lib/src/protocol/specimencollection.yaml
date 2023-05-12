@@ -1,0 +1,17 @@
+class: SpecimenCollection
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  collector: Reference?
+  collectedDateTime: DateTime?
+  collectedDateTimeElement: Element?
+  collectedPeriod: Period?
+  duration: String?
+  quantity: Quantity?
+  method: CodeableConcept?
+  device: CodeableReference?
+  procedure: Reference?
+  bodySite: CodeableReference?
+  fastingStatusCodeableConcept: CodeableConcept?
+  fastingStatusDuration: String?

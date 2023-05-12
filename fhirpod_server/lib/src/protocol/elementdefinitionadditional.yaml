@@ -1,0 +1,15 @@
+class: ElementDefinitionAdditional
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  purpose: String?
+  purposeElement: Element?
+  valueSet: String
+  documentation: String?
+  documentationElement: Element?
+  shortDoco: String?
+  shortDocoElement: Element?
+  usage: List<UsageContext>?
+  any: bool?
+  anyElement: Element?

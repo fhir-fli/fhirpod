@@ -1,0 +1,75 @@
+/* AUTOMATICALLY GENERATED CODE DO NOT MODIFY */
+/*   To generate run: "serverpod generate"    */
+
+// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: public_member_api_docs
+// ignore_for_file: implementation_imports
+
+// ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:serverpod_client/serverpod_client.dart' as _i1;
+import 'protocol.dart' as _i2;
+
+class BodyStructureBodyLandmarkOrientation extends _i1.SerializableEntity {
+  BodyStructureBodyLandmarkOrientation({
+    this.id,
+    this.extension_,
+    this.modifierExtension,
+    this.landmarkDescription,
+    this.clockFacePosition,
+    this.distanceFromLandmark,
+    this.surfaceOrientation,
+  });
+
+  factory BodyStructureBodyLandmarkOrientation.fromJson(
+    Map<String, dynamic> jsonSerialization,
+    _i1.SerializationManager serializationManager,
+  ) {
+    return BodyStructureBodyLandmarkOrientation(
+      id: serializationManager.deserialize<String?>(jsonSerialization['id']),
+      extension_: serializationManager.deserialize<List<_i2.FhirExtension>?>(
+          jsonSerialization['extension_']),
+      modifierExtension:
+          serializationManager.deserialize<List<_i2.FhirExtension>?>(
+              jsonSerialization['modifierExtension']),
+      landmarkDescription:
+          serializationManager.deserialize<List<_i2.CodeableConcept>?>(
+              jsonSerialization['landmarkDescription']),
+      clockFacePosition:
+          serializationManager.deserialize<List<_i2.CodeableConcept>?>(
+              jsonSerialization['clockFacePosition']),
+      distanceFromLandmark: serializationManager
+          .deserialize<List<_i2.BodyStructureDistanceFromLandmark>?>(
+              jsonSerialization['distanceFromLandmark']),
+      surfaceOrientation:
+          serializationManager.deserialize<List<_i2.CodeableConcept>?>(
+              jsonSerialization['surfaceOrientation']),
+    );
+  }
+
+  String? id;
+
+  List<_i2.FhirExtension>? extension_;
+
+  List<_i2.FhirExtension>? modifierExtension;
+
+  List<_i2.CodeableConcept>? landmarkDescription;
+
+  List<_i2.CodeableConcept>? clockFacePosition;
+
+  List<_i2.BodyStructureDistanceFromLandmark>? distanceFromLandmark;
+
+  List<_i2.CodeableConcept>? surfaceOrientation;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'extension_': extension_,
+      'modifierExtension': modifierExtension,
+      'landmarkDescription': landmarkDescription,
+      'clockFacePosition': clockFacePosition,
+      'distanceFromLandmark': distanceFromLandmark,
+      'surfaceOrientation': surfaceOrientation,
+    };
+  }
+}

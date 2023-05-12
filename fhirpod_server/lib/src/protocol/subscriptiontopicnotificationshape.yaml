@@ -1,0 +1,11 @@
+class: SubscriptionTopicNotificationShape
+fields:
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  resource: String?
+  resourceElement: Element?
+  include: List<String>?
+  includeElement: List<Element>?
+  revInclude: List<String>?
+  revIncludeElement: List<Element>?
