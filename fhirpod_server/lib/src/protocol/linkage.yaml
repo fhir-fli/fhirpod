@@ -1,0 +1,17 @@
+class: Linkage
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  active: bool?
+  activeElement: Element?
+  author: Reference?
+  item: List<LinkageItem>

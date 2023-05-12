@@ -1,0 +1,13 @@
+class: ImmunizationProtocolApplied
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  series: String?
+  seriesElement: Element?
+  authority: Reference?
+  targetDisease: List<CodeableConcept>?
+  doseNumber: String?
+  doseNumberElement: Element?
+  seriesDoses: String?
+  seriesDosesElement: Element?

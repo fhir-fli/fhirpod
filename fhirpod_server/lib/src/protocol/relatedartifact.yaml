@@ -1,0 +1,20 @@
+class: RelatedArtifact
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  type: String?
+  typeElement: Element?
+  classifier: List<CodeableConcept>?
+  label: String?
+  labelElement: Element?
+  display: String?
+  displayElement: Element?
+  citation: String?
+  citationElement: Element?
+  document: Attachment?
+  resource: String?
+  resourceReference: Reference?
+  publicationStatus: String?
+  publicationStatusElement: Element?
+  publicationDate: DateTime?
+  publicationDateElement: Element?

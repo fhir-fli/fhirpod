@@ -1,0 +1,7 @@
+class: ProcedureFocalDevice
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  action: CodeableConcept?
+  manipulated: Reference

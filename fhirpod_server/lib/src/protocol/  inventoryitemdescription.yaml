@@ -1,9 +1,0 @@
-class:   InventoryItemDescription
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  language: String?
-  languageElement: Element?
-  description: String?
-  descriptionElement: Element?

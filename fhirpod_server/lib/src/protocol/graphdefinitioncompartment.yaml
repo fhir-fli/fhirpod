@@ -1,0 +1,15 @@
+class: GraphDefinitionCompartment
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  use: String?
+  useElement: Element?
+  rule: String?
+  ruleElement: Element?
+  code: String?
+  codeElement: Element?
+  expression: String?
+  expressionElement: Element?
+  description: String?
+  descriptionElement: Element?

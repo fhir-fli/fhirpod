@@ -1,0 +1,9 @@
+class: EvidenceModelCharacteristic
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableConcept
+  value: Quantity?
+  variable: List<EvidenceVariable>?
+  attributeEstimate: List<EvidenceAttributeEstimate>?

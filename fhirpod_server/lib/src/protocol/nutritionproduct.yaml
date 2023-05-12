@@ -1,0 +1,24 @@
+class: NutritionProduct
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableConcept?
+  status: String?
+  statusElement: Element?
+  category: List<CodeableConcept>?
+  manufacturer: List<Reference>?
+  nutrient: List<NutritionProductNutrient>?
+  ingredient: List<NutritionProductIngredient>?
+  knownAllergen: List<CodeableReference>?
+  characteristic: List<NutritionProductCharacteristic>?
+  instance: List<NutritionProductInstance>?
+  note: List<Annotation>?

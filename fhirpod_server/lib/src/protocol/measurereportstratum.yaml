@@ -1,0 +1,20 @@
+class: MeasureReportStratum
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  valueCodeableConcept: CodeableConcept?
+  valueBoolean: bool?
+  valueBooleanElement: Element?
+  valueQuantity: Quantity?
+  valueRange: Range?
+  valueReference: Reference?
+  component: List<MeasureReportComponent>?
+  population: List<MeasureReportPopulation1>?
+  measureScoreQuantity: Quantity?
+  measureScoreDateTime: DateTime?
+  measureScoreDateTimeElement: Element?
+  measureScoreCodeableConcept: CodeableConcept?
+  measureScorePeriod: Period?
+  measureScoreRange: Range?
+  measureScoreDuration: String?

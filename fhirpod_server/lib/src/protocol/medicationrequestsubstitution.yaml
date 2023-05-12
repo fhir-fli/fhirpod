@@ -1,0 +1,9 @@
+class: MedicationRequestSubstitution
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  allowedBoolean: bool?
+  allowedBooleanElement: Element?
+  allowedCodeableConcept: CodeableConcept?
+  reason: CodeableConcept?

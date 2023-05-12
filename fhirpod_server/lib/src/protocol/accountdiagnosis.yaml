@@ -1,0 +1,14 @@
+class: AccountDiagnosis
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  sequence: int?
+  sequenceElement: Element?
+  condition: CodeableReference
+  dateOfDiagnosis: DateTime?
+  dateOfDiagnosisElement: Element?
+  type: List<CodeableConcept>?
+  onAdmission: bool?
+  onAdmissionElement: Element?
+  packageCode: List<CodeableConcept>?

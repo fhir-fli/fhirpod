@@ -1,0 +1,16 @@
+class: NutritionOrderEnteralFormula
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  baseFormulaType: CodeableReference?
+  baseFormulaProductName: String?
+  baseFormulaProductNameElement: Element?
+  deliveryDevice: List<CodeableReference>?
+  additive: List<NutritionOrderAdditive>?
+  caloricDensity: Quantity?
+  routeOfAdministration: CodeableConcept?
+  administration: List<NutritionOrderAdministration>?
+  maxVolumeToDeliver: Quantity?
+  administrationInstruction: String?
+  administrationInstructionElement: Element?

@@ -1,7 +1,0 @@
-class:   EvidenceReportSubject
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  characteristic: List<EvidenceReportCharacteristic>?
-  note: List<Annotation>?

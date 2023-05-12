@@ -1,0 +1,11 @@
+class: SupplyRequestParameter
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableConcept?
+  valueCodeableConcept: CodeableConcept?
+  valueQuantity: Quantity?
+  valueRange: Range?
+  valueBoolean: bool?
+  valueBooleanElement: Element?

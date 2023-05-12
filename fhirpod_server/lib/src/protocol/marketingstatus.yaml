@@ -1,0 +1,11 @@
+class: MarketingStatus
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  country: CodeableConcept?
+  jurisdiction: CodeableConcept?
+  status: CodeableConcept
+  dateRange: Period?
+  restoreDate: DateTime?
+  restoreDateElement: Element?

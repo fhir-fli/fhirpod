@@ -1,0 +1,7 @@
+class: ContactDetail
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  name: String?
+  nameElement: Element?
+  telecom: List<ContactPoint>?

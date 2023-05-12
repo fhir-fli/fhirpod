@@ -1,0 +1,17 @@
+class: FamilyMemberHistoryProcedure
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableConcept
+  outcome: CodeableConcept?
+  contributedToDeath: bool?
+  contributedToDeathElement: Element?
+  performedAge: Age?
+  performedRange: Range?
+  performedPeriod: Period?
+  performedString: String?
+  performedStringElement: Element?
+  performedDateTime: DateTime?
+  performedDateTimeElement: Element?
+  note: List<Annotation>?

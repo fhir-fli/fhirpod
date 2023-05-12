@@ -1,0 +1,25 @@
+class: Schedule
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  active: bool?
+  activeElement: Element?
+  serviceCategory: List<CodeableConcept>?
+  serviceType: List<CodeableReference>?
+  specialty: List<CodeableConcept>?
+  name: String?
+  nameElement: Element?
+  actor: List<Reference>
+  planningHorizon: Period?
+  comment: String?
+  commentElement: Element?

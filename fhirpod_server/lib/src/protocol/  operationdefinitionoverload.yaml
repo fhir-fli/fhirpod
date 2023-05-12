@@ -1,9 +1,0 @@
-class:   OperationDefinitionOverload
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  parameterName: List<String>?
-  parameterNameElement: List<Element>?
-  comment: String?
-  commentElement: Element?

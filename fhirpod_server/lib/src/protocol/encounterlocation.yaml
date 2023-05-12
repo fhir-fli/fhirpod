@@ -1,0 +1,10 @@
+class: EncounterLocation
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  location: Reference
+  status: String?
+  statusElement: Element?
+  form: CodeableConcept?
+  period: Period?

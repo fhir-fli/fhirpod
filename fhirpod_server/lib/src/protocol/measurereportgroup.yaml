@@ -1,0 +1,18 @@
+class: MeasureReportGroup
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  linkId: String?
+  linkIdElement: Element?
+  code: CodeableConcept?
+  subject: Reference?
+  population: List<MeasureReportPopulation>?
+  measureScoreQuantity: Quantity?
+  measureScoreDateTime: DateTime?
+  measureScoreDateTimeElement: Element?
+  measureScoreCodeableConcept: CodeableConcept?
+  measureScorePeriod: Period?
+  measureScoreRange: Range?
+  measureScoreDuration: String?
+  stratifier: List<MeasureReportStratifier>?

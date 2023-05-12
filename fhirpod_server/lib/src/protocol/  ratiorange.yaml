@@ -1,7 +1,0 @@
-class:   RatioRange
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  lowNumerator: Quantity?
-  highNumerator: Quantity?
-  denominator: Quantity?

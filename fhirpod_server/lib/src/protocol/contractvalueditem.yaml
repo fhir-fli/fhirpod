@@ -1,0 +1,27 @@
+class: ContractValuedItem
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  entityCodeableConcept: CodeableConcept?
+  entityReference: Reference?
+  identifier: Identifier?
+  effectiveTime: DateTime?
+  effectiveTimeElement: Element?
+  quantity: Quantity?
+  unitPrice: Money?
+  factor: double?
+  factorElement: Element?
+  points: double?
+  pointsElement: Element?
+  net: Money?
+  payment: String?
+  paymentElement: Element?
+  paymentDate: DateTime?
+  paymentDateElement: Element?
+  responsible: Reference?
+  recipient: Reference?
+  linkId: List<String>?
+  linkIdElement: List<Element>?
+  securityLabelNumber: List<int>?
+  securityLabelNumberElement: List<Element>?

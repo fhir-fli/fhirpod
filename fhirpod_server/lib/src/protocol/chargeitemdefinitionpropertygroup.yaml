@@ -1,0 +1,7 @@
+class: ChargeItemDefinitionPropertyGroup
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  applicability: List<ChargeItemDefinitionApplicability>?
+  priceComponent: List<MonetaryComponent>?

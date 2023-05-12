@@ -1,0 +1,23 @@
+class: SubscriptionStatus
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  status: String?
+  statusElement: Element?
+  type: String?
+  typeElement: Element?
+  eventsSinceSubscriptionStart: BigInt?
+  eventsSinceSubscriptionStartElement: Element?
+  notificationEvent: List<SubscriptionStatusNotificationEvent>?
+  subscription: Reference
+  topic: String?
+  error: List<CodeableConcept>?

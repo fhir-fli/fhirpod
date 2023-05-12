@@ -1,0 +1,14 @@
+class: EvidenceSampleSize
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  description: String?
+  descriptionElement: Element?
+  note: List<Annotation>?
+  numberOfStudies: int?
+  numberOfStudiesElement: Element?
+  numberOfParticipants: int?
+  numberOfParticipantsElement: Element?
+  knownDataCount: int?
+  knownDataCountElement: Element?

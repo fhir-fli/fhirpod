@@ -1,0 +1,33 @@
+class: CoverageEligibilityRequest
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  status: String?
+  statusElement: Element?
+  priority: CodeableConcept?
+  purpose: List<String>?
+  purposeElement: List<Element>?
+  patient: Reference
+  event: List<CoverageEligibilityRequestEvent>?
+  servicedDate: DateTime?
+  servicedDateElement: Element?
+  servicedPeriod: Period?
+  created: DateTime?
+  createdElement: Element?
+  enterer: Reference?
+  provider: Reference?
+  insurer: Reference
+  facility: Reference?
+  supportingInfo: List<CoverageEligibilityRequestSupportingInfo>?
+  insurance: List<CoverageEligibilityRequestInsurance>?
+  item: List<CoverageEligibilityRequestItem>?

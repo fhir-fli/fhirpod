@@ -1,0 +1,19 @@
+class: AuditEventAgent
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept?
+  role: List<CodeableConcept>?
+  who: Reference
+  requestor: bool?
+  requestorElement: Element?
+  location: Reference?
+  policy: List<String>?
+  policyElement: List<Element>?
+  networkReference: Reference?
+  networkUri: String?
+  networkUriElement: Element?
+  networkString: String?
+  networkStringElement: Element?
+  authorization: List<CodeableConcept>?

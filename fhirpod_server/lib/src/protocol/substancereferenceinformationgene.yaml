@@ -1,0 +1,8 @@
+class: SubstanceReferenceInformationGene
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  geneSequenceOrigin: CodeableConcept?
+  gene: CodeableConcept?
+  source: List<Reference>?

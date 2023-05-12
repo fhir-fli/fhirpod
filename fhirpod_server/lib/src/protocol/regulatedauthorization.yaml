@@ -1,0 +1,30 @@
+class: RegulatedAuthorization
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  subject: List<Reference>?
+  type: CodeableConcept?
+  description: String?
+  descriptionElement: Element?
+  region: List<CodeableConcept>?
+  status: CodeableConcept?
+  statusDate: DateTime?
+  statusDateElement: Element?
+  validityPeriod: Period?
+  indication: List<CodeableReference>?
+  intendedUse: CodeableConcept?
+  basis: List<CodeableConcept>?
+  holder: Reference?
+  regulator: Reference?
+  attachedDocument: List<Reference>?
+  case_: RegulatedAuthorizationCase?

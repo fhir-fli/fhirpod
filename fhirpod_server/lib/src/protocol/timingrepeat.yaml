@@ -1,0 +1,36 @@
+class: TimingRepeat
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  boundsDuration: String?
+  boundsRange: Range?
+  boundsPeriod: Period?
+  count: int?
+  countElement: Element?
+  countMax: int?
+  countMaxElement: Element?
+  duration: double?
+  durationElement: Element?
+  durationMax: double?
+  durationMaxElement: Element?
+  durationUnit: String?
+  durationUnitElement: Element?
+  frequency: int?
+  frequencyElement: Element?
+  frequencyMax: int?
+  frequencyMaxElement: Element?
+  period: double?
+  periodElement: Element?
+  periodMax: double?
+  periodMaxElement: Element?
+  periodUnit: String?
+  periodUnitElement: Element?
+  dayOfWeek: List<String>?
+  dayOfWeekElement: List<Element>?
+  timeOfDay: List<String>?
+  timeOfDayElement: List<Element>?
+  when: List<String>?
+  whenElement: List<Element>?
+  offset: int?
+  offsetElement: Element?

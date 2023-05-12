@@ -1,9 +1,0 @@
-class:   VerificationResultValidator
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  organization: Reference
-  identityCertificate: String?
-  identityCertificateElement: Element?
-  attestationSignature: Signature?

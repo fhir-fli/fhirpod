@@ -1,0 +1,6 @@
+class: TestScriptTeardown
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  action: List<TestScriptAction2>

@@ -1,0 +1,9 @@
+class: SubstanceDefinitionOfficial
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  authority: CodeableConcept?
+  status: CodeableConcept?
+  date: DateTime?
+  dateElement: Element?

@@ -1,0 +1,9 @@
+class: TaskRestriction
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  repetitions: int?
+  repetitionsElement: Element?
+  period: Period?
+  recipient: List<Reference>?

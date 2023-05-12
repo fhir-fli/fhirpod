@@ -1,0 +1,9 @@
+class: OrganizationQualification
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  code: CodeableConcept
+  period: Period?
+  issuer: Reference?

@@ -1,0 +1,22 @@
+class: GraphDefinitionLink
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  description: String?
+  descriptionElement: Element?
+  min: int?
+  minElement: Element?
+  max: String?
+  maxElement: Element?
+  sourceId: String?
+  sourceIdElement: Element?
+  path: String?
+  pathElement: Element?
+  sliceName: String?
+  sliceNameElement: Element?
+  targetId: String?
+  targetIdElement: Element?
+  params: String?
+  paramsElement: Element?
+  compartment: List<GraphDefinitionCompartment>?

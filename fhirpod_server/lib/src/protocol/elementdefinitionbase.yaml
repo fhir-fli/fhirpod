@@ -1,0 +1,11 @@
+class: ElementDefinitionBase
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  path: String?
+  pathElement: Element?
+  min: int?
+  minElement: Element?
+  max: String?
+  maxElement: Element?

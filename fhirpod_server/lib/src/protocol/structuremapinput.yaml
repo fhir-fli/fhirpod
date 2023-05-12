@@ -1,0 +1,13 @@
+class: StructureMapInput
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  name: String?
+  nameElement: Element?
+  type: String?
+  typeElement: Element?
+  mode: String?
+  modeElement: Element?
+  documentation: String?
+  documentationElement: Element?

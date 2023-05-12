@@ -1,0 +1,20 @@
+class: ClaimResponseSubDetail1
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  traceNumber: List<Identifier>?
+  revenue: CodeableConcept?
+  productOrService: CodeableConcept?
+  productOrServiceEnd: CodeableConcept?
+  modifier: List<CodeableConcept>?
+  quantity: Quantity?
+  unitPrice: Money?
+  factor: double?
+  factorElement: Element?
+  tax: Money?
+  net: Money?
+  noteNumber: List<int>?
+  noteNumberElement: List<Element>?
+  reviewOutcome: ClaimResponseReviewOutcome?
+  adjudication: List<ClaimResponseAdjudication>?

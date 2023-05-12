@@ -1,0 +1,13 @@
+class: EvidenceCertainty
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  description: String?
+  descriptionElement: Element?
+  note: List<Annotation>?
+  type: CodeableConcept?
+  rating: CodeableConcept?
+  rater: String?
+  raterElement: Element?
+  subcomponent: List<EvidenceCertainty>?

@@ -1,0 +1,36 @@
+class: Location
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  status: String?
+  statusElement: Element?
+  operationalStatus: Coding?
+  name: String?
+  nameElement: Element?
+  alias: List<String>?
+  aliasElement: List<Element>?
+  description: String?
+  descriptionElement: Element?
+  mode: String?
+  modeElement: Element?
+  type: List<CodeableConcept>?
+  contact: List<ExtendedContactDetail>?
+  address: Address?
+  form: CodeableConcept?
+  position: LocationPosition?
+  managingOrganization: Reference?
+  partOf: Reference?
+  characteristic: List<CodeableConcept>?
+  hoursOfOperation: List<Availability>?
+  virtualService: List<VirtualServiceDetail>?
+  endpoint: List<Reference>?

@@ -1,0 +1,16 @@
+class: OperationOutcomeIssue
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  severity: String?
+  severityElement: Element?
+  code: String?
+  codeElement: Element?
+  details: CodeableConcept?
+  diagnostics: String?
+  diagnosticsElement: Element?
+  location: List<String>?
+  locationElement: List<Element>?
+  expression: List<String>?
+  expressionElement: List<Element>?

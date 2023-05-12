@@ -1,8 +1,0 @@
-class:   TestScriptScope
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  artifact: String
-  conformance: CodeableConcept?
-  phase: CodeableConcept?

@@ -1,0 +1,10 @@
+class: PlanDefinitionOption
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: String?
+  typeElement: Element?
+  typeCanonical: String?
+  typeReference: Reference?
+  role: CodeableConcept?

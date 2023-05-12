@@ -1,8 +1,0 @@
-class:   DeviceAssociationOperation
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  status: CodeableConcept
-  operator_: List<Reference>?
-  period: Period?

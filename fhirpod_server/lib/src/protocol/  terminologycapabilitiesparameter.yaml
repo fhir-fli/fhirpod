@@ -1,9 +1,0 @@
-class:   TerminologyCapabilitiesParameter
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  name: String?
-  nameElement: Element?
-  documentation: String?
-  documentationElement: Element?

@@ -1,0 +1,12 @@
+class: TestReportAssert
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  result: String?
+  resultElement: Element?
+  message: String?
+  messageElement: Element?
+  detail: String?
+  detailElement: Element?
+  requirement: List<TestReportRequirement>?

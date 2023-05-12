@@ -1,0 +1,17 @@
+class: ParameterDefinition
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  name: String?
+  nameElement: Element?
+  use: String?
+  useElement: Element?
+  min: int?
+  minElement: Element?
+  max: String?
+  maxElement: Element?
+  documentation: String?
+  documentationElement: Element?
+  type: String?
+  typeElement: Element?
+  profile: String?

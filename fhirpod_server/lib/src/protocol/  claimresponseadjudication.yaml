@@ -1,9 +1,0 @@
-class:   ClaimResponseAdjudication
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  category: CodeableConcept
-  reason: CodeableConcept?
-  amount: Money?
-  quantity: Quantity?

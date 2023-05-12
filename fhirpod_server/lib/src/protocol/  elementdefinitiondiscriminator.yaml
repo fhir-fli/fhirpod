@@ -1,9 +1,0 @@
-class:   ElementDefinitionDiscriminator
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: ElementDefinitionDiscriminatorType?
-  typeElement: Element?
-  path: String?
-  pathElement: Element?

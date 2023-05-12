@@ -1,0 +1,9 @@
+class: ContractContext
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  reference: Reference?
+  code: List<CodeableConcept>?
+  text: String?
+  textElement: Element?

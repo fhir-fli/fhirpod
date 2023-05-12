@@ -1,0 +1,9 @@
+class: ValueSetScope
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  inclusionCriteria: String?
+  inclusionCriteriaElement: Element?
+  exclusionCriteria: String?
+  exclusionCriteriaElement: Element?

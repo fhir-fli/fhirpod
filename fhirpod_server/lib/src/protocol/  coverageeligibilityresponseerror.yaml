@@ -1,8 +1,0 @@
-class:   CoverageEligibilityResponseError
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  code: CodeableConcept
-  expression: List<String>?
-  expressionElement: List<Element>?

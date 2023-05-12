@@ -1,0 +1,16 @@
+class: ConceptMapDependsOn
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  attribute: String?
+  attributeElement: Element?
+  valueCode: String?
+  valueCodeElement: Element?
+  valueCoding: Coding?
+  valueString: String?
+  valueStringElement: Element?
+  valueBoolean: bool?
+  valueBooleanElement: Element?
+  valueQuantity: Quantity?
+  valueSet: String?

@@ -1,0 +1,7 @@
+class: InvoiceParticipant
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  role: CodeableConcept?
+  actor: Reference

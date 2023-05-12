@@ -1,7 +1,0 @@
-class:   MedicationKnowledgeDosage
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: CodeableConcept
-  dosage: List<Dosage>

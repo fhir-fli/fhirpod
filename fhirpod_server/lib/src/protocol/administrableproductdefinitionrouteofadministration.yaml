@@ -1,0 +1,12 @@
+class: AdministrableProductDefinitionRouteOfAdministration
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableConcept
+  firstDose: Quantity?
+  maxSingleDose: Quantity?
+  maxDosePerDay: Quantity?
+  maxDosePerTreatmentPeriod: Ratio?
+  maxTreatmentPeriod: String?
+  targetSpecies: List<AdministrableProductDefinitionTargetSpecies>?

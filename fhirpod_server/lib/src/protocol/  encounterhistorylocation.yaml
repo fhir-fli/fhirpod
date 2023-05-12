@@ -1,7 +1,0 @@
-class:   EncounterHistoryLocation
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  location: Reference
-  form: CodeableConcept?

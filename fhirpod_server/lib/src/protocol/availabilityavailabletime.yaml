@@ -1,0 +1,13 @@
+class: AvailabilityAvailableTime
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  daysOfWeek: List<String>?
+  daysOfWeekElement: List<Element>?
+  allDay: bool?
+  allDayElement: Element?
+  availableStartTime: String?
+  availableStartTimeElement: Element?
+  availableEndTime: String?
+  availableEndTimeElement: Element?

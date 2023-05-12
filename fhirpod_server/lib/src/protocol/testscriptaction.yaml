@@ -1,0 +1,7 @@
+class: TestScriptAction
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  operation: TestScriptOperation?
+  assert_: TestScriptAssert?

@@ -1,0 +1,28 @@
+class: PractitionerRole
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  active: bool?
+  activeElement: Element?
+  period: Period?
+  practitioner: Reference?
+  organization: Reference?
+  code: List<CodeableConcept>?
+  specialty: List<CodeableConcept>?
+  location: List<Reference>?
+  healthcareService: List<Reference>?
+  contact: List<ExtendedContactDetail>?
+  characteristic: List<CodeableConcept>?
+  communication: List<CodeableConcept>?
+  availability: List<Availability>?
+  endpoint: List<Reference>?

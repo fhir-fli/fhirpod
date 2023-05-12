@@ -1,0 +1,7 @@
+class: AppointmentYearlyTemplate
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  yearInterval: int?
+  yearIntervalElement: Element?

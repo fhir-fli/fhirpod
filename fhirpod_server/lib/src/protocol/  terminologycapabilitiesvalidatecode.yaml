@@ -1,7 +1,0 @@
-class:   TerminologyCapabilitiesValidateCode
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  translations: bool?
-  translationsElement: Element?

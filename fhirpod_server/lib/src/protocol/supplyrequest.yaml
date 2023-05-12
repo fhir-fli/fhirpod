@@ -1,0 +1,35 @@
+class: SupplyRequest
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  status: String?
+  statusElement: Element?
+  basedOn: List<Reference>?
+  category: CodeableConcept?
+  priority: String?
+  priorityElement: Element?
+  deliverFor: Reference?
+  item: CodeableReference
+  quantity: Quantity
+  parameter: List<SupplyRequestParameter>?
+  occurrenceDateTime: DateTime?
+  occurrenceDateTimeElement: Element?
+  occurrencePeriod: Period?
+  occurrenceTiming: Timing?
+  authoredOn: DateTime?
+  authoredOnElement: Element?
+  requester: Reference?
+  supplier: List<Reference>?
+  reason: List<CodeableReference>?
+  deliverFrom: Reference?
+  deliverTo: Reference?

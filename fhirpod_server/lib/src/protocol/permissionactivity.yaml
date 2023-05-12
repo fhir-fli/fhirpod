@@ -1,0 +1,8 @@
+class: PermissionActivity
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  actor: List<Reference>?
+  action: List<CodeableConcept>?
+  purpose: List<CodeableConcept>?

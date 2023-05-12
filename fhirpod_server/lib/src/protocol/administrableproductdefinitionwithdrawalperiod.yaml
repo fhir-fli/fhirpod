@@ -1,0 +1,9 @@
+class: AdministrableProductDefinitionWithdrawalPeriod
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  tissue: CodeableConcept
+  value: Quantity
+  supportingInformation: String?
+  supportingInformationElement: Element?

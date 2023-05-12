@@ -1,0 +1,7 @@
+class: ImmunizationPerformer
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  function_: CodeableConcept?
+  actor: Reference

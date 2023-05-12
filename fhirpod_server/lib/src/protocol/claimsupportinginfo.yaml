@@ -1,0 +1,21 @@
+class: ClaimSupportingInfo
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  sequence: int?
+  sequenceElement: Element?
+  category: CodeableConcept
+  code: CodeableConcept?
+  timingDate: DateTime?
+  timingDateElement: Element?
+  timingPeriod: Period?
+  valueBoolean: bool?
+  valueBooleanElement: Element?
+  valueString: String?
+  valueStringElement: Element?
+  valueQuantity: Quantity?
+  valueAttachment: Attachment?
+  valueReference: Reference?
+  valueIdentifier: Identifier?
+  reason: CodeableConcept?

@@ -1,0 +1,17 @@
+class: DataRequirement
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  type: String?
+  typeElement: Element?
+  profile: List<String>?
+  subjectCodeableConcept: CodeableConcept?
+  subjectReference: Reference?
+  mustSupport: List<String>?
+  mustSupportElement: List<Element>?
+  codeFilter: List<DataRequirementCodeFilter>?
+  dateFilter: List<DataRequirementDateFilter>?
+  valueFilter: List<DataRequirementValueFilter>?
+  limit: int?
+  limitElement: Element?
+  sort: List<DataRequirementSort>?

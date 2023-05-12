@@ -1,8 +1,0 @@
-class:   ServiceRequestPatientInstruction
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  instructionMarkdown: String?
-  instructionMarkdownElement: Element?
-  instructionReference: Reference?

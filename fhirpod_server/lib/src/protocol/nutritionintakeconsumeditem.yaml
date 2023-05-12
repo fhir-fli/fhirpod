@@ -1,0 +1,13 @@
+class: NutritionIntakeConsumedItem
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  nutritionProduct: CodeableReference
+  schedule: Timing?
+  amount: Quantity?
+  rate: Quantity?
+  notConsumed: bool?
+  notConsumedElement: Element?
+  notConsumedReason: CodeableConcept?

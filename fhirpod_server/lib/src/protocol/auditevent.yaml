@@ -1,0 +1,32 @@
+class: AuditEvent
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  category: List<CodeableConcept>?
+  code: CodeableConcept
+  action: String?
+  actionElement: Element?
+  severity: String?
+  severityElement: Element?
+  occurredPeriod: Period?
+  occurredDateTime: DateTime?
+  occurredDateTimeElement: Element?
+  recorded: DateTime?
+  recordedElement: Element?
+  outcome: AuditEventOutcome?
+  authorization: List<CodeableConcept>?
+  basedOn: List<Reference>?
+  patient: Reference?
+  encounter: Reference?
+  agent: List<AuditEventAgent>
+  source: AuditEventSource
+  entity: List<AuditEventEntity>?

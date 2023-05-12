@@ -1,0 +1,15 @@
+class: AllergyIntoleranceReaction
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  substance: CodeableConcept?
+  manifestation: List<CodeableReference>
+  description: String?
+  descriptionElement: Element?
+  onset: DateTime?
+  onsetElement: Element?
+  severity: String?
+  severityElement: Element?
+  exposureRoute: CodeableConcept?
+  note: List<Annotation>?

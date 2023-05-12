@@ -1,7 +1,0 @@
-class:   CodeableConcept
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  coding: List<Coding>?
-  text: String?
-  textElement: Element?

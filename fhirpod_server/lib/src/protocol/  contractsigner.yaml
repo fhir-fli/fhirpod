@@ -1,8 +1,0 @@
-class:   ContractSigner
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: Coding
-  party: Reference
-  signature: List<Signature>

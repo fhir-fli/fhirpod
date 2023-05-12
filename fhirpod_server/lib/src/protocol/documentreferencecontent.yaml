@@ -1,0 +1,7 @@
+class: DocumentReferenceContent
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  attachment: Attachment
+  profile: List<DocumentReferenceProfile>?

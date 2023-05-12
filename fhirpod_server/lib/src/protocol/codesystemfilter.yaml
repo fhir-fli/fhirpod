@@ -1,0 +1,13 @@
+class: CodeSystemFilter
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: String?
+  codeElement: Element?
+  description: String?
+  descriptionElement: Element?
+  operator_: List<String>?
+  operatorElement: List<Element>?
+  value: String?
+  valueElement: Element?

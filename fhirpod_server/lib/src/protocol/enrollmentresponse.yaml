@@ -1,0 +1,25 @@
+class: EnrollmentResponse
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  status: String?
+  statusElement: Element?
+  request: Reference?
+  outcome: String?
+  outcomeElement: Element?
+  disposition: String?
+  dispositionElement: Element?
+  created: DateTime?
+  createdElement: Element?
+  organization: Reference?
+  requestProvider: Reference?

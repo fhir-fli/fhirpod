@@ -1,9 +1,0 @@
-class:   MedicationKnowledgePatientCharacteristic
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: CodeableConcept
-  valueCodeableConcept: CodeableConcept?
-  valueQuantity: Quantity?
-  valueRange: Range?

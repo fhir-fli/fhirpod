@@ -1,0 +1,10 @@
+class: MedicationDispenseSubstitution
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  wasSubstituted: bool?
+  wasSubstitutedElement: Element?
+  type: CodeableConcept?
+  reason: List<CodeableConcept>?
+  responsibleParty: Reference?

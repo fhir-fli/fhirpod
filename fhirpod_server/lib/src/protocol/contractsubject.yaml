@@ -1,0 +1,7 @@
+class: ContractSubject
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  reference: List<Reference>
+  role: CodeableConcept?

@@ -1,0 +1,19 @@
+class: ImmunizationRecommendation
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  patient: Reference
+  date: DateTime?
+  dateElement: Element?
+  authority: Reference?
+  recommendation: List<ImmunizationRecommendationRecommendation>

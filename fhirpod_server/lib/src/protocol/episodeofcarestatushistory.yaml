@@ -1,0 +1,8 @@
+class: EpisodeOfCareStatusHistory
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  status: String?
+  statusElement: Element?
+  period: Period

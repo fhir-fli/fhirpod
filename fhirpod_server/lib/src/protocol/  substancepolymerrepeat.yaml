@@ -1,9 +1,0 @@
-class:   SubstancePolymerRepeat
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  averageMolecularFormula: String?
-  averageMolecularFormulaElement: Element?
-  repeatUnitAmountType: CodeableConcept?
-  repeatUnit: List<SubstancePolymerRepeatUnit>?

@@ -1,8 +1,0 @@
-class:   ImplementationGuideParameter
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  code: Coding
-  value: String?
-  valueElement: Element?

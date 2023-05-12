@@ -1,9 +1,0 @@
-class:   InsurancePlanCost
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: CodeableConcept
-  applicability: CodeableConcept?
-  qualifiers: List<CodeableConcept>?
-  value: Quantity?

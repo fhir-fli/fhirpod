@@ -1,8 +1,0 @@
-class:   MedicinalProductDefinitionPart
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  part_: String?
-  partElement: Element?
-  type: CodeableConcept

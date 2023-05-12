@@ -1,0 +1,33 @@
+class: DetectedIssue
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  status: String?
+  statusElement: Element?
+  category: List<CodeableConcept>?
+  code: CodeableConcept?
+  severity: String?
+  severityElement: Element?
+  subject: Reference?
+  encounter: Reference?
+  identifiedDateTime: DateTime?
+  identifiedDateTimeElement: Element?
+  identifiedPeriod: Period?
+  author: Reference?
+  implicated: List<Reference>?
+  evidence: List<DetectedIssueEvidence>?
+  detail: String?
+  detailElement: Element?
+  reference: String?
+  referenceElement: Element?
+  mitigation: List<DetectedIssueMitigation>?

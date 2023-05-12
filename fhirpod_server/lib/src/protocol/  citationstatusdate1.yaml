@@ -1,9 +1,0 @@
-class:   CitationStatusDate1
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  activity: CodeableConcept
-  actual: bool?
-  actualElement: Element?
-  period: Period

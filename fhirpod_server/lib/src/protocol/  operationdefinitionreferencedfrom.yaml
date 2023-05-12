@@ -1,9 +1,0 @@
-class:   OperationDefinitionReferencedFrom
-fields: 
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  source: String?
-  sourceElement: Element?
-  sourceId: String?
-  sourceIdElement: Element?

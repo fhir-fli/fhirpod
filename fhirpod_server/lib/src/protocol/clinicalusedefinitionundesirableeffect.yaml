@@ -1,0 +1,8 @@
+class: ClinicalUseDefinitionUndesirableEffect
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  symptomConditionEffect: CodeableReference?
+  classification: CodeableConcept?
+  frequencyOfOccurrence: CodeableConcept?

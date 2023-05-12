@@ -1,0 +1,11 @@
+class: MedicationKnowledgeCost
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  effectiveDate: List<Period>?
+  type: CodeableConcept
+  source: String?
+  sourceElement: Element?
+  costMoney: Money?
+  costCodeableConcept: CodeableConcept?
