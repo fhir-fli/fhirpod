@@ -8,51 +8,40 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:serverpod_client/serverpod_client.dart' as _i1;
 import 'dart:async' as _i2;
-import 'package:fhirpod_client/src/protocol/patient.dart' as _i3;
-import 'package:fhir/r5/resource/resource.dart' as _i4;
-import 'package:fhir/primitive_types/id.dart' as _i5;
-import 'dart:io' as _i6;
-import 'protocol.dart' as _i7;
+import 'dart:io' as _i3;
+import 'protocol.dart' as _i4;
 
-class _EndpointFhirResource extends _i1.EndpointRef {
-  _EndpointFhirResource(_i1.EndpointCaller caller) : super(caller);
+class _EndpointExample extends _i1.EndpointRef {
+  _EndpointExample(_i1.EndpointCaller caller) : super(caller);
 
   @override
-  String get name => 'fhirResource';
+  String get name => 'example';
 
-  _i2.Future<_i3.Patient?> get({
-    _i4.R5ResourceType? resourceType,
-    _i5.FhirId? id,
-  }) =>
-      caller.callServerEndpoint<_i3.Patient?>(
-        'fhirResource',
-        'get',
-        {
-          'resourceType': resourceType,
-          'id': id,
-        },
+  _i2.Future<String> hello(String name) => caller.callServerEndpoint<String>(
+        'example',
+        'hello',
+        {'name': name},
       );
 }
 
 class Client extends _i1.ServerpodClient {
   Client(
     String host, {
-    _i6.SecurityContext? context,
+    _i3.SecurityContext? context,
     _i1.AuthenticationKeyManager? authenticationKeyManager,
   }) : super(
           host,
-          _i7.Protocol(),
+          _i4.Protocol(),
           context: context,
           authenticationKeyManager: authenticationKeyManager,
         ) {
-    fhirResource = _EndpointFhirResource(this);
+    example = _EndpointExample(this);
   }
 
-  late final _EndpointFhirResource fhirResource;
+  late final _EndpointExample example;
 
   @override
-  Map<String, _i1.EndpointRef> get endpointRefLookup =>
-      {'fhirResource': fhirResource};
+  Map<String, _i1.EndpointRef> get endpointRefLookup => {'example': example};
   @override
   Map<String, _i1.ModuleEndpointCaller> get moduleLookup => {};
 }

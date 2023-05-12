@@ -8,14 +8,14 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_DB: fhirpod
-      POSTGRES_PASSWORD: "wopkmS3-cvKbDIvaDPW5MsmjptDRHWmH"
+      POSTGRES_PASSWORD: "Pf0Nooy-_sAZ9NoQ_0RuKyd9rb5vMkSU"
     volumes:
       - fhirpod_data:/var/lib/postgresql/data
   redis:
     image: redis:6.2.6
     ports:
       - '8091:6379'
-    command: redis-server --requirepass "j35se6bEbhu1pSW3w6XB4oPIZJIauIMr"
+    command: redis-server --requirepass "uPdVNfc5yum6-T6G-lrSethWNNE52MdO"
     environment:
       - REDIS_REPLICATION_MODE=master
 volumes:
