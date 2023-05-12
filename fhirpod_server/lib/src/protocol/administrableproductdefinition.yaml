@@ -24,4 +24,4 @@ fields:
   description: String?
   descriptionElement: Element?
   property: List<AdministrableProductDefinitionProperty>?
-  routeOfAdministration: AdministrableProductDefinitionRouteOfAdministration
+  routeOfAdministration: List<AdministrableProductDefinitionRouteOfAdministration>

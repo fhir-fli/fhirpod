@@ -2974,7 +2974,7 @@ class Protocol extends _i1.SerializationManagerServer {
           columnType: _i2.ColumnType.json,
           isNullable: false,
           dartType:
-              'protocol:AdministrableProductDefinitionRouteOfAdministration',
+              'List<protocol:AdministrableProductDefinitionRouteOfAdministration>',
         ),
       ],
       foreignKeys: [],
@@ -25373,8 +25373,9 @@ class Protocol extends _i1.SerializationManagerServer {
         _i2.ColumnDefinition(
           name: 'relatedMedicationKnowledge',
           columnType: _i2.ColumnType.json,
-          isNullable: false,
-          dartType: 'protocol:MedicationKnowledgeRelatedMedicationKnowledge',
+          isNullable: true,
+          dartType:
+              'List<protocol:MedicationKnowledgeRelatedMedicationKnowledge>?',
         ),
         _i2.ColumnDefinition(
           name: 'associatedMedication',
@@ -49260,6 +49261,12 @@ class Protocol extends _i1.SerializationManagerServer {
               .toList()
           : null) as dynamic;
     }
+    if (t == List<_i838.AdministrableProductDefinitionRouteOfAdministration>) {
+      return (data as List)
+          .map((e) => deserialize<
+              _i838.AdministrableProductDefinitionRouteOfAdministration>(e))
+          .toList() as dynamic;
+    }
     if (t == _i1.getType<List<_i838.FhirExtension>?>()) {
       return (data != null
           ? (data as List)
@@ -63982,6 +63989,16 @@ class Protocol extends _i1.SerializationManagerServer {
       return (data != null
           ? (data as List)
               .map((e) => deserialize<_i838.CodeableConcept>(e))
+              .toList()
+          : null) as dynamic;
+    }
+    if (t ==
+        _i1.getType<
+            List<_i838.MedicationKnowledgeRelatedMedicationKnowledge>?>()) {
+      return (data != null
+          ? (data as List)
+              .map((e) => deserialize<
+                  _i838.MedicationKnowledgeRelatedMedicationKnowledge>(e))
               .toList()
           : null) as dynamic;
     }

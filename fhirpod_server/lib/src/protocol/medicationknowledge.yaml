@@ -56,7 +56,7 @@ fields:
   relatedArtifact: List<RelatedArtifact>?
   code: CodeableConcept?
   intendedJurisdiction: List<CodeableConcept>?
-  relatedMedicationKnowledge: MedicationKnowledgeRelatedMedicationKnowledge
+  relatedMedicationKnowledge: List<MedicationKnowledgeRelatedMedicationKnowledge>?
   associatedMedication: List<Reference>?
   productType: List<CodeableConcept>?
   monograph: List<MedicationKnowledgeMonograph>?

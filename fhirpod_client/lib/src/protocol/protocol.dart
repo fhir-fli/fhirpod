@@ -8575,6 +8575,12 @@ class Protocol extends _i1.SerializationManager {
               .toList()
           : null) as dynamic;
     }
+    if (t == List<_i837.AdministrableProductDefinitionRouteOfAdministration>) {
+      return (data as List)
+          .map((e) => deserialize<
+              _i837.AdministrableProductDefinitionRouteOfAdministration>(e))
+          .toList() as dynamic;
+    }
     if (t == _i1.getType<List<_i837.FhirExtension>?>()) {
       return (data != null
           ? (data as List)
@@ -23297,6 +23303,16 @@ class Protocol extends _i1.SerializationManager {
       return (data != null
           ? (data as List)
               .map((e) => deserialize<_i837.CodeableConcept>(e))
+              .toList()
+          : null) as dynamic;
+    }
+    if (t ==
+        _i1.getType<
+            List<_i837.MedicationKnowledgeRelatedMedicationKnowledge>?>()) {
+      return (data != null
+          ? (data as List)
+              .map((e) => deserialize<
+                  _i837.MedicationKnowledgeRelatedMedicationKnowledge>(e))
               .toList()
           : null) as dynamic;
     }

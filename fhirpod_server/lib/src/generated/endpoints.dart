@@ -13,19 +13,19 @@ class Endpoints extends _i1.EndpointDispatch {
   @override
   void initializeEndpoints(_i1.Server server) {
     var endpoints = <String, _i1.Endpoint>{
-      'example': _i2.ExampleEndpoint()
+      'fhirResource': _i2.FhirResource()
         ..initialize(
           server,
-          'example',
+          'fhirResource',
           null,
         )
     };
-    connectors['example'] = _i1.EndpointConnector(
-      name: 'example',
-      endpoint: endpoints['example']!,
+    connectors['fhirResource'] = _i1.EndpointConnector(
+      name: 'fhirResource',
+      endpoint: endpoints['fhirResource']!,
       methodConnectors: {
-        'hello': _i1.MethodConnector(
-          name: 'hello',
+        'post': _i1.MethodConnector(
+          name: 'post',
           params: {
             'name': _i1.ParameterDescription(
               name: 'name',
@@ -37,7 +37,7 @@ class Endpoints extends _i1.EndpointDispatch {
             _i1.Session session,
             Map<String, dynamic> params,
           ) async =>
-              (endpoints['example'] as _i2.ExampleEndpoint).hello(
+              (endpoints['fhirResource'] as _i2.FhirResource).post(
             session,
             params['name'],
           ),

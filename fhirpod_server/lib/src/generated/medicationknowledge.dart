@@ -67,7 +67,7 @@ class MedicationKnowledge extends _i1.TableRow {
     this.relatedArtifact,
     this.code,
     this.intendedJurisdiction,
-    required this.relatedMedicationKnowledge,
+    this.relatedMedicationKnowledge,
     this.associatedMedication,
     this.productType,
     this.monograph,
@@ -204,9 +204,9 @@ class MedicationKnowledge extends _i1.TableRow {
       intendedJurisdiction:
           serializationManager.deserialize<List<_i2.CodeableConcept>?>(
               jsonSerialization['intendedJurisdiction']),
-      relatedMedicationKnowledge: serializationManager
-          .deserialize<_i2.MedicationKnowledgeRelatedMedicationKnowledge>(
-              jsonSerialization['relatedMedicationKnowledge']),
+      relatedMedicationKnowledge: serializationManager.deserialize<
+              List<_i2.MedicationKnowledgeRelatedMedicationKnowledge>?>(
+          jsonSerialization['relatedMedicationKnowledge']),
       associatedMedication:
           serializationManager.deserialize<List<_i2.Reference>?>(
               jsonSerialization['associatedMedication']),
@@ -361,7 +361,8 @@ class MedicationKnowledge extends _i1.TableRow {
 
   List<_i2.CodeableConcept>? intendedJurisdiction;
 
-  _i2.MedicationKnowledgeRelatedMedicationKnowledge relatedMedicationKnowledge;
+  List<_i2.MedicationKnowledgeRelatedMedicationKnowledge>?
+      relatedMedicationKnowledge;
 
   List<_i2.Reference>? associatedMedication;
 

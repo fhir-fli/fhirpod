@@ -11,15 +11,15 @@ import 'dart:async' as _i2;
 import 'dart:io' as _i3;
 import 'protocol.dart' as _i4;
 
-class _EndpointExample extends _i1.EndpointRef {
-  _EndpointExample(_i1.EndpointCaller caller) : super(caller);
+class _EndpointFhirResource extends _i1.EndpointRef {
+  _EndpointFhirResource(_i1.EndpointCaller caller) : super(caller);
 
   @override
-  String get name => 'example';
+  String get name => 'fhirResource';
 
-  _i2.Future<String> hello(String name) => caller.callServerEndpoint<String>(
-        'example',
-        'hello',
+  _i2.Future<String> post(String name) => caller.callServerEndpoint<String>(
+        'fhirResource',
+        'post',
         {'name': name},
       );
 }
@@ -35,13 +35,14 @@ class Client extends _i1.ServerpodClient {
           context: context,
           authenticationKeyManager: authenticationKeyManager,
         ) {
-    example = _EndpointExample(this);
+    fhirResource = _EndpointFhirResource(this);
   }
 
-  late final _EndpointExample example;
+  late final _EndpointFhirResource fhirResource;
 
   @override
-  Map<String, _i1.EndpointRef> get endpointRefLookup => {'example': example};
+  Map<String, _i1.EndpointRef> get endpointRefLookup =>
+      {'fhirResource': fhirResource};
   @override
   Map<String, _i1.ModuleEndpointCaller> get moduleLookup => {};
 }

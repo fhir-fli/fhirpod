@@ -4570,7 +4570,7 @@ CREATE TABLE "medicationknowledge" (
   "relatedArtifact" json,
   "code" json,
   "intendedJurisdiction" json,
-  "relatedMedicationKnowledge" json NOT NULL,
+  "relatedMedicationKnowledge" json,
   "associatedMedication" json,
   "productType" json,
   "monograph" json,

@@ -94,9 +94,9 @@ class AdministrableProductDefinition extends _i1.TableRow {
       property: serializationManager
           .deserialize<List<_i2.AdministrableProductDefinitionProperty>?>(
               jsonSerialization['property']),
-      routeOfAdministration: serializationManager
-          .deserialize<_i2.AdministrableProductDefinitionRouteOfAdministration>(
-              jsonSerialization['routeOfAdministration']),
+      routeOfAdministration: serializationManager.deserialize<
+              List<_i2.AdministrableProductDefinitionRouteOfAdministration>>(
+          jsonSerialization['routeOfAdministration']),
     );
   }
 
@@ -148,7 +148,8 @@ class AdministrableProductDefinition extends _i1.TableRow {
 
   List<_i2.AdministrableProductDefinitionProperty>? property;
 
-  _i2.AdministrableProductDefinitionRouteOfAdministration routeOfAdministration;
+  List<_i2.AdministrableProductDefinitionRouteOfAdministration>
+      routeOfAdministration;
 
   @override
   String get tableName => 'administrableproductdefinition';

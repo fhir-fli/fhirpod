@@ -94,9 +94,9 @@ class AdministrableProductDefinition extends _i1.SerializableEntity {
       property: serializationManager
           .deserialize<List<_i2.AdministrableProductDefinitionProperty>?>(
               jsonSerialization['property']),
-      routeOfAdministration: serializationManager
-          .deserialize<_i2.AdministrableProductDefinitionRouteOfAdministration>(
-              jsonSerialization['routeOfAdministration']),
+      routeOfAdministration: serializationManager.deserialize<
+              List<_i2.AdministrableProductDefinitionRouteOfAdministration>>(
+          jsonSerialization['routeOfAdministration']),
     );
   }
 
@@ -151,7 +151,8 @@ class AdministrableProductDefinition extends _i1.SerializableEntity {
 
   List<_i2.AdministrableProductDefinitionProperty>? property;
 
-  _i2.AdministrableProductDefinitionRouteOfAdministration routeOfAdministration;
+  List<_i2.AdministrableProductDefinitionRouteOfAdministration>
+      routeOfAdministration;
 
   @override
   Map<String, dynamic> toJson() {
