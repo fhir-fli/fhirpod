@@ -1,7 +1,0 @@
-class: ContractLegal
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  contentAttachment: Attachment?
-  contentReference: Reference?

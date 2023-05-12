@@ -1,9 +1,0 @@
-class: BundleLink
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  relation: String?
-  relationElement: Element?
-  url: String?
-  urlElement: Element?

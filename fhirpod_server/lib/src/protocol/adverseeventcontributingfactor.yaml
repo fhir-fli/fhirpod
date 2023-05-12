@@ -1,7 +1,0 @@
-class: AdverseEventContributingFactor
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  itemReference: Reference?
-  itemCodeableConcept: CodeableConcept?

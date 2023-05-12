@@ -1,8 +1,0 @@
-class: ClinicalImpressionFinding
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  item: CodeableReference?
-  basis: String?
-  basisElement: Element?

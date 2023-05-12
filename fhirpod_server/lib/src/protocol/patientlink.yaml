@@ -1,8 +1,0 @@
-class: PatientLink
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  other: Reference
-  type: String?
-  typeElement: Element?

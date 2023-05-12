@@ -1,7 +1,0 @@
-class: ExplanationOfBenefitTotal
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  category: CodeableConcept
-  amount: Money

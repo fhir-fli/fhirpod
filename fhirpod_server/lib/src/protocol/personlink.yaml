@@ -1,8 +1,0 @@
-class: PersonLink
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  target: Reference
-  assurance: String?
-  assuranceElement: Element?

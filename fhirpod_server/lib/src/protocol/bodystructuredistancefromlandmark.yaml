@@ -1,7 +1,0 @@
-class: BodyStructureDistanceFromLandmark
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  device: List<CodeableReference>?
-  value: List<Quantity>?

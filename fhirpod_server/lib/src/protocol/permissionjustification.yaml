@@ -1,7 +1,0 @@
-class: PermissionJustification
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  basis: List<CodeableConcept>?
-  evidence: List<Reference>?

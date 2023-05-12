@@ -845,6 +845,7 @@ import 'visionprescription.dart' as _i835;
 import 'visionprescriptionlensspecification.dart' as _i836;
 import 'visionprescriptionprism.dart' as _i837;
 import 'protocol.dart' as _i838;
+import 'package:fhir_serial/r5.dart' as _i839;
 export 'account.dart';
 export 'accountbalance.dart';
 export 'accountcoverage.dart';
@@ -73935,6 +73936,13 @@ class Protocol extends _i1.SerializationManagerServer {
               .toList()
           : null) as dynamic;
     }
+    if (t == _i839.BackboneType) {
+      return _i839.BackboneType.fromJson(data, this) as T;
+    }
+    if (t == _i1.getType<_i839.BackboneType?>()) {
+      return (data != null ? _i839.BackboneType.fromJson(data, this) : null)
+          as T;
+    }
     try {
       return _i2.Protocol().deserialize<T>(data, t);
     } catch (_) {}
@@ -73943,6 +73951,9 @@ class Protocol extends _i1.SerializationManagerServer {
 
   @override
   String? getClassNameForObject(Object data) {
+    if (data is _i839.BackboneType) {
+      return 'BackboneType';
+    }
     if (data is _i3.Account) {
       return 'Account';
     }
@@ -76453,6 +76464,9 @@ class Protocol extends _i1.SerializationManagerServer {
 
   @override
   dynamic deserializeByClassName(Map<String, dynamic> data) {
+    if (data['className'] == 'BackboneType') {
+      return deserialize<_i839.BackboneType>(data['data']);
+    }
     if (data['className'] == 'Account') {
       return deserialize<_i3.Account>(data['data']);
     }

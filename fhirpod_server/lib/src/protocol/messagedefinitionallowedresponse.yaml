@@ -1,8 +1,0 @@
-class: MessageDefinitionAllowedResponse
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  message: String
-  situation: String?
-  situationElement: Element?

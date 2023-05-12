@@ -1,8 +1,0 @@
-class: Period
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  start: DateTime?
-  startElement: Element?
-  end: DateTime?
-  endElement: Element?

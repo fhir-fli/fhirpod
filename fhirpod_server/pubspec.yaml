@@ -7,8 +7,10 @@ environment:
   sdk: '>=2.17.0 <3.0.0'
 
 dependencies:
-  fhir:
-    path: ../../fhir
+  # fhir:
+  #   path: ../../fhir
+  fhir_serial:
+    path: ../../fhir_serial
   serverpod: ^1.1.0
 
 dev_dependencies:

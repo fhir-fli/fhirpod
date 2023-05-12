@@ -1,8 +1,0 @@
-class: FhirEndpointPayload
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: List<CodeableConcept>?
-  mimeType: List<String>?
-  mimeTypeElement: List<Element>?

@@ -1,7 +1,0 @@
-class: ContractParty
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  reference: List<Reference>
-  role: CodeableConcept

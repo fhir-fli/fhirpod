@@ -1,8 +1,0 @@
-class: InventoryReportItem
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  category: CodeableConcept?
-  quantity: Quantity
-  item: CodeableReference

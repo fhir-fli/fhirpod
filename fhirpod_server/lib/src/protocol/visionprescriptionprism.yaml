@@ -1,9 +1,0 @@
-class: VisionPrescriptionPrism
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  amount: double?
-  amountElement: Element?
-  base: String?
-  baseElement: Element?

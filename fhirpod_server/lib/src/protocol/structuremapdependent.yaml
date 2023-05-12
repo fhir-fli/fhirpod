@@ -1,8 +1,0 @@
-class: StructureMapDependent
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  name: String?
-  nameElement: Element?
-  parameter: List<StructureMapParameter>

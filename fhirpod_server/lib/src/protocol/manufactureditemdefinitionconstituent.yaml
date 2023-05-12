@@ -1,9 +1,0 @@
-class: ManufacturedItemDefinitionConstituent
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  amount: List<Quantity>?
-  location: List<CodeableConcept>?
-  function_: List<CodeableConcept>?
-  hasIngredient: List<CodeableReference>?

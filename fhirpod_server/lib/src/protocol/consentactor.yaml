@@ -1,7 +1,0 @@
-class: ConsentActor
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  role: CodeableConcept?
-  reference: Reference?

@@ -1,7 +1,0 @@
-class: ClaimPayee
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: CodeableConcept
-  party: Reference?

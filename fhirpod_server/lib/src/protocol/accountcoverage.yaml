@@ -1,8 +1,0 @@
-class: AccountCoverage
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  coverage: Reference
-  priority: int?
-  priorityElement: Element?

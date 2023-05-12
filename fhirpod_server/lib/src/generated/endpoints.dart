@@ -24,22 +24,28 @@ class Endpoints extends _i1.EndpointDispatch {
       name: 'fhirResource',
       endpoint: endpoints['fhirResource']!,
       methodConnectors: {
-        'post': _i1.MethodConnector(
-          name: 'post',
+        'get': _i1.MethodConnector(
+          name: 'get',
           params: {
-            'name': _i1.ParameterDescription(
-              name: 'name',
-              type: _i1.getType<String>(),
+            'resourceType': _i1.ParameterDescription(
+              name: 'resourceType',
+              type: _i1.getType<dynamic>(),
               nullable: false,
-            )
+            ),
+            'id': _i1.ParameterDescription(
+              name: 'id',
+              type: _i1.getType<dynamic>(),
+              nullable: false,
+            ),
           },
           call: (
             _i1.Session session,
             Map<String, dynamic> params,
           ) async =>
-              (endpoints['fhirResource'] as _i2.FhirResource).post(
+              (endpoints['fhirResource'] as _i2.FhirResource).get(
             session,
-            params['name'],
+            resourceType: params['resourceType'],
+            id: params['id'],
           ),
         )
       },

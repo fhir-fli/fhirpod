@@ -1,8 +1,0 @@
-class: ConditionStage
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  summary: CodeableConcept?
-  assessment: List<Reference>?
-  type: CodeableConcept?

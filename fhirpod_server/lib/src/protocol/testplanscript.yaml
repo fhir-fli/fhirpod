@@ -1,9 +1,0 @@
-class: TestPlanScript
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  language: CodeableConcept?
-  sourceString: String?
-  sourceStringElement: Element?
-  sourceReference: Reference?

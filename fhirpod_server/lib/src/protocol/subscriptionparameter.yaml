@@ -1,9 +1,0 @@
-class: SubscriptionParameter
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  name: String?
-  nameElement: Element?
-  value: String?
-  valueElement: Element?
