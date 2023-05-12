@@ -1,0 +1,14 @@
+class:   ExplanationOfBenefitFinancial
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  allowedUnsignedInt: int?
+  allowedUnsignedIntElement: Element?
+  allowedString: String?
+  allowedStringElement: Element?
+  allowedMoney: Money?
+  usedUnsignedInt: int?
+  usedUnsignedIntElement: Element?
+  usedMoney: Money?

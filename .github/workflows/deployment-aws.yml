@@ -58,7 +58,7 @@ jobs:
         env:
           PROJECT_NAME: fhirpod
           AWS_NAME: fhirpod
-          DEPLOYMENT_BUCKET: fhirpod-deployment-8224545
+          DEPLOYMENT_BUCKET: fhirpod-deployment-6157202
           TARGET: ${{ github.event.inputs.target }}
         run: |
           # Deploy server to AWS

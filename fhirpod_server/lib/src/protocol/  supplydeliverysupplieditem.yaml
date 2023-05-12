@@ -1,0 +1,8 @@
+class:   SupplyDeliverySuppliedItem
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  quantity: Quantity?
+  itemCodeableConcept: CodeableConcept?
+  itemReference: Reference?

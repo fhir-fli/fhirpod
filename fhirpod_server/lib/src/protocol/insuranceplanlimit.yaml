@@ -1,7 +1,0 @@
-class: InsurancePlanLimit
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  value: Quantity?
-  code: CodeableConcept?

@@ -1,0 +1,9 @@
+class:   CitationPart
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept?
+  value: String?
+  valueElement: Element?
+  baseCitation: Reference?

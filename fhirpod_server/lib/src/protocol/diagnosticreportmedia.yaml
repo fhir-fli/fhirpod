@@ -1,8 +1,0 @@
-class: DiagnosticReportMedia
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  comment: String?
-  commentElement: Element?
-  link: Reference

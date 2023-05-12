@@ -1,8 +1,0 @@
-class: TestPlanAssertion
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: List<CodeableConcept>?
-  object: List<CodeableReference>?
-  result: List<CodeableReference>?

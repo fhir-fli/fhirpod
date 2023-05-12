@@ -1,0 +1,8 @@
+class:   InventoryItemAssociation
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  associationType: CodeableConcept
+  relatedItem: Reference
+  quantity: Ratio

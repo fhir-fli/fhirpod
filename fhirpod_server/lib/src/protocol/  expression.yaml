@@ -1,0 +1,14 @@
+class:   Expression
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  description: String?
+  descriptionElement: Element?
+  name: String?
+  nameElement: Element?
+  language: String?
+  languageElement: Element?
+  expression: String?
+  expressionElement: Element?
+  reference: String?
+  referenceElement: Element?

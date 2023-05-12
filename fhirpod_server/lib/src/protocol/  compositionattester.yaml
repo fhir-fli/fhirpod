@@ -1,0 +1,9 @@
+class:   CompositionAttester
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  mode: CodeableConcept
+  time: DateTime?
+  timeElement: Element?
+  party: Reference?

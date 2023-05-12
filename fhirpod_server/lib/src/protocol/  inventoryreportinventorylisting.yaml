@@ -1,0 +1,10 @@
+class:   InventoryReportInventoryListing
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  location: Reference?
+  itemStatus: CodeableConcept?
+  countingDateTime: DateTime?
+  countingDateTimeElement: Element?
+  item: List<InventoryReportItem>?

@@ -1,0 +1,10 @@
+class:   DocumentReferenceProfile
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  valueCoding: Coding?
+  valueUri: String?
+  valueUriElement: Element?
+  valueCanonical: String?
+  valueCanonicalElement: Element?

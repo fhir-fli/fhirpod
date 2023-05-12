@@ -1,9 +1,0 @@
-class: ImplementationGuideGrouping
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  name: String?
-  nameElement: Element?
-  description: String?
-  descriptionElement: Element?

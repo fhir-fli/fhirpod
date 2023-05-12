@@ -1,9 +1,0 @@
-class: InsurancePlanBenefit
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: CodeableConcept
-  requirement: String?
-  requirementElement: Element?
-  limit: List<InsurancePlanLimit>?

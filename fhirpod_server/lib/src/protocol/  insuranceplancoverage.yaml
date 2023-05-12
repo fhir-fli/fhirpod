@@ -1,0 +1,8 @@
+class:   InsurancePlanCoverage
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  network: List<Reference>?
+  benefit: List<InsurancePlanBenefit>

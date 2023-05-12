@@ -1,0 +1,13 @@
+class:   ConceptMapElement
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: String?
+  codeElement: Element?
+  display: String?
+  displayElement: Element?
+  valueSet: String?
+  noMap: bool?
+  noMapElement: Element?
+  target: List<ConceptMapTarget>?

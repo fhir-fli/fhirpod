@@ -1,0 +1,8 @@
+class:   SubstanceDefinitionMolecularWeight
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  method: CodeableConcept?
+  type: CodeableConcept?
+  amount: Quantity

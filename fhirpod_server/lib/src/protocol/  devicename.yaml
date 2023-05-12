@@ -1,0 +1,11 @@
+class:   DeviceName
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  value: String?
+  valueElement: Element?
+  type: String?
+  typeElement: Element?
+  display: bool?
+  displayElement: Element?

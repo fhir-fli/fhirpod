@@ -1,0 +1,7 @@
+class:   DeviceDefinitionLink
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  relation: Coding
+  relatedDevice: CodeableReference

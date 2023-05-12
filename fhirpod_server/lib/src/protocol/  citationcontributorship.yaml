@@ -1,0 +1,9 @@
+class:   CitationContributorship
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  complete: bool?
+  completeElement: Element?
+  entry: List<CitationEntry>?
+  summary: List<CitationSummary1>?

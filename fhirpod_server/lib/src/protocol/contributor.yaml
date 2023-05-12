@@ -1,9 +1,0 @@
-class: Contributor
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  type: String ?
-  typeElement: Element?
-  name: String?
-  nameElement: Element?
-  contact: List<ContactDetail>?

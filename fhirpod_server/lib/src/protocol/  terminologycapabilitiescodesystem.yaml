@@ -1,0 +1,11 @@
+class:   TerminologyCapabilitiesCodeSystem
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  uri: String?
+  version: List<TerminologyCapabilitiesVersion>?
+  content: String?
+  contentElement: Element?
+  subsumption: bool?
+  subsumptionElement: Element?

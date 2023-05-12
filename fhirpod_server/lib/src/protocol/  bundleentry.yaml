@@ -1,0 +1,12 @@
+class:   BundleEntry
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  link: List<BundleLink>?
+  fullUrl: String?
+  fullUrlElement: Element?
+  resource: Resource?
+  search: BundleSearch?
+  request: BundleRequest?
+  response: BundleResponse?

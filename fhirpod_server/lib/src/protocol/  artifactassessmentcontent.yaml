@@ -1,0 +1,19 @@
+class:   ArtifactAssessmentContent
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  informationType: String?
+  informationTypeElement: Element?
+  summary: String?
+  summaryElement: Element?
+  type: CodeableConcept?
+  classifier: List<CodeableConcept>?
+  quantity: Quantity?
+  author: Reference?
+  path: List<FhirUri>?
+  pathElement: List<Element>?
+  relatedArtifact: List<RelatedArtifact>?
+  freeToShare: bool?
+  freeToShareElement: Element?
+  component: List<ArtifactAssessmentContent>?

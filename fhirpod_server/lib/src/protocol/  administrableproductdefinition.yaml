@@ -1,0 +1,26 @@
+class:   AdministrableProductDefinition
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  status: String?
+  statusElement: Element?
+  formOf: List<Reference>?
+  administrableDoseForm: CodeableConcept?
+  unitOfPresentation: CodeableConcept?
+  producedFrom: List<Reference>?
+  ingredient: List<CodeableConcept>?
+  device: Reference?
+  description: String?
+  descriptionElement: Element?
+  property: List<AdministrableProductDefinitionProperty>?
+  routeOfAdministration: 

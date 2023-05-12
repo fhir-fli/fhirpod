@@ -1,0 +1,10 @@
+class:   ObservationDefinitionComponent
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableConcept
+  permittedDataType: List<FhirCode>?
+  permittedDataTypeElement: List<Element>?
+  permittedUnit: List<Coding>?
+  qualifiedValue: List<ObservationDefinitionQualifiedValue>?

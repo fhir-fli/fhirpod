@@ -1,0 +1,21 @@
+class:   AppointmentWeeklyTemplate
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  monday: bool?
+  mondayElement: Element?
+  tuesday: bool?
+  tuesdayElement: Element?
+  wednesday: bool?
+  wednesdayElement: Element?
+  thursday: bool?
+  thursdayElement: Element?
+  friday: bool?
+  fridayElement: Element?
+  saturday: bool?
+  saturdayElement: Element?
+  sunday: bool?
+  sundayElement: Element?
+  weekInterval: int?
+  weekIntervalElement: Element?

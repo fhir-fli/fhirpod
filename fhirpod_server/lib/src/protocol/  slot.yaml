@@ -1,0 +1,29 @@
+class:   Slot
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  serviceCategory: List<CodeableConcept>?
+  serviceType: List<CodeableReference>?
+  specialty: List<CodeableConcept>?
+  appointmentType: List<CodeableConcept>?
+  schedule: Reference
+  status: String?
+  statusElement: Element?
+  start: DateTime?
+  startElement: Element?
+  end: DateTime?
+  endElement: Element?
+  overbooked: bool?
+  overbookedElement: Element?
+  comment: String?
+  commentElement: Element?

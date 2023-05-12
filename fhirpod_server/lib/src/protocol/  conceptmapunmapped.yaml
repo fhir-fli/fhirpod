@@ -1,0 +1,15 @@
+class:   ConceptMapUnmapped
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  mode: String?
+  modeElement: Element?
+  code: String?
+  codeElement: Element?
+  display: String?
+  displayElement: Element?
+  valueSet: String?
+  relationship: String?
+  relationshipElement: Element?
+  otherMap: String?

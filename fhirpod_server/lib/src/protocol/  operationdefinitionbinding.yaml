@@ -1,0 +1,8 @@
+class:   OperationDefinitionBinding
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  strength: String?
+  strengthElement: Element?
+  valueSet: String

@@ -1,6 +1,0 @@
-class: TestReportAction2
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  operation: TestReportOperation

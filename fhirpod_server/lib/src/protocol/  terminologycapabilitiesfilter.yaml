@@ -1,0 +1,9 @@
+class:   TerminologyCapabilitiesFilter
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: String?
+  codeElement: Element?
+  op: List<FhirCode>?
+  opElement: List<Element>?

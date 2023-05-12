@@ -1,8 +1,0 @@
-class: PractitionerCommunication
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  language: CodeableConcept
-  preferred: bool?
-  preferredElement: Element?

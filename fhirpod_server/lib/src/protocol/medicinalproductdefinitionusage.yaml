@@ -1,8 +1,0 @@
-class: MedicinalProductDefinitionUsage
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  country: CodeableConcept
-  jurisdiction: CodeableConcept?
-  language: CodeableConcept

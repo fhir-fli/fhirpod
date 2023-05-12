@@ -1,0 +1,7 @@
+class:   DeviceDefinitionClassification
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  justification: List<RelatedArtifact>?

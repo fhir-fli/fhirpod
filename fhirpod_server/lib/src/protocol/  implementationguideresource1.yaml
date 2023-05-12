@@ -1,0 +1,11 @@
+class:   ImplementationGuideResource1
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  reference: Reference
+  isExample: bool?
+  isExampleElement: Element?
+  profile: List<FhirCanonical>?
+  relativePath: String?
+  relativePathElement: Element?

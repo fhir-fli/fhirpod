@@ -1,0 +1,10 @@
+class:   CapabilityStatementImplementation
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  description: String?
+  descriptionElement: Element?
+  url: String?
+  urlElement: Element?
+  custodian: Reference?

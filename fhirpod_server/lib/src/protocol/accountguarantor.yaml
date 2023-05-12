@@ -1,9 +1,0 @@
-class: AccountGuarantor
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  party: Reference
-  onHold: bool?
-  onHoldElement: Element?
-  period: Period?

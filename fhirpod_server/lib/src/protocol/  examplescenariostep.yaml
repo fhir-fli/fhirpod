@@ -1,0 +1,13 @@
+class:   ExampleScenarioStep
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  number: String?
+  numberElement: Element?
+  process: ExampleScenarioProcess?
+  workflow: String?
+  operation: ExampleScenarioOperation?
+  alternative: List<ExampleScenarioAlternative>?
+  pause: bool?
+  pauseElement: Element?

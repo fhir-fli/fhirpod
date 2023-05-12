@@ -1,0 +1,13 @@
+class:   MeasureStratifier
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  linkId: String?
+  linkIdElement: Element?
+  code: CodeableConcept?
+  description: String?
+  descriptionElement: Element?
+  criteria: Expression?
+  groupDefinition: Reference?
+  component: List<MeasureComponent>?

@@ -1,0 +1,37 @@
+class:   ArtifactAssessment
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  title: String?
+  titleElement: Element?
+  citeAsReference: Reference?
+  citeAsMarkdown: String?
+  citeAsMarkdownElement: Element?
+  date: DateTime?
+  dateElement: Element?
+  copyright: String?
+  copyrightElement: Element?
+  approvalDate: DateTime?
+  approvalDateElement: Element?
+  lastReviewDate: DateTime?
+  lastReviewDateElement: Element?
+  artifactReference: Reference?
+  artifactCanonical: String?
+  artifactCanonicalElement: Element?
+  artifactUri: String?
+  artifactUriElement: Element?
+  content: List<ArtifactAssessmentContent>?
+  workflowStatus: String?
+  workflowStatusElement: Element?
+  disposition: String?
+  dispositionElement: Element?

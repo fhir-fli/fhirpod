@@ -1,6 +1,0 @@
-class: Availability
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  availableTime: List<AvailabilityAvailableTime>?
-  notAvailableTime: List<AvailabilityNotAvailableTime>?

@@ -1,0 +1,18 @@
+class:   TriggerDefinition
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  type: TriggerDefinitionType?
+  typeElement: Element?
+  name: String?
+  nameElement: Element?
+  code: CodeableConcept?
+  subscriptionTopic: String?
+  timingTiming: Timing?
+  timingReference: Reference?
+  timingDate: DateTime?
+  timingDateElement: Element?
+  timingDateTime: DateTime?
+  timingDateTimeElement: Element?
+  data: List<DataRequirement>?
+  condition: Expression?

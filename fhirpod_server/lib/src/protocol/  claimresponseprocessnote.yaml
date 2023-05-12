@@ -1,0 +1,11 @@
+class:   ClaimResponseProcessNote
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  number: int?
+  numberElement: Element?
+  type: CodeableConcept?
+  text: String?
+  textElement: Element?
+  language: CodeableConcept?

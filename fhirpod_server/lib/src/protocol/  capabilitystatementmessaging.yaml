@@ -1,0 +1,11 @@
+class:   CapabilityStatementMessaging
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  endpoint: List<CapabilityStatementEndpoint>?
+  reliableCache: int?
+  reliableCacheElement: Element?
+  documentation: String?
+  documentationElement: Element?
+  supportedMessage: List<CapabilityStatementSupportedMessage>?

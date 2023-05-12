@@ -1,0 +1,25 @@
+class:   MolecularSequence
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  type: String?
+  typeElement: Element?
+  subject: Reference?
+  focus: List<Reference>?
+  specimen: Reference?
+  device: Reference?
+  performer: Reference?
+  literal: String?
+  literalElement: Element?
+  formatted: List<Attachment>?
+  relative: List<MolecularSequenceRelative>?

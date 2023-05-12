@@ -1,0 +1,13 @@
+class:   Identifier
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  use: IdentifierUse?
+  useElement: Element?
+  type: CodeableConcept?
+  system: String?
+  systemElement: Element?
+  value: String?
+  valueElement: Element?
+  period: Period?
+  assigner: Reference?

@@ -1,0 +1,8 @@
+class:   EndpointPayload
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: List<CodeableConcept>?
+  mimeType: List<FhirCode>?
+  mimeTypeElement: List<Element>?

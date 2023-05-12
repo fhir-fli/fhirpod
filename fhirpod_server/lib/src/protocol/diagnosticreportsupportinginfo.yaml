@@ -1,7 +1,0 @@
-class: DiagnosticReportSupportingInfo
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: CodeableConcept
-  reference: Reference

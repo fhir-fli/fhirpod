@@ -1,0 +1,9 @@
+class:   PaymentReconciliationProcessNote
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: String?
+  typeElement: Element?
+  text: String?
+  textElement: Element?

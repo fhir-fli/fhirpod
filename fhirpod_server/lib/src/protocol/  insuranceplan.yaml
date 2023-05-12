@@ -1,0 +1,30 @@
+class:   InsurancePlan
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  identifier: List<Identifier>?
+  status: String?
+  statusElement: Element?
+  type: List<CodeableConcept>?
+  name: String?
+  nameElement: Element?
+  alias: List<String>?
+  aliasElement: List<Element>?
+  period: Period?
+  ownedBy: Reference?
+  administeredBy: Reference?
+  coverageArea: List<Reference>?
+  contact: List<ExtendedContactDetail>?
+  endpoint: List<Reference>?
+  network: List<Reference>?
+  coverage: List<InsurancePlanCoverage>?
+  plan: List<InsurancePlanPlan>?

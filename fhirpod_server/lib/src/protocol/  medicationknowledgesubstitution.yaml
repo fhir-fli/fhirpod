@@ -1,0 +1,8 @@
+class:   MedicationKnowledgeSubstitution
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  allowed: bool?
+  allowedElement: Element?

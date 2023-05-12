@@ -1,9 +1,0 @@
-class: ConceptMapGroup
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  source: String?
-  target: String?
-  element: List<ConceptMapElement>
-  unmapped: ConceptMapUnmapped?

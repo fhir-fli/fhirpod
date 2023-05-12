@@ -1,0 +1,7 @@
+class:   SpecimenDefinitionAdditive
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  additiveCodeableConcept: CodeableConcept?
+  additiveReference: Reference?

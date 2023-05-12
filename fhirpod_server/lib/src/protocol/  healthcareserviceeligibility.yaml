@@ -1,0 +1,8 @@
+class:   HealthcareServiceEligibility
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  code: CodeableConcept?
+  comment: String?
+  commentElement: Element?

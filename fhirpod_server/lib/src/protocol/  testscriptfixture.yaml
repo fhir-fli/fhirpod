@@ -1,0 +1,10 @@
+class:   TestScriptFixture
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  autocreate: bool?
+  autocreateElement: Element?
+  autodelete: bool?
+  autodeleteElement: Element?
+  resource: Reference?

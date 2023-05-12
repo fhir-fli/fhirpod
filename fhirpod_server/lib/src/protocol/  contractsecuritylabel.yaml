@@ -1,0 +1,10 @@
+class:   ContractSecurityLabel
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  number: List<FhirUnsignedInt>?
+  numberElement: List<Element>?
+  classification: Coding
+  category: List<Coding>?
+  control: List<Coding>?

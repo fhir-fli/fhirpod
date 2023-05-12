@@ -1,0 +1,15 @@
+class:   NutritionProductCharacteristic
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  valueCodeableConcept: CodeableConcept?
+  valueString: String?
+  valueStringElement: Element?
+  valueQuantity: Quantity?
+  valueBase64Binary: String?
+  valueBase64BinaryElement: Element?
+  valueAttachment: Attachment?
+  valueBoolean: bool?
+  valueBooleanElement: Element?

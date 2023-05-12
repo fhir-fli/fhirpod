@@ -1,0 +1,8 @@
+class:   CarePlanActivity
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  performedActivity: List<CodeableReference>?
+  progress: List<Annotation>?
+  plannedActivityReference: Reference?

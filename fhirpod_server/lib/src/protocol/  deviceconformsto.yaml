@@ -1,0 +1,9 @@
+class:   DeviceConformsTo
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  category: CodeableConcept?
+  specification: CodeableConcept
+  version: String?
+  versionElement: Element?

@@ -1,0 +1,10 @@
+class:   SubstanceDefinitionCharacterization
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  technique: CodeableConcept?
+  form: CodeableConcept?
+  description: String?
+  descriptionElement: Element?
+  file: List<Attachment>?

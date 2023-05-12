@@ -1,0 +1,12 @@
+class:   SubstancePolymerRepeatUnit
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  unit: String?
+  unitElement: Element?
+  orientation: CodeableConcept?
+  amount: int?
+  amountElement: Element?
+  degreeOfPolymerisation: List<SubstancePolymerDegreeOfPolymerisation>?
+  structuralRepresentation: List<SubstancePolymerStructuralRepresentation>?

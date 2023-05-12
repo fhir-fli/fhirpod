@@ -1,0 +1,15 @@
+class:   ClinicalUseDefinitionIndication
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  diseaseSymptomProcedure: CodeableReference?
+  diseaseStatus: CodeableReference?
+  comorbidity: List<CodeableReference>?
+  intendedEffect: CodeableReference?
+  durationRange: Range?
+  durationString: String?
+  durationStringElement: Element?
+  undesirableEffect: List<Reference>?
+  applicability: Expression?
+  otherTherapy: List<ClinicalUseDefinitionOtherTherapy>?

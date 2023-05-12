@@ -1,0 +1,13 @@
+class:   MeasureReportPopulation
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  linkId: String?
+  linkIdElement: Element?
+  code: CodeableConcept?
+  count: int?
+  countElement: Element?
+  subjectResults: Reference?
+  subjectReport: List<Reference>?
+  subjects: Reference?

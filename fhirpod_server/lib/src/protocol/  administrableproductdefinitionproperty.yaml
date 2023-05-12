@@ -1,0 +1,17 @@
+class:   AdministrableProductDefinitionProperty
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept
+  valueCodeableConcept: CodeableConcept?
+  valueQuantity: Quantity?
+  valueDate: DateTime?
+  valueDateElement: Element?
+  valueBoolean: bool?
+  valueBooleanElement: Element?
+  valueMarkdown: String?
+  valueMarkdownElement: Element?
+  valueAttachment: Attachment?
+  valueReference: Reference?
+  status: CodeableConcept?

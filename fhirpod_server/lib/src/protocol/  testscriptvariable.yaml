@@ -1,0 +1,21 @@
+class:   TestScriptVariable
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  name: String?
+  nameElement: Element?
+  defaultValue: String?
+  defaultValueElement: Element?
+  description: String?
+  descriptionElement: Element?
+  expression: String?
+  expressionElement: Element?
+  headerField: String?
+  headerFieldElement: Element?
+  hint: String?
+  hintElement: Element?
+  path: String?
+  pathElement: Element?
+  sourceId: String?
+  sourceIdElement: Element?

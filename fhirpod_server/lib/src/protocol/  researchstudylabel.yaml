@@ -1,0 +1,8 @@
+class:   ResearchStudyLabel
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept?
+  value: String?
+  valueElement: Element?

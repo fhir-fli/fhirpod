@@ -1,0 +1,8 @@
+class:   CitationWebLocation
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  classifier: List<CodeableConcept>?
+  url: String?
+  urlElement: Element?

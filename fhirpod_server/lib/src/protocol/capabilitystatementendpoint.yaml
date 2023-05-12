@@ -1,8 +1,0 @@
-class: CapabilityStatementEndpoint
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  protocol: Coding
-  address: String?
-  addressElement: Element?

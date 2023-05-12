@@ -1,0 +1,8 @@
+class:   MedicationKnowledgeMonitoringProgram
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept?
+  name: String?
+  nameElement: Element?

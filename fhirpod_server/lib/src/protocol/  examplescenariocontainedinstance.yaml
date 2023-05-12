@@ -1,0 +1,9 @@
+class:   ExampleScenarioContainedInstance
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  instanceReference: String?
+  instanceReferenceElement: Element?
+  versionReference: String?
+  versionReferenceElement: Element?

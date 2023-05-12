@@ -1,0 +1,7 @@
+class:   TestScriptMetadata
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  link: List<TestScriptLink>?
+  capability: List<TestScriptCapability>

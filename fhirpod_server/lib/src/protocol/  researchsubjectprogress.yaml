@@ -1,0 +1,13 @@
+class:   ResearchSubjectProgress
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableConcept?
+  subjectState: CodeableConcept?
+  milestone: CodeableConcept?
+  reason: CodeableConcept?
+  startDate: DateTime?
+  startDateElement: Element?
+  endDate: DateTime?
+  endDateElement: Element?

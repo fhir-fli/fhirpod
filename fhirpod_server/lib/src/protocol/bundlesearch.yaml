@@ -1,9 +1,0 @@
-class: BundleSearch
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  mode: String?
-  modeElement: Element?
-  score: double?
-  scoreElement: Element?

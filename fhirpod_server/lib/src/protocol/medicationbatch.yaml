@@ -1,9 +1,0 @@
-class: MedicationBatch
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  lotNumber: String?
-  lotNumberElement: Element?
-  expirationDate: DateTime?
-  expirationDateElement: Element?

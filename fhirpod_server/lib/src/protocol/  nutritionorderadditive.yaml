@@ -1,0 +1,9 @@
+class:   NutritionOrderAdditive
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: CodeableReference?
+  productName: String?
+  productNameElement: Element?
+  quantity: Quantity?

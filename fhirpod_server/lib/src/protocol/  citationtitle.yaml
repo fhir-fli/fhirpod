@@ -1,0 +1,9 @@
+class:   CitationTitle
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  type: List<CodeableConcept>?
+  language: CodeableConcept?
+  text: String?
+  textElement: Element?

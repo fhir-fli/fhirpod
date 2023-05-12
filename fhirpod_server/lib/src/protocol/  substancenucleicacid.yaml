@@ -1,0 +1,20 @@
+class:   SubstanceNucleicAcid
+fields: 
+  resourceType: String
+  id: String?
+  meta: FhirMeta?
+  implicitRules: String?
+  implicitRulesElement: Element?
+  language: String?
+  languageElement: Element?
+  text: Narrative?
+  contained: List<Resource>?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  sequenceType: CodeableConcept?
+  numberOfSubunits: int?
+  numberOfSubunitsElement: Element?
+  areaOfHybridisation: String?
+  areaOfHybridisationElement: Element?
+  oligoNucleotideType: CodeableConcept?
+  subunit: List<SubstanceNucleicAcidSubunit>?

@@ -1,0 +1,14 @@
+class:   Coding
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  system: String?
+  systemElement: Element?
+  version: String?
+  versionElement: Element?
+  code: String?
+  codeElement: Element?
+  display: String?
+  displayElement: Element?
+  userSelected: bool?
+  userSelectedElement: Element?

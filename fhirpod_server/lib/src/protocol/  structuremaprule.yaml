@@ -1,0 +1,13 @@
+class:   StructureMapRule
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  name: String?
+  nameElement: Element?
+  source: List<StructureMapSource>
+  target: List<StructureMapTarget>?
+  rule: List<StructureMapRule>?
+  dependent: List<StructureMapDependent>?
+  documentation: String?
+  documentationElement: Element?

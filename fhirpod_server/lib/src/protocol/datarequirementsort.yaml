@@ -1,9 +1,0 @@
-class: DataRequirementSort
-fields:
-  id: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  path: String?
-  pathElement: Element?
-  direction: String ?
-  directionElement: Element?

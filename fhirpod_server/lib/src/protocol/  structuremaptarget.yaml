@@ -1,0 +1,18 @@
+class:   StructureMapTarget
+fields: 
+  id: String?
+  extension_: List<FhirExtension>?
+  modifierExtension: List<FhirExtension>?
+  context: String?
+  contextElement: Element?
+  element: String?
+  elementElement: Element?
+  variable: String?
+  variableElement: Element?
+  listMode: List<FhirCode>?
+  listModeElement: List<Element>?
+  listRuleId: String?
+  listRuleIdElement: Element?
+  transform: String?
+  transformElement: Element?
+  parameter: List<StructureMapParameter>?
