@@ -9,8 +9,10 @@
 import 'package:serverpod_client/serverpod_client.dart' as _i1;
 import 'dart:async' as _i2;
 import 'package:fhirpod_client/src/protocol/patient.dart' as _i3;
-import 'dart:io' as _i4;
-import 'protocol.dart' as _i5;
+import 'package:fhir/r5/resource/resource.dart' as _i4;
+import 'package:fhir/primitive_types/id.dart' as _i5;
+import 'dart:io' as _i6;
+import 'protocol.dart' as _i7;
 
 class _EndpointFhirResource extends _i1.EndpointRef {
   _EndpointFhirResource(_i1.EndpointCaller caller) : super(caller);
@@ -19,8 +21,8 @@ class _EndpointFhirResource extends _i1.EndpointRef {
   String get name => 'fhirResource';
 
   _i2.Future<_i3.Patient?> get({
-    required dynamic resourceType,
-    required dynamic id,
+    _i4.R5ResourceType? resourceType,
+    _i5.FhirId? id,
   }) =>
       caller.callServerEndpoint<_i3.Patient?>(
         'fhirResource',
@@ -35,11 +37,11 @@ class _EndpointFhirResource extends _i1.EndpointRef {
 class Client extends _i1.ServerpodClient {
   Client(
     String host, {
-    _i4.SecurityContext? context,
+    _i6.SecurityContext? context,
     _i1.AuthenticationKeyManager? authenticationKeyManager,
   }) : super(
           host,
-          _i5.Protocol(),
+          _i7.Protocol(),
           context: context,
           authenticationKeyManager: authenticationKeyManager,
         ) {

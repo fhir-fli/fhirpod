@@ -8,6 +8,8 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:serverpod/serverpod.dart' as _i1;
 import '../endpoints/example_endpoint.dart' as _i2;
+import 'package:fhir/r5/resource/resource.dart' as _i3;
+import 'package:fhir/primitive_types/id.dart' as _i4;
 
 class Endpoints extends _i1.EndpointDispatch {
   @override
@@ -29,13 +31,13 @@ class Endpoints extends _i1.EndpointDispatch {
           params: {
             'resourceType': _i1.ParameterDescription(
               name: 'resourceType',
-              type: _i1.getType<dynamic>(),
-              nullable: false,
+              type: _i1.getType<_i3.R5ResourceType?>(),
+              nullable: true,
             ),
             'id': _i1.ParameterDescription(
               name: 'id',
-              type: _i1.getType<dynamic>(),
-              nullable: false,
+              type: _i1.getType<_i4.FhirId?>(),
+              nullable: true,
             ),
           },
           call: (
