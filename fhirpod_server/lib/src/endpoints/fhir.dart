@@ -25,10 +25,10 @@ class ExampleEndpoint extends Endpoint {
 }
 
 class Fhir extends Endpoint {
-  Future<fhir.Resource> get(
-          Session session, fhir.R5ResourceType resourceType, fhir.FhirId id) =>
+  Future<fhir.Resource> get(Session session, fhir.R5ResourceType resourceType,
+          fhir.FhirId id) async =>
       getByType(session, resourceType, id);
 
-  Future<void> post(Session session, fhir.Resource resource) =>
+  Future<void> post(Session session, fhir.Resource resource) async =>
       insertByType(session, resource);
 }
