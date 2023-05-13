@@ -1,5 +1,10 @@
+import 'dart:convert';
+
+import 'package:fhir/r5.dart' as fhir;
 import 'package:fhirpod_client/fhirpod_client.dart';
 import 'package:flutter/material.dart';
+
+import 'new_patient.dart';
 
 void main() => runApp(const MyApp());
 
@@ -18,17 +23,69 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  fhir.Patient patientToUpload = fhir.Patient();
+  fhir.Patient downloadedPatient = fhir.Patient();
   var client = Client('http://localhost:8080/');
+
+  Future<void> upload() async {
+    final patient =
+        newPatient().copyWith(id: fhir.FhirId(zipCode().toString()));
+    setState(() {
+      patientToUpload = patient;
+      downloadedPatient = fhir.Patient();
+    });
+    await client.fhir.post(patient);
+    final downloadPatient =
+        await client.fhir.get(fhir.R5ResourceType.Patient, patient.id!);
+    setState(() {
+      downloadedPatient = downloadPatient as fhir.Patient;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: ElevatedButton(
-        onPressed: () {
-          client.fhir.post(resource);
-        },
-        child: const Text('Upload'),
-      )),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Center(
+            child: Column(
+              children: [
+                ElevatedButton(
+                  onPressed: upload,
+                  child: const Text('Upload'),
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                        color: Colors.grey[400],
+                        child: Padding(
+                          padding: const EdgeInsets.all(2),
+                          child: Text(
+                              'Patient to Upload: \n\n${prettyPrintJson(patientToUpload.toJson())}'),
+                        )),
+                    Container(
+                        color: Colors.green[300],
+                        child: Padding(
+                          padding: const EdgeInsets.all(2.0),
+                          child: Text(
+                              'Downloaded Patient: \n\n${prettyPrintJson(downloadedPatient.toJson())}'),
+                        )),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
+
+const jsonEncoder = JsonEncoder.withIndent('    ');
+
+String jsonPrettyPrint(Map<String, dynamic> map) => jsonEncoder.convert(map);
+
+String prettyPrintJson(Map<String, dynamic> map) => jsonEncoder.convert(map);
