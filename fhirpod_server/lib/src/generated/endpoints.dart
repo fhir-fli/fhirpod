@@ -8,6 +8,8 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:serverpod/serverpod.dart' as _i1;
 import '../endpoints/example_endpoint.dart' as _i2;
+import 'package:fhir/r5/resource/resource.dart' as _i3;
+import 'package:fhir/primitive_types/id.dart' as _i4;
 
 class Endpoints extends _i1.EndpointDispatch {
   @override
@@ -18,7 +20,13 @@ class Endpoints extends _i1.EndpointDispatch {
           server,
           'example',
           null,
-        )
+        ),
+      'fhir': _i2.Fhir()
+        ..initialize(
+          server,
+          'fhir',
+          null,
+        ),
     };
     connectors['example'] = _i1.EndpointConnector(
       name: 'example',
@@ -40,6 +48,36 @@ class Endpoints extends _i1.EndpointDispatch {
               (endpoints['example'] as _i2.ExampleEndpoint).hello(
             session,
             params['name'],
+          ),
+        )
+      },
+    );
+    connectors['fhir'] = _i1.EndpointConnector(
+      name: 'fhir',
+      endpoint: endpoints['fhir']!,
+      methodConnectors: {
+        'get': _i1.MethodConnector(
+          name: 'get',
+          params: {
+            'resourceType': _i1.ParameterDescription(
+              name: 'resourceType',
+              type: _i1.getType<_i3.R5ResourceType>(),
+              nullable: false,
+            ),
+            'id': _i1.ParameterDescription(
+              name: 'id',
+              type: _i1.getType<_i4.FhirId>(),
+              nullable: false,
+            ),
+          },
+          call: (
+            _i1.Session session,
+            Map<String, dynamic> params,
+          ) async =>
+              (endpoints['fhir'] as _i2.Fhir).get(
+            session,
+            params['resourceType'],
+            params['id'],
           ),
         )
       },

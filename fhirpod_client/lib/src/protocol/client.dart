@@ -8,8 +8,10 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:serverpod_client/serverpod_client.dart' as _i1;
 import 'dart:async' as _i2;
-import 'dart:io' as _i3;
-import 'protocol.dart' as _i4;
+import 'package:fhir/r5/resource/resource.dart' as _i3;
+import 'package:fhir/primitive_types/id.dart' as _i4;
+import 'dart:io' as _i5;
+import 'protocol.dart' as _i6;
 
 class _EndpointExample extends _i1.EndpointRef {
   _EndpointExample(_i1.EndpointCaller caller) : super(caller);
@@ -24,24 +26,50 @@ class _EndpointExample extends _i1.EndpointRef {
       );
 }
 
+class _EndpointFhir extends _i1.EndpointRef {
+  _EndpointFhir(_i1.EndpointCaller caller) : super(caller);
+
+  @override
+  String get name => 'fhir';
+
+  _i2.Future<_i3.Resource> get(
+    _i3.R5ResourceType resourceType,
+    _i4.FhirId id,
+  ) =>
+      caller.callServerEndpoint<_i3.Resource>(
+        'fhir',
+        'get',
+        {
+          'resourceType': resourceType,
+          'id': id,
+        },
+      );
+}
+
 class Client extends _i1.ServerpodClient {
   Client(
     String host, {
-    _i3.SecurityContext? context,
+    _i5.SecurityContext? context,
     _i1.AuthenticationKeyManager? authenticationKeyManager,
   }) : super(
           host,
-          _i4.Protocol(),
+          _i6.Protocol(),
           context: context,
           authenticationKeyManager: authenticationKeyManager,
         ) {
     example = _EndpointExample(this);
+    fhir = _EndpointFhir(this);
   }
 
   late final _EndpointExample example;
 
+  late final _EndpointFhir fhir;
+
   @override
-  Map<String, _i1.EndpointRef> get endpointRefLookup => {'example': example};
+  Map<String, _i1.EndpointRef> get endpointRefLookup => {
+        'example': example,
+        'fhir': fhir,
+      };
   @override
   Map<String, _i1.ModuleEndpointCaller> get moduleLookup => {};
 }
