@@ -1,4 +1,5 @@
 import 'package:fhir/r5.dart' as fhir;
+import 'package:fhirpod_server/src/generated/protocol.dart';
 import 'package:serverpod/serverpod.dart';
 
 import 'get_by_type.dart';
@@ -29,6 +30,9 @@ class Fhir extends Endpoint {
           fhir.FhirId id) async =>
       getByType(session, resourceType, id);
 
-  Future<void> post(Session session, fhir.Resource resource) async =>
-      insertByType(session, resource);
+  Future<fhir.Resource> post(Session session, fhir.Resource resource) async =>
+      resource;
+  // insertByType(session, resource);
+  Future<Patient> postPatient(Session session, Patient patient) async =>
+      patient;
 }
