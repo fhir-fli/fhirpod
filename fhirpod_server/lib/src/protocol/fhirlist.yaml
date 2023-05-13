@@ -1,4 +1,5 @@
 class: FhirList
+table: fhirlist
 fields: 
   resourceType: String
   fhirId: String?

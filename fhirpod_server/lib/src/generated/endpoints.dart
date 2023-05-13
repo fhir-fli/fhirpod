@@ -7,7 +7,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:serverpod/serverpod.dart' as _i1;
-import '../endpoints/example_endpoint.dart' as _i2;
+import '../endpoints/fhir.dart' as _i2;
 import 'package:fhir/r5/resource/resource.dart' as _i3;
 import 'package:fhir/primitive_types/id.dart' as _i4;
 
@@ -79,7 +79,25 @@ class Endpoints extends _i1.EndpointDispatch {
             params['resourceType'],
             params['id'],
           ),
-        )
+        ),
+        'post': _i1.MethodConnector(
+          name: 'post',
+          params: {
+            'resource': _i1.ParameterDescription(
+              name: 'resource',
+              type: _i1.getType<_i3.Resource>(),
+              nullable: false,
+            )
+          },
+          call: (
+            _i1.Session session,
+            Map<String, dynamic> params,
+          ) async =>
+              (endpoints['fhir'] as _i2.Fhir).post(
+            session,
+            params['resource'],
+          ),
+        ),
       },
     );
   }

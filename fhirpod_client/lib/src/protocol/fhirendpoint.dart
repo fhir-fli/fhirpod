@@ -11,6 +11,7 @@ import 'protocol.dart' as _i2;
 
 class FhirEndpoint extends _i1.SerializableEntity {
   FhirEndpoint({
+    this.id,
     required this.resourceType,
     this.fhirId,
     this.meta,
@@ -46,6 +47,7 @@ class FhirEndpoint extends _i1.SerializableEntity {
     _i1.SerializationManager serializationManager,
   ) {
     return FhirEndpoint(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
       resourceType: serializationManager
           .deserialize<String>(jsonSerialization['resourceType']),
       fhirId: serializationManager
@@ -108,6 +110,11 @@ class FhirEndpoint extends _i1.SerializableEntity {
     );
   }
 
+  /// The database id, set if the object has been inserted into the
+  /// database or if it has been fetched from the database. Otherwise,
+  /// the id will be null.
+  int? id;
+
   String resourceType;
 
   String? fhirId;
@@ -167,6 +174,7 @@ class FhirEndpoint extends _i1.SerializableEntity {
   @override
   Map<String, dynamic> toJson() {
     return {
+      'id': id,
       'resourceType': resourceType,
       'fhirId': fhirId,
       'meta': meta,

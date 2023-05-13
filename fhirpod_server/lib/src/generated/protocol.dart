@@ -18509,6 +18509,402 @@ class Protocol extends _i1.SerializationManagerServer {
       managed: true,
     ),
     _i2.TableDefinition(
+      name: 'fhirendpoint',
+      schema: 'public',
+      columns: [
+        _i2.ColumnDefinition(
+          name: 'id',
+          columnType: _i2.ColumnType.integer,
+          isNullable: false,
+          dartType: 'int?',
+          columnDefault: 'nextval(\'fhirendpoint_id_seq\'::regclass)',
+        ),
+        _i2.ColumnDefinition(
+          name: 'resourceType',
+          columnType: _i2.ColumnType.text,
+          isNullable: false,
+          dartType: 'String',
+        ),
+        _i2.ColumnDefinition(
+          name: 'fhirId',
+          columnType: _i2.ColumnType.text,
+          isNullable: true,
+          dartType: 'String?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'meta',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:FhirMeta?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'implicitRules',
+          columnType: _i2.ColumnType.text,
+          isNullable: true,
+          dartType: 'String?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'implicitRulesElement',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Element?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'language',
+          columnType: _i2.ColumnType.text,
+          isNullable: true,
+          dartType: 'String?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'languageElement',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Element?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'text',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Narrative?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'contained',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:Resource>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'extension_',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:FhirExtension>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'modifierExtension',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:FhirExtension>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'identifier',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:Identifier>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'status',
+          columnType: _i2.ColumnType.text,
+          isNullable: true,
+          dartType: 'String?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'statusElement',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Element?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'connectionType',
+          columnType: _i2.ColumnType.json,
+          isNullable: false,
+          dartType: 'List<protocol:CodeableConcept>',
+        ),
+        _i2.ColumnDefinition(
+          name: 'name',
+          columnType: _i2.ColumnType.text,
+          isNullable: true,
+          dartType: 'String?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'nameElement',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Element?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'description',
+          columnType: _i2.ColumnType.text,
+          isNullable: true,
+          dartType: 'String?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'descriptionElement',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Element?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'environmentType',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:CodeableConcept>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'managingOrganization',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Reference?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'contact',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:ContactPoint>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'period',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Period?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'payload',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:FhirEndpointPayload>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'address',
+          columnType: _i2.ColumnType.text,
+          isNullable: true,
+          dartType: 'String?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'addressElement',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Element?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'header',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<String>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'headerElement',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:Element>?',
+        ),
+      ],
+      foreignKeys: [],
+      indexes: [
+        _i2.IndexDefinition(
+          indexName: 'fhirendpoint_pkey',
+          tableSpace: null,
+          elements: [
+            _i2.IndexElementDefinition(
+              type: _i2.IndexElementDefinitionType.column,
+              definition: 'id',
+            )
+          ],
+          type: 'btree',
+          isUnique: true,
+          isPrimary: true,
+        )
+      ],
+      managed: true,
+    ),
+    _i2.TableDefinition(
+      name: 'fhirlist',
+      schema: 'public',
+      columns: [
+        _i2.ColumnDefinition(
+          name: 'id',
+          columnType: _i2.ColumnType.integer,
+          isNullable: false,
+          dartType: 'int?',
+          columnDefault: 'nextval(\'fhirlist_id_seq\'::regclass)',
+        ),
+        _i2.ColumnDefinition(
+          name: 'resourceType',
+          columnType: _i2.ColumnType.text,
+          isNullable: false,
+          dartType: 'String',
+        ),
+        _i2.ColumnDefinition(
+          name: 'fhirId',
+          columnType: _i2.ColumnType.text,
+          isNullable: true,
+          dartType: 'String?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'meta',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:FhirMeta?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'implicitRules',
+          columnType: _i2.ColumnType.text,
+          isNullable: true,
+          dartType: 'String?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'implicitRulesElement',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Element?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'language',
+          columnType: _i2.ColumnType.text,
+          isNullable: true,
+          dartType: 'String?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'languageElement',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Element?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'text',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Narrative?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'contained',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:Resource>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'extension_',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:FhirExtension>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'modifierExtension',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:FhirExtension>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'identifier',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:Identifier>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'status',
+          columnType: _i2.ColumnType.text,
+          isNullable: true,
+          dartType: 'String?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'statusElement',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Element?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'mode',
+          columnType: _i2.ColumnType.text,
+          isNullable: true,
+          dartType: 'String?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'modeElement',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Element?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'title',
+          columnType: _i2.ColumnType.text,
+          isNullable: true,
+          dartType: 'String?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'titleElement',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Element?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'code',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:CodeableConcept?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'subject',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:Reference>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'encounter',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Reference?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'date',
+          columnType: _i2.ColumnType.timestampWithoutTimeZone,
+          isNullable: true,
+          dartType: 'DateTime?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'dateElement',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Element?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'source',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:Reference?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'orderedBy',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:CodeableConcept?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'note',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:Annotation>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'entry',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'List<protocol:ListEntry>?',
+        ),
+        _i2.ColumnDefinition(
+          name: 'emptyReason',
+          columnType: _i2.ColumnType.json,
+          isNullable: true,
+          dartType: 'protocol:CodeableConcept?',
+        ),
+      ],
+      foreignKeys: [],
+      indexes: [
+        _i2.IndexDefinition(
+          indexName: 'fhirlist_pkey',
+          tableSpace: null,
+          elements: [
+            _i2.IndexElementDefinition(
+              type: _i2.IndexElementDefinitionType.column,
+              definition: 'id',
+            )
+          ],
+          type: 'btree',
+          isUnique: true,
+          isPrimary: true,
+        )
+      ],
+      managed: true,
+    ),
+    _i2.TableDefinition(
       name: 'flag',
       schema: 'public',
       columns: [
@@ -79052,6 +79448,10 @@ class Protocol extends _i1.SerializationManagerServer {
         return _i339.ExplanationOfBenefit.t;
       case _i366.FamilyMemberHistory:
         return _i366.FamilyMemberHistory.t;
+      case _i371.FhirEndpoint:
+        return _i371.FhirEndpoint.t;
+      case _i374.FhirList:
+        return _i374.FhirList.t;
       case _i376.Flag:
         return _i376.Flag.t;
       case _i377.FormularyItem:

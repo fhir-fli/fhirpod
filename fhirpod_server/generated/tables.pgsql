@@ -3228,6 +3228,86 @@ ALTER TABLE ONLY "familymemberhistory"
 
 
 --
+-- Class FhirEndpoint as table fhirendpoint
+--
+
+CREATE TABLE "fhirendpoint" (
+  "id" serial,
+  "resourceType" text NOT NULL,
+  "fhirId" text,
+  "meta" json,
+  "implicitRules" text,
+  "implicitRulesElement" json,
+  "language" text,
+  "languageElement" json,
+  "text" json,
+  "contained" json,
+  "extension_" json,
+  "modifierExtension" json,
+  "identifier" json,
+  "status" text,
+  "statusElement" json,
+  "connectionType" json NOT NULL,
+  "name" text,
+  "nameElement" json,
+  "description" text,
+  "descriptionElement" json,
+  "environmentType" json,
+  "managingOrganization" json,
+  "contact" json,
+  "period" json,
+  "payload" json,
+  "address" text,
+  "addressElement" json,
+  "header" json,
+  "headerElement" json
+);
+
+ALTER TABLE ONLY "fhirendpoint"
+  ADD CONSTRAINT fhirendpoint_pkey PRIMARY KEY (id);
+
+
+--
+-- Class FhirList as table fhirlist
+--
+
+CREATE TABLE "fhirlist" (
+  "id" serial,
+  "resourceType" text NOT NULL,
+  "fhirId" text,
+  "meta" json,
+  "implicitRules" text,
+  "implicitRulesElement" json,
+  "language" text,
+  "languageElement" json,
+  "text" json,
+  "contained" json,
+  "extension_" json,
+  "modifierExtension" json,
+  "identifier" json,
+  "status" text,
+  "statusElement" json,
+  "mode" text,
+  "modeElement" json,
+  "title" text,
+  "titleElement" json,
+  "code" json,
+  "subject" json,
+  "encounter" json,
+  "date" timestamp without time zone,
+  "dateElement" json,
+  "source" json,
+  "orderedBy" json,
+  "note" json,
+  "entry" json,
+  "emptyReason" json
+);
+
+ALTER TABLE ONLY "fhirlist"
+  ADD CONSTRAINT fhirlist_pkey PRIMARY KEY (id);
+
+
+--
 -- Class Flag as table flag
 --
 

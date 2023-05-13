@@ -44,6 +44,13 @@ class _EndpointFhir extends _i1.EndpointRef {
           'id': id,
         },
       );
+
+  _i2.Future<void> post(_i3.Resource resource) =>
+      caller.callServerEndpoint<void>(
+        'fhir',
+        'post',
+        {'resource': resource},
+      );
 }
 
 class Client extends _i1.ServerpodClient {
