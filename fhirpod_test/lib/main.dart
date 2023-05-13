@@ -25,7 +25,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   fhir.Patient patientToUpload = fhir.Patient();
   fhir.Patient downloadedPatient = fhir.Patient();
-  var client = Client('http://localhost:8080/');
+  var client = Client(
+    'http://localhost:8080/',
+  );
 
   Future<void> upload() async {
     final patient =
