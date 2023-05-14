@@ -58,3 +58,7 @@ docker-compose stop
 ```
 
 I've made start and stop scripts in the project just so you don't have to remember the exact commands.
+
+### notes
+
+Came across this and wanted to make note of it: https://github.com/shorebirdtech

@@ -30,20 +30,20 @@ class _MyHomePageState extends State<MyHomePage> {
   );
 
   Future<void> upload() async {
-    final patient =
-        newPatient().copyWith(id: fhir.FhirId(zipCode().toString()));
-    final currentPatient =
-        Patient.fromJson(patient.toJson(), client.serializationManager);
-    setState(() {
-      patientToUpload = patient;
-      downloadedPatient = fhir.Patient();
-    });
-    final downloadPatient = await client.fhir.postPatient(currentPatient);
-    // final downloadPatient =
-    //     await client.fhir.get(fhir.R5ResourceType.Patient, patient.id!);
-    setState(() {
-      downloadedPatient = fhir.Patient.fromJson(downloadPatient.toJson());
-    });
+    // final patient =
+    //     newPatient().copyWith(id: fhir.FhirId(zipCode().toString()));
+    // final currentPatient =
+    //     Patient.fromJson(patient.toJson(), client.serializationManager);
+    // setState(() {
+    //   patientToUpload = patient;
+    //   downloadedPatient = fhir.Patient();
+    // });
+    // final downloadPatient = await client.fhir.postPatient(currentPatient);
+    // // final downloadPatient =
+    // //     await client.fhir.get(fhir.R5ResourceType.Patient, patient.id!);
+    // setState(() {
+    //   downloadedPatient = fhir.Patient.fromJson(downloadPatient.toJson());
+    // });
   }
 
   @override
