@@ -1,9 +1,0 @@
-class: GroupMember
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  entity: Reference
-  period: Period?
-  inactive: bool?
-  inactiveElement: Element?

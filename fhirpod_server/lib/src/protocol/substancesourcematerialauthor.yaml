@@ -1,8 +1,0 @@
-class: SubstanceSourceMaterialAuthor
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  authorType: CodeableConcept?
-  authorDescription: String?
-  authorDescriptionElement: Element?

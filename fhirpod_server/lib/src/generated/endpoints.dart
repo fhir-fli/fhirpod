@@ -8,9 +8,6 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:serverpod/serverpod.dart' as _i1;
 import '../endpoints/fhir.dart' as _i2;
-import 'package:fhir/r5/resource/resource.dart' as _i3;
-import 'package:fhir/primitive_types/id.dart' as _i4;
-import 'package:fhirpod_server/src/generated/patient.dart' as _i5;
 
 class Endpoints extends _i1.EndpointDispatch {
   @override
@@ -57,66 +54,15 @@ class Endpoints extends _i1.EndpointDispatch {
       name: 'fhir',
       endpoint: endpoints['fhir']!,
       methodConnectors: {
-        'get': _i1.MethodConnector(
-          name: 'get',
-          params: {
-            'resourceType': _i1.ParameterDescription(
-              name: 'resourceType',
-              type: _i1.getType<_i3.R5ResourceType>(),
-              nullable: false,
-            ),
-            'id': _i1.ParameterDescription(
-              name: 'id',
-              type: _i1.getType<_i4.FhirId>(),
-              nullable: false,
-            ),
-          },
+        'hello': _i1.MethodConnector(
+          name: 'hello',
+          params: {},
           call: (
             _i1.Session session,
             Map<String, dynamic> params,
           ) async =>
-              (endpoints['fhir'] as _i2.Fhir).get(
-            session,
-            params['resourceType'],
-            params['id'],
-          ),
-        ),
-        'post': _i1.MethodConnector(
-          name: 'post',
-          params: {
-            'resource': _i1.ParameterDescription(
-              name: 'resource',
-              type: _i1.getType<_i3.Resource>(),
-              nullable: false,
-            )
-          },
-          call: (
-            _i1.Session session,
-            Map<String, dynamic> params,
-          ) async =>
-              (endpoints['fhir'] as _i2.Fhir).post(
-            session,
-            params['resource'],
-          ),
-        ),
-        'postPatient': _i1.MethodConnector(
-          name: 'postPatient',
-          params: {
-            'patient': _i1.ParameterDescription(
-              name: 'patient',
-              type: _i1.getType<_i5.Patient>(),
-              nullable: false,
-            )
-          },
-          call: (
-            _i1.Session session,
-            Map<String, dynamic> params,
-          ) async =>
-              (endpoints['fhir'] as _i2.Fhir).postPatient(
-            session,
-            params['patient'],
-          ),
-        ),
+              (endpoints['fhir'] as _i2.Fhir).hello(session),
+        )
       },
     );
   }

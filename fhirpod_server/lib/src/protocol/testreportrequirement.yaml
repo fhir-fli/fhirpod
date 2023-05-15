@@ -1,9 +1,0 @@
-class: TestReportRequirement
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  linkUri: String?
-  linkUriElement: Element?
-  linkCanonical: String?
-  linkCanonicalElement: Element?

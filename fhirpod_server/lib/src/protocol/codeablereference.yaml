@@ -1,6 +1,0 @@
-class: CodeableReference
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  concept: CodeableConcept?
-  reference: Reference?

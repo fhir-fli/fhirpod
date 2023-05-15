@@ -1,7 +1,0 @@
-class: PackagedProductDefinitionContainedItem
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  item: CodeableReference
-  amount: Quantity?

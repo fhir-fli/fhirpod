@@ -1,9 +1,0 @@
-class: DeviceDefinitionDeviceName
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  name: String?
-  nameElement: Element?
-  type: String?
-  typeElement: Element?

@@ -1,9 +1,0 @@
-class: MedicationKnowledgeEnvironmentalSetting
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: CodeableConcept
-  valueQuantity: Quantity?
-  valueRange: Range?
-  valueCodeableConcept: CodeableConcept?

@@ -1,8 +1,0 @@
-class: EvidenceReportRelatesTo
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  code: String?
-  codeElement: Element?
-  target: EvidenceReportTarget

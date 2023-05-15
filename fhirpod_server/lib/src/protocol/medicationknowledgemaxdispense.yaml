@@ -1,7 +1,0 @@
-class: MedicationKnowledgeMaxDispense
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  quantity: Quantity
-  period: String?

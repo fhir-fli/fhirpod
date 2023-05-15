@@ -8,11 +8,8 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:serverpod_client/serverpod_client.dart' as _i1;
 import 'dart:async' as _i2;
-import 'package:fhir/r5/resource/resource.dart' as _i3;
-import 'package:fhir/primitive_types/id.dart' as _i4;
-import 'package:fhirpod_client/src/protocol/patient.dart' as _i5;
-import 'dart:io' as _i6;
-import 'protocol.dart' as _i7;
+import 'dart:io' as _i3;
+import 'protocol.dart' as _i4;
 
 class _EndpointExample extends _i1.EndpointRef {
   _EndpointExample(_i1.EndpointCaller caller) : super(caller);
@@ -33,42 +30,21 @@ class _EndpointFhir extends _i1.EndpointRef {
   @override
   String get name => 'fhir';
 
-  _i2.Future<_i3.Resource> get(
-    _i3.R5ResourceType resourceType,
-    _i4.FhirId id,
-  ) =>
-      caller.callServerEndpoint<_i3.Resource>(
+  _i2.Future<String> hello() => caller.callServerEndpoint<String>(
         'fhir',
-        'get',
-        {
-          'resourceType': resourceType,
-          'id': id,
-        },
-      );
-
-  _i2.Future<_i3.Resource> post(_i3.Resource resource) =>
-      caller.callServerEndpoint<_i3.Resource>(
-        'fhir',
-        'post',
-        {'resource': resource},
-      );
-
-  _i2.Future<_i5.Patient> postPatient(_i5.Patient patient) =>
-      caller.callServerEndpoint<_i5.Patient>(
-        'fhir',
-        'postPatient',
-        {'patient': patient},
+        'hello',
+        {},
       );
 }
 
 class Client extends _i1.ServerpodClient {
   Client(
     String host, {
-    _i6.SecurityContext? context,
+    _i3.SecurityContext? context,
     _i1.AuthenticationKeyManager? authenticationKeyManager,
   }) : super(
           host,
-          _i7.Protocol(),
+          _i4.Protocol(),
           context: context,
           authenticationKeyManager: authenticationKeyManager,
         ) {

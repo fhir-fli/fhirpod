@@ -1,7 +1,0 @@
-class: SubstanceSourceMaterialPartDescription
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  part_: CodeableConcept?
-  partLocation: CodeableConcept?

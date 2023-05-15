@@ -1,8 +1,0 @@
-class: PermissionResource
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  meaning: String?
-  meaningElement: Element?
-  reference: Reference

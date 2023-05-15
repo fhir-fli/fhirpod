@@ -1,9 +1,0 @@
-class: ExplanationOfBenefitEvent
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: CodeableConcept
-  whenDateTime: DateTime?
-  whenDateTimeElement: Element?
-  whenPeriod: Period?

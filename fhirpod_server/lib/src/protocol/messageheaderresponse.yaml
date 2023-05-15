@@ -1,9 +1,0 @@
-class: MessageHeaderResponse
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  identifier: Identifier
-  code: String?
-  codeElement: Element?
-  details: Reference?

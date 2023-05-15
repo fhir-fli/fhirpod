@@ -1,8 +1,0 @@
-class: TestPlanTestRun
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  narrative: String?
-  narrativeElement: Element?
-  script: TestPlanScript?

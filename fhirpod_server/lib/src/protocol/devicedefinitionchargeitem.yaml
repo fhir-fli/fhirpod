@@ -1,9 +1,0 @@
-class: DeviceDefinitionChargeItem
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  chargeItemCode: CodeableReference
-  count: Quantity
-  effectivePeriod: Period?
-  useContext: List<UsageContext>?

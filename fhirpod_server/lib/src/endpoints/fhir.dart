@@ -1,5 +1,4 @@
-import 'package:fhir/r5.dart' as fhir;
-import 'package:fhirpod_server/src/generated/protocol.dart';
+import 'package:fhir/r5.dart';
 import 'package:serverpod/serverpod.dart';
 
 import 'get_by_type.dart';
@@ -26,13 +25,5 @@ class ExampleEndpoint extends Endpoint {
 }
 
 class Fhir extends Endpoint {
-  Future<fhir.Resource> get(Session session, fhir.R5ResourceType resourceType,
-          fhir.FhirId id) async =>
-      getByType(session, resourceType, id);
-
-  Future<fhir.Resource> post(Session session, fhir.Resource resource) async =>
-      resource;
-  // insertByType(session, resource);
-  Future<Patient> postPatient(Session session, Patient patient) async =>
-      patient;
+  Future<String> hello(Session session) async => 'hello world!';
 }

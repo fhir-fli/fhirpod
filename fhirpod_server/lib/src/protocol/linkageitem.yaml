@@ -1,8 +1,0 @@
-class: LinkageItem
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: String?
-  typeElement: Element?
-  resource: Reference

@@ -1,8 +1,0 @@
-class: IngredientManufacturer
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  role: String?
-  roleElement: Element?
-  manufacturer: Reference

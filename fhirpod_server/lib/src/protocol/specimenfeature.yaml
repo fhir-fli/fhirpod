@@ -1,8 +1,0 @@
-class: SpecimenFeature
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  modifierExtension: List<FhirExtension>?
-  type: CodeableConcept
-  description: String?
-  descriptionElement: Element?

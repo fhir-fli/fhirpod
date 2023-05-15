@@ -1,6 +1,0 @@
-class: Range
-fields: 
-  fhirId: String?
-  extension_: List<FhirExtension>?
-  low: Quantity?
-  high: Quantity?
