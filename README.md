@@ -62,3 +62,54 @@ I've made start and stop scripts in the project just so you don't have to rememb
 ### notes
 
 Came across this and wanted to make note of it: https://github.com/shorebirdtech
+
+### specific fhir generation
+
+1. In order to get the serverpod branch from the main branch
+2. Add serverpod as a dependency in the package
+3. Perform the following replacement
+
+- this
+
+```dart
+R5ResourceType resourceType,
+```
+
+- with
+
+```dart
+R5ResourceType resourceType,
+
+      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
+```
+
+4. Run ```flutter pub run build_runner watch --delete-conflicting-outputs```
+
+5. Run ```serverpod.dart```, needs to be placed in the version directory (r5, stu3, etc)
+
+6. Replacement
+
+- this
+
+```dart
+.fromJson(Map<String, dynamic> json
+```
+
+- with
+
+```dart
+.fromJson(Map<String, dynamic> json, [_i1.SerializationManager? serializationManager,]
+```
+
+- and this
+
+```dart
+.fromJson(
+          Map<String, dynamic> json
+```
+
+- with
+
+```dart
+.fromJson(Map<String, dynamic> json, [_i1.SerializationManager? serializationManager,]
+```

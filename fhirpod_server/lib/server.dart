@@ -1,4 +1,4 @@
-import 'package:serverpod/serverpod.dart';
+import 'package:serverpod/serverpod.dart' as _i1;
 
 import 'package:fhirpod_server/src/web/routes/root.dart';
 
@@ -11,7 +11,7 @@ import 'src/generated/endpoints.dart';
 
 void run(List<String> args) async {
   // Initialize Serverpod and connect it with your generated code.
-  final pod = Serverpod(
+  final pod = _i1.Serverpod(
     args,
     Protocol(),
     Endpoints(),
@@ -25,7 +25,7 @@ void run(List<String> args) async {
   pod.webServer.addRoute(RouteRoot(), '/index.html');
   // Serve all files in the /static directory.
   pod.webServer.addRoute(
-    RouteStaticDirectory(serverDirectory: 'static', basePath: '/'),
+    _i1.RouteStaticDirectory(serverDirectory: 'static', basePath: '/'),
     '/*',
   );
 
